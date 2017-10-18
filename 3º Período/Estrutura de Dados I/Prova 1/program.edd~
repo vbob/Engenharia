@@ -1,0 +1,16 @@
+routine A
+print "1"
+call B
+call C
+call D
+return
+routine B
+call C
+print "3"
+return
+routine C
+print "2"
+return
+routine D
+print "4"
+return

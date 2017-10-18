@@ -1,0 +1,1 @@
+﻿<CasDocument DocVersion="4.0"><Entries ZoomFactor="1"><Entry Id="0" NumberField="Real" TrigUnit="Degrees"><Type>Graphing</Type><Sub Type="input" Width="1095" Height="40"><Formula>Show2D[PlotEq2D[Equal[y,Sum[Product[Negative[0.08723],Exponent[x,2]],15.2]]]]</Formula></Sub></Entry></Entries><Assignments /></CasDocument>

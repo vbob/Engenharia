@@ -1,0 +1,9 @@
+#Transações financeiras
+#Codigo,Transacao,Material,Quantidade,Valor Total,Cliente,Data
+3456,compra,televisao,3,2550,Casas Bahia,30/06/2010,
+1253,venda,mesa,5,4050,Sportcenter,23/04/2095,
+4577,emprestimo,dinheiro,1,7333,Banco do Brasil,10/02/2014,
+5734,venda,computador,1,2550,Lojas Americanas,13/06/2000,
+9647,compra,lampada,5,340,Eletroenergia,05/05/1996,
+7538,venda,radio,3,4050,Escolanova,09/09/2001,
+2310,emprestimo,dinheiro,1,8530.2,Banco do Brasil,22/08/2008,

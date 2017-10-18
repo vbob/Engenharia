@@ -1,0 +1,249 @@
+prog somapares
+	int i, soma, numero;
+	soma = 0;
+	para (i = 0; i < 100; i++)
+		{
+			imprima ("Insira um número: ");
+			leia numero;
+			se (numero % 2 = 0)
+				{
+					soma = soma + numero;
+				}
+		}
+	imprima ("A soma dos números pares inseridos é: ", soma);
+fim prog
+
+--------------------------------------------------------------------------------------------------------------		
+
+prog mediampares
+	int i, soma, numero, n;
+	soma = 0;
+	n = 0;
+	para (i = 0; i < 100; i++)
+		{
+			imprima ("Insira um número: ");
+			leia numero;
+			se (numero % 2 = 1)
+				{
+					soma = soma + numero;
+					n++;
+				}
+		}
+	imprima ("Foram inseridos ", n, " números ímpares, e a média entre eles é: ", (soma/n));
+fim prog
+
+--------------------------------------------------------------------------------------------------------------	
+
+prog creditobanco
+	real sMedio, cFinal;
+	imprima ("Digite seu saldo médio do último ano: R$");
+	leia sMedio;
+	se (sMedio < 251)
+		cFinal = 0;
+	se (sMedio > 250 && sMedio < 501)
+		cFinal = 0.15;
+	se (sMedio > 500 && sMedio < 1001)
+		cFinal = 0.3;
+	se (sMedio > 1000)
+		cFinal = 0.5;
+	imprima ("Seu crédito no banco é de R$", (sMedio*cFinal), " calculado sobre o Saldo Médio de R$", sMedio);
+fim prog
+
+--------------------------------------------------------------------------------------------------------------	
+
+prog tresfibonacci
+	int tInicial, nTermos, tTermos, i, aTermo, bTermo, tAnterior);
+	imprima ("Qual o termo inicial da sequência? ");
+	leia tInicial;
+	imprima ("Quantos termos devem ser exibidos? ");
+	leia nTermos;
+	tTermos = nTermos + tInicial;
+	aTermo = 3;
+	bTermo = 3;
+	para (i = 0; i < tTermos-1; i++)
+		{
+			tAnterior = aTermo;
+			Se (i >= tInicial-1)
+				{
+					imprima (aTermo, ", ");
+				}
+			aTermo = bTermo;
+			bTermo = aTermo + tAnterior;
+		}
+fim prog	
+	
+--------------------------------------------------------------------------------------------------------------	
+
+prog censo
+	int i, j, idade, altura;
+	string sexo;
+	real peso, matriz[,];	
+	idade = 1;	i = 0;	sIdade = 0;	
+	imprima ("Para sair, coloque 0 no campo idade");	
+	enquanto (idade > 0)
+	{
+		imprima ("Insira a idade: ");
+		leia idade;
+		se (idade > 0)
+			{
+				imprima ("Insira o sexo, M ou F: ");
+				leia sexo;
+				imprima ("Insira o peso: ")
+				leia peso;
+				imprima ("Insira a altura: ");
+				leia altura;
+				matriz[i,0] = idade;
+				matriz[i,2] = peso;
+				matriz[i,3] = altura;
+				se (sexo = "M" || sexo = "m")
+					matriz[i,1] = 0;
+				se (sexo = "F" || sexo = "f")
+					matriz[i,1] = 1;
+				i++;		
+			}
+	}	
+	int tMatriz;
+	tMatriz = i;		
+	real mediaTFora, mediaTDentro, T, pesoHAcima; pesoHAbaixo, pesoMAcima, pesoMAbaixo, H, M, somaPesoH, somaPesoM;	
+	//Matriz(i,j); j0 idade; j1 sexo; j2 peso, j3 altura;		
+	t = 0; 	mediaTFora = 0; mediaTDentro = 0; H = 0; M = 0; pesoHAcima = 0; pesoHAbaixo = 0; pesoMAcima = 0; pesoMAbaixo = 0; somaPesoH = 0; somaPesoM = 0;
+	para (i = 0; i <= tMatriz; i++)
+		{
+			se (Matriz[i,1] = 0)
+				{
+					se (Matriz[i,2] > ((72,7*Matriz[i,3]) - 58)
+						{
+							mediaTFora = mediaTFora + Matriz[i,0];
+							pesoHAcima++;
+							t++;
+						}
+					se (Matriz[i,2] = ((72,7*Matriz[i,3]) - 58)
+						{
+							mediaTDentro = mediaTDentro + Matriz[i,0];
+						}
+					se (Matriz[i,2] < ((72,7*Matriz[i,3]) - 58)
+						{
+							mediaTFora = mediaTFora + Matriz[i,0];
+							pesoHAbaixo++;
+							t++;
+						}
+					somaPesoH = Matriz[i,2] + somaPesoH;
+					H++;
+				}
+			se (Matriz[i,1] = 1)	
+				{
+					se (Matriz[i,2] > ((62,1*Matriz[i,3]) - 44,7)
+						{
+							mediaTFora = mediaTFora + Matriz[i,0];
+							pesoMAcima++;
+							t++;
+						}
+					se (Matriz[i,2] = ((62,1*Matriz[i,3]) - 44,7)
+						{
+							mediaTDentro = mediaTDentro + Matriz[i,0];
+						}
+					se (Matriz[i,2] < ((62,1*Matriz[i,3]) - 44,7)
+						{
+							mediaTFora = mediaTFora + Matriz[i,0];
+							pesoMAbaixo++;
+							t++;
+						}
+					somaPesoM = Matriz[i,2] + somaPesoM;
+					M++;
+				}
+		}
+	imprima("A média de idade das pessoas que estão fora do peso é: ", (mediaTFora/t), " anos");
+	imprima("A média de idade das pessoas que estão dentro do peso é: ", (mediaTDentro/(tMatriz-t)), " anos");
+	imprima(((pesoHAcima/H)*100), "% dos homens estão acima do peso);
+	imprima(((pesoHAbaixo/H)*100), "% dos homens estão abaixo do peso);
+	imprima(((((pesoHAbaixo/H)+(pesoHAbaixo/H))-100)*100), "% dos homens estão com peso normal);
+	imprima(((pesoMAcima/H)*100), "% das mulheres estão acima do peso);
+	imprima(((pesoMAbaixo/H)*100), "% das mulheres estão abaixo do peso);
+	imprima(((((pesoMAbaixo/H)+(pesoMAbaixo/H))-100)*100), "% das mulheres estão com peso normal);
+	imprima("A média de peso dos homens é: ", (somaPesoH/H), "kg");
+	imprima("A média de peso das mulheres é: ", (somaPesoM/M), "kg");
+fim prog
+
+--------------------------------------------------------------------------------------------------------------	
+
+prog multiplosdetres
+	int n1, n2, a, b, a1, contador;
+	imprima("Insira um número: ");
+	leia n1;
+	imprima("Insira outro número: ");
+	leia n2;
+	se (n1 > n2)
+		{ 
+			a = n1;
+			b = n2;
+		}
+	senão
+		{ 
+			b = n1;
+			a = n2;
+		}
+		
+	se (a % 3 = 0)
+		a1 = a;
+	se ((a+1) % 3 = 0)
+		a1 = a+1;
+	se ((a-1) % 3 = 0)
+		a1 = a-1;
+	para (contador=0; a1 < b; a1 = a1 + 3 && contador++); 
+	imprima("O número de múltiplos de 3 entre ", a, " e ", b, " é ", contador);
+fim prog;
+
+--------------------------------------------------------------------------------------------------------------	
+
+prog vetores
+	int A[10], B[10], U[20], Soma[10], Sub[10], produto[10], interseccao[];
+	int i, j, s;
+	para (i = 0; i<10; i++)
+		{
+			imprima("Insira a ", i, "a posição do vetor A")
+			leia A[i];
+		}
+	para (i = 0; i<10; i++)
+		{
+			imprima("Insira a ", i, "a posição do vetor B")
+			leia B[i];
+		}
+	para (i = 0; i < 10; i++)
+	 	U[i] = A[i];
+	para (i = 0; i < 10; i++)
+		U[i+10] = B[i];
+	para (i = 0; i < 10; i++)
+		Soma[i] = A[i]+B[i];
+	para (i = 0; i < 10; i++)
+		Sub[i] = A[i]-B[i];
+	para (i = 0; i < 10; i++)
+		produto[i] = A[i]*B[i];
+	s = 0;
+	para (i = 0, i < 10; i++)
+		{
+			para (j = 0; j < 10; j++)
+				{
+					se (A[i] = B[j])
+						interseccao[s] = A[i];
+				}
+		}
+	imprima("Vetor União");
+	para (i = 0; i < 20; i++)
+		imprima(U[i], ", ");
+
+	imprima("Vetor Soma");
+	para (i = 0; i < 10; i++)
+		imprima(Soma[i], ", ");	
+			
+	imprima("Vetor Diferença");
+	para (i = 0; i < 10; i++)
+		imprima(Sub[i], ", ");
+
+	imprima("Vetor Produto");
+	para (i = 0; i < 10; i++)
+		imprima(produto[i], ", ");
+	
+	imprima("Vetor Intersecção");
+	para (i = 0; i < s; i++)
+		imprima(interseccao[i], ", ");
+fim prog;			

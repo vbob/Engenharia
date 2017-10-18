@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(void) {
+	FILE *ARQUIVO;
+	char linha[255];
+	int i;
+	ARQUIVO = fopen("arquivo-texto.txt", "w");
+	if (ARQUIVO== NULL) {
+	 	char selecao[2];
+		do {	
+			system("clear");
+			printf("\nArquivo corrompido");
+			printf("\nDeseja apagar o arquivo atual? (S/N): ");
+			scanf(" %s", selecao);
+			switch (selecao[0]) {
+				case 's': system("rm arquivo-texto.txt");
+					  break;             
+				case 'S': system("rm arquivo-texto.txt");
+				   	  break;
+				case 'n': break;          
+				case 'N': break;
+				default: break;      
+			} 
+		} while ((selecao[0] =! 'n') || (selecao[0] != 's'));
+	}
+
+	char *c;
+	char uma_linha[100];
+	do {
+		c = fgets(uma_linha,100,ARQUIVO);
+		if (c != NULL) 
+			printf ("%s", uma_linha);
+	} while (c != NULL);
+	fclose(ARQUIVO);
+}
+	

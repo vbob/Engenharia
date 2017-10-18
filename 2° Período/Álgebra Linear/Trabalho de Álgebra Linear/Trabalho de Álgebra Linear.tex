@@ -1,0 +1,365 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{lmodern}
+\usepackage{esvect}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{setspace}
+\newcommand\tab[1][1.835cm]{\hspace*{#1}}
+\newcommand\taba[1][2.55cm]{\hspace*{#1}}
+\newcommand\tabb[1][2.2cm]{\hspace*{#1}}
+\newcommand\tabc[1][3cm]{\hspace*{#1}}
+\author{Luis Alexandre Ferreira Bueno, Luiz Filipe de Jesus, Nicolas Timoteu Cuerbas e Vitor Bruno de Oliveira Barth}
+\title{Trabalho de Álgebra Linear }
+
+% End of Documento Declaration
+
+\begin{document}
+
+% Título
+\begin{center}
+\textbf{Trabalho de Álgebra Linear}
+\end{center}
+
+% Cabeçalho
+\begin{flushleft}
+
+\textbf{Professora: }Aline Brum Seibel\linebreak
+
+%Alunos
+\textbf{Alunos: } Luis Alexandre Ferreira Bueno\linebreak 
+\tab Luiz Filipe de Jesus\linebreak
+\tab Nicolas Timoteu Cuerbas\linebreak
+\tab Vitor Bruno de Oliveira Barth\linebreak
+	
+%Conteudo	
+\textbf{Conteúdos:} Matrizes canônicas, transformações lineares, operadores lineares, autovalores, autovetores e polinômios característicos \linebreak
+
+%
+% DOCUMENTO
+%
+
+\textbf{1. Matrizes canônicas e transformações lineares} \linebreak
+
+
+\tab \textbf{I) Base de uma Transformação:} Seja $V$ um espaço vetorial finito onde $ n = dim(V)$ e $\beta = \{ \vv{v_1}, \vv{v_2}, ..., \vv{v_n} \}$ a base deste espaço. Sendo assim, posso escrever todos os vetores deste espaço através da combinação $\vv{v} = c_1\vv{v_1} + c_2\vv{v_2} + ... + c_n\vv{v_n}$, onde $c$ pertence, claro, ao mesmo plano que os o espaço vetorial.  Neste caso, $\begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix}$ é a matriz das coordenadas de $V$.\linebreak
+
+\tabb Se tenho uma a transformação linear $T: V \rightarrow W$, assim como a base de $V$, consigo dizer onde estão todos os vetores de $T(V)$, pois segundo as regras c.i) e c.ii) podemos dizer que $T(\vv{v})=T(c_1\vv{v_1}+c_2\vv{v_2}+...+c_n\vv{v_n})=$ $T(c_1\vv{v_1})+T(c_2\vv{v_2})+...+T(c_n\vv{v_n})= $ $c_1T(\vv{v_1})+c_2T(\vv{v_2})+...$ $ + c_nT(\vv{v_n})$ \linebreak
+
+\tab \textbf{II) Imagem e núcleo de uma Transformação:} Sendo $T: V \rightarrow W$, $Im(T) = \{ \vv{w} \in W | $ $ \vv{w} = T(\vv{v})$ para alguns $\vv{v} \in V\}$, ou seja, a Imagem de uma Transformação corresponde ao subespaço vetorial de W que possui elementos dados por $T(\vv{v})$. Sendo assim, logicamente $Im(T) \leq W$. \linebreak
+
+\tab Já o núcleo de uma Transformação (denotado por $Ker(T)$) é dado por $Ker(T) = \{ \vv{v} \in V $ $ | T(\vv{v}) = 0\}$. Se a transformação é injetora, o núcleo é trivial, afinal $T(0)$ deve obrigatóriamente pertencer à $Im(T)$. Porém caso ela não seja injetora, o núcleo poderá ser um conjunto vetorial. Sendo assim, obrigatoriamente, $Ker(T)$ é um subespaço vetorial de $V$ \linebreak
+
+\taba \textbf{Ex. 1)} $T: \mathbb{R}^3 \rightarrow \mathbb{R}^2$ tal que $T(x,y,z) = (2x-y+z, 3x+y-2z)$ \linebreak
+\taba $Im(T) =$ $ ? \rightarrow T(x,y,z) = (2x-y+z, 3x+y-2z) = (2x,3x) + (-y,y) + (z-2z)$ \linebreak
+\taba $Im(T) = x(2,3) + y(-1,1) + z(1,-2) \rightarrow Im(T) = [(2,3) + (-1,1) + (1,-2)]$ \linebreak
+\newline
+\taba $Ker(T) = $ $? \rightarrow Ker(T) = {(x,y,z)|(2x-y+z,3x+y-2z) = (0,0)}$ \linebreak
+\taba $\begin{cases} 2x-y+z=0\\ 3x+y-2=0 \end{cases} \implies 5x-z = 0 \implies 5x = z$ \newline
+\newline \taba \hspace{3.15cm} $\implies 2x-y+z =0 \implies 2x-y+5x =0 \implies 7x = y$
+\newline \taba $Ker(T) = \{(x,7x,5x) | x \in \mathbb{R}\}$ \linebreak
+\\
+\tab \textbf{III) Isomorfismo:} Seja $\phi: V \rightarrow W$ uma transformação linear. Para que ela exista, é necessário que sejam atendidas algumas condições: \linebreak
+
+\tabb a) $V$ e $W$ precisam estar sobre o mesmo plano \linebreak
+\tabb b) $\phi$ precisa ser bijetora, ou seja, todo elemento em W precisa ser necessáriamente e exclusivamente a imagem de um elemento em V\linebreak
+\tabb c) $\phi$ deve obedecer as regras de soma e multiplicação por escalar: \linebreak
+\taba $\vv{v_1}, \vv{v_2} \in V$, $\phi(\vv{v_1}), \phi(\vv{v_2}) \in W$ e $c \in \mathbb{R} $ \linebreak
+\taba i) $\phi(\vv{v_1}) + \phi(\vv{v_2}) = \phi(\vv{v_1} + \vv{v_2}) $ \linebreak
+\taba ii) $\phi(c*\vv{v_1}) = c*\phi(\vv{v_1}) $ \linebreak
+
+\tab \textbf {IV) Homomorfismo:} Denomina-se uma transformação linear homomórfica a transformação  $T: V \rightarrow W$ em que a função T não é bijetora. \linebreak
+\\
+\tab \textbf{V) Matriz de uma transformação linear:} De modo geral, fixadas as bases $\beta = \{\vv{v_1}, \vv{v_2},...,\vv{v_n}\}$ e $\beta' = \{\vv{w_1},\vv{w_2},...,\vv{w_n}\}$, a matriz $A = \begin{bmatrix} a_{11} \ ... \ a_{1n} \\ \vdots \\ a_{n1} \ ... \ a_{nn} \end{bmatrix} $ podemos associar $T_A: \mathbb{R}^n \rightarrow \mathbb{R}^m$ e $ \vv{v} \rightarrow T_A(\vv{v})$. \linebreak
+\tab Seja $X =[\vv{v}]_\beta = \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix}$, logo $A*X = \begin{bmatrix} a_{11} \ ... \ a_{1n} \\ \vdots \\ a_{n1} \ ... \ a_{nn} \end{bmatrix} * \begin{bmatrix} x_1 \\ \vdots \\ x_n \end{bmatrix} = \begin{bmatrix} y_1 \\ \vdots \\ y_n \end{bmatrix}$ \linebreak
+\\
+\tab Então $T_A(\vv{v}) = y_1 \vv{w_1} + ... + y_m \vv{w_m}$ onde $y_i = A_i*X$ e $A_i$ é a i-ésima linha de $A$. Em geral, dada um matriz $A_{mxn}$, ela é tida como aplicação linear $T_A: \mathbb{R}^n \rightarrow \mathbb{R}^m$ em relação às bases canônics de $\mathbb{R}^n$ e $\mathbb{R}^m$.\linebreak
+\\
+\tab Sendo assim, encontraremos a matriz associada a uma transformação linear: seja $T: V \rightarrow W$ linear, $\beta = \{\vv{v_1}, \vv{v_2},...,\vv{v_n}\}$ base de $V$ e $\beta' = \{\vv{w_1},\vv{w_2},...,\vv{w_n}\}$ base de $W$, então $T(v_1),...,T(v_n)$ são vetores de $W$, e portanto \linebreak \newline \tab $\begin{matrix} T(\vv{v_1}) = a_{11}\vv{w_1} + ... + a_{m1}\vv{w_m} \\ \vdots \\ T(\vv{v_n}) = a_{1n}\vv{w_1} + ... + a_{an}\vv{w_m} \end{matrix}$ \linebreak
+\newline \tab A transposta da matriz de coeficientes deste sistema, denotada por ${[T]_{\beta'}^\beta}$ é chamada de matriz de $W$ em relação às bases $\beta$ e $\beta'$. \linebreak
+\newline \tab ${[T]_{\beta'}^\beta} = \begin{bmatrix} a_{11} \ ... \ a_{1n} \\ \vdots \\ a_{n1} \ ... \ a_{nn} \end{bmatrix} = A$ \linebreak \newline
+\\
+\tab \textbf{Ex. 2)} Dado $T: \mathbb{R}^3 \rightarrow \mathbb{R}^2, T(x,y,z) = (2x-y+z,3x+y-2z)$  e as bases \linebreak \tab $\alpha = \{\vv{v_1} = (1,1,1), \vv{v_2} = (0,1,1), \vv{v_3} = (0,0,1)\}$ \linebreak \tab $\beta = \{\vv{w1} = (0,1),  \vv{w_2} = (0,1)\}$ \linebreak \tab $T_\alpha^\beta = A = ?$ \linebreak  \newline 
+\\
+\tab * Matriz $T_\alpha^\beta$ é de ordem $2x3$:\newline
+\tab $T_\alpha^\beta=\begin{bmatrix} a_{11} \ a_{12} \ a_{13} \\ a_{21} \ a_{22} \ a_{23} \end{bmatrix}$ \linebreak
+\tab $\hspace{0.1cm}\begin{matrix}\hspace{0.2cm}\bigtriangledown \hspace{0.15cm}\ \bigtriangledown \ \hspace{0.15cm} \bigtriangledown\\ \hspace{0.2cm} T({\vv{v_1})_\beta} \ T{(\vv{v_2})_\beta} \ T{(\vv{v_3})_\beta}\end{matrix}$ \linebreak
+\newline 
+\newline \tab - $T(1,1,1) = (2-1+1,3+1-2) \implies T(1,1,1) = (2,2)$ 
+\newline \tab $(2,2) = a_{11}(1,0) + a_{21}(0,1) \implies (2,2) = (a_{11}, a_{22})$  \linebreak
+\newline \tab - $T(0,1,1) = (0-1+1,0+1-2) \implies T(0,1,1) = (0,-1)$ 
+\newline \tab $(0,-1) = a_{12}(1,0) + a_{22}(0,1) \implies (0,-1) = (a_{12}, a_{22})$  \linebreak
+\newline \tab - $T(0,0,1) = (0-0+1,0+0-2) \implies T(0,0,1) = (1,-2)$ 
+\newline \tab $(1,-2) = a_{13}(1,0) + a_{23}(0,1) \implies (1,-2) = (a_{13}, a_{23})$  \linebreak
+\newline \tab $T_\alpha^\beta$ = $\begin{bmatrix} 2 \ \hspace{0.45cm} 0 \hspace{0.45cm} 1 \\ 2 \ -1 \ -2 \end{bmatrix} $
+\newline \\
+\pagebreak
+\textbf{2. Operadores lineares}\linebreak
+
+\tab É chamado de Operador Linear a Transformação Linear $T$ tal que $T: V \rightarrow V$, ou seja, aquela na qual o domínio e o contradomínio pertencem ao mesmo espaço vetorial.\linebreak
+
+\tab A condição de existência de um Operador Linear é a mesma que as outras transformações, ou seja, deve obedecer as regras de soma e de multiplicação por escalar dada em 1.c.i) e 1.c.ii), porém $V$ necessita ser um espaço vetorial finito. Como o espaço vetorial do dominio é o mesmo do contradomínio, a base de ambos é a mesma.\linebreak
+
+\tab Sendo $X = \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix}$ as coordenadas do espaço vetorial $V$, e $A$ uma matriz de dimensão $n*n$, um operador linear pode ser expresso na forma $T = A*X$, sendo esta a grande diferença entre ele e as outras transformações lineares. \linebreak
+
+\tab Seja $A = \begin{bmatrix} a_{11} \ a_{12} \ ... \ a_{1n} \\ a_{21} \ a_{22} \ ... \ a_{2n} \\ \vdots \\ a_{n1} \ a_{n2} \ ... \ a_{nn} \end{bmatrix}$. Ao calcularmos $A*X$, perceberemos que $ T(\vv{v_j})$ | $ 1 \leq j \leq n  $ é dada por $ \displaystyle\sum_{i=1}^n a_{ij}\vv{v_i} $, assim como $T(\vv{v}) = \displaystyle\sum_{j=1}^n c_jT(\vv{v_j}) $. Portanto $T(\vv{v}) = \displaystyle\sum_{j=1}^n \displaystyle\sum_{i=1}^n c_j(a_{ij}\vv{v_i})$ \linebreak 
+\newline \newline \textbf{3. Autovalores e autovetores}\linebreak
+\tab Seja $V$ um espaço vetorial sobre $K$, e seja $T$ um operador linear sobre $V$. Um vetor não nulo $\vv{v}$ de $V$ é dito um autovetor de $T $ se existir um $\lambda \in K | T(\vv{v}) = \lambda\vv{v}$. Neste caso $\lambda$ é dito autovalor de $T$ \linebreak
+
+\tab \textbf{Ex. 1)} $T: \mathbb{R}^2 \rightarrow \mathbb{R}^2$  
+$(x,y) \rightarrow T(x,y) = (4x+5y,2x+y)$ Verifique se $\vv{v} = (5,2)$ é um autovetor de $T $. Por definição $ T( \vv{v} ) = \lambda\vv{v} \implies T(5,2) = (30,12) =6(5,2) = 6\vv{v}$. Logo $\vv{v} = (5,2)$ é um autovetor de $T$ e $\lambda = 6$ é o autovalor associado $\vv{v}$. \linebreak
+
+\tab Agora, verifique se $\vv{u} = (1,1)$ é um autovetor de $T$. 
+\newline \tab $T(\vv{u}) = T(1,1) = (9,3) = 3(3,1)$. $(3,1) \neq (1,1)$, logo $\vv{u}$ não é um autovetor de $T$. 
+\newline \newline \tab \textbf{Ex. 2)} Se $T: \mathbb{R}^3 \rightarrow \mathbb{R}^3, T(x,y,z) = (x,y,0) = 1 (x,y,0)$. Logo qualquer vetor $(x,y,0)$ é um autovetor de $T$ e tem seu autovalor associado em $1$.
+\newline \tab Um escalar $\lambda \in \mathbb{C}$ é um autovalor de $A \in \mathbb{R}^(nxn)$ se existe um vetor $x \in \mathbb{C}$ não nulo tal que $Ax = \lambda x$ \linebreak
+
+\tab \textbf{Algumas propriedades: }
+\newline \tab i) Sejam $\lambda$ e $\beta$ autovalores diferentes de $T$ e $\vv{u}$ e $\vv{v}$ autovetores associados a $\lambda$ e $\beta$, respectivamente. Então os vetores $\vv{u}$ e $\vv{v}$ são linearmente independentes. \linebreak
+
+\tab ii) $det(A)=(\lambda 1*\lambda 2*...*\lambda n)$, ou seja, o determinante de $A$ é igual ao produto dos seus
+autovalores. \linebreak
+
+\tab iii) $A$ é matriz não singular se, e somente se, todos os seus autovalores são diferentes
+de $0$. \linebreak
+
+\tab iv) Os autovalores de $A$ e de $AT$ são os mesmos, sendo $AT$ a matriz transposta de $A$. \linebreak \pagebreak
+
+
+\textbf{4. Polinômios característicos}\linebreak
+\tab O Polinômio Caracteristico é um metodo pratico para se encontrar autovalores e autovetores de uma matriz  de ordem \textbf{N}\newline
+\textbf{Exemplo}:\newline\newline
+\tab A= $ \begin{pmatrix} & -2 &  0\\  -1& 1 & 0 \\ 0& 1 & 2 \end{pmatrix}$
+\vspace*{3mm}
+
+\tab Procuramos um vetor $\vv{v}\in\mathnormal{R^3}$  e escalares $\lambda\in\mathnormal{R}$ Tal que $\mathnormal{A}. \vv{v}= \lambda\vv{v}$. Observe se  $\mathnormal {I}$ for a matriz identidade de mesma ordem a equação pode ser escrita $(\mathnormal {A}-\lambda\mathnormal {I})\vv{v}=0$ \vspace*{3mm}\newline
+\tab $\begin{bmatrix*} 4 -\lambda& -2 &  0\\  -1& 1-\lambda & 0 \\  0& 1 & 2-\lambda \end{bmatrix*} \begin{bmatrix}
+x\\y\\z\\ \end{bmatrix}=0 $
+\vspace*{3mm}\newline \tab Para se calcular os autovetores de  A, isto é, vetores v$\neq$ 0, tais que $(\mathnormal {A}-\lambda\mathnormal {I})\mathnormal {v}=0$. Neste caso calculamos a $det(\mathnormal {A}-\lambda\mathnormal {I})=0$\vspace*{3mm}\newline
+\tab $\begin{bmatrix*} 4 -\lambda& -2 &  0\\  -1& 1-\lambda & 0 \\  0& 1 & 2-\lambda \end{bmatrix*}=0 \implies -\lambda^2+7\lambda-16\lambda+12=0\implies (\lambda-2)^2(\lambda-3)=0$\vspace*{3mm}\newline
+\tab Logo $\lambda=2$ e $\lambda=3$são as raizes do polinomio caracteristico de $\mathnormal{A}$, e portanto os autovalores da matriz $\mathnormal{A}$ são 2 e 3. Conhecendo os autovalores podemos encontrar os autovetores correspondentes. \tab Resolvendo a equação: $\mathnormal{A}\mathnormal{v}=\lambda\mathnormal{v}$\vspace*{3mm}\newline
+\tab $\lambda=2$\newline
+\tab $\begin{bmatrix*} 4& -2 &  0\\  -1& 1 & 0 \\  0& 1 & 2 \end{bmatrix*} \begin{bmatrix}
+x\\y\\z\\ \end{bmatrix}=2\begin{bmatrix} x\\y\\z \end{bmatrix} \implies  \begin{cases} 4x+2y\hspace{1cm}=2x\\ -x+1y\hspace{1cm}=2y\\ \hspace{1.2cm}y-2z=2z \end{cases}\implies  \begin{cases} x\hspace{1cm}=y\\ -x\hspace{0.7cm}=y\\\hspace{0.5cm}y hspace{0.5cm}=0 \end{cases}$\vspace*{3mm}\newline
+\tab Implicando em: $y=0$, x=0 e como nenhuma equação impõe restrição em z, os autovetores associados a $\lambda=2$ são do tipo $\mathnormal{v}(0,0,z)$ pertendo ao subespaço[(0,0,1)]. \vspace*{3mm}\newline
+ \tab $\lambda=3$\newline
+\tab  $\begin{bmatrix*} 4& -2 &  0\\  -1& 1 & 0 \\  0& 1 & 2 \end{bmatrix*} \begin{bmatrix}
+x\\y\\z\\
+\end{bmatrix}=3\begin{bmatrix}
+x\\y\\z
+\end{bmatrix} \implies  \begin{cases}
+    4x+2y\hspace{1cm}=3x\\
+    -x+1y\hspace{1cm}=3y\\
+    \hspace{1.2cm}y-2z=3z
+  \end{cases}\implies  \begin{cases}
+    x\hspace{1cm}=-2y\\
+    x\hspace{1cm}=-2y\\
+    \hspace{0.5cm}y\hspace{0.5cm}=z
+  \end{cases}$\vspace*{3mm}\newline
+\tab Implicando em:y=z,x=2y. Os autovetores associados a $\lambda=3$ são do tipo (-2y, y, y) pertencendo ao  subespaço[(-2,1,1)].\newline
+\tab Generalizando:\vspace*{3mm}\newline
+ \tab $ \begin{bmatrix}
+a_{ 1,1}-\lambda & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2}-\lambda & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{n,1} & a_{n,2} & \cdots &a_{n,n}-\lambda 
+ \end{bmatrix}\begin{bmatrix}
+x1\\x2\\\vdots\\x3
+\end{bmatrix}=\begin{bmatrix}
+0\\0\\\vdots\\0
+\end{bmatrix}$\vspace*{3mm}\newline
+\tab Chamemos essa matriz de $\mathnormal{B}$. $\mathnormal{B}.\mathnormal{v}=0$. Se a determinante for diferente de zero, temos que o posto da matriz é n.	E o sistema linear indica que existe apenas uma única solução: x1=x2=...=xn=0 sempre é solução do sistema homogênio, solução nula. Assim a única solução para encontrar autovetores v é:\vspace*{3mm}\newline
+\tab $det(A-\lambda\mathnormal{I})=0$\newline
+\tab $P(\lambda)=det(A-\lambda\mathnormal{I})= \begin{bmatrix}
+a_{ 1,1}-\lambda & a_{1,2} & \cdots & a_{1,n} \\
+  a_{2,1} & a_{2,2}-\lambda & \cdots & a_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  a_{n,1} & a_{n,2} & \cdots &a_{n,n}-\lambda 
+ \end{bmatrix}$\vspace*{3mm}\newline
+\tab $P(\lambda)=(a_{1,1}-\lambda)\cdots(a_(n,n)-\lambda)$+ termos de grau $<$ n, e os autovalores são as raizes deste polinômio. P($\lambda$) conhecido como polinômio característico da matriz.\newline
+\tab \textbf{Ex: 1)} $
+ \begin{bmatrix}
+1 & 2\\
+0 & -1
+\end{bmatrix}
+ $\newline
+\tab  $det(A-\lambda\mathnormal{I})=
+ \begin{bmatrix}
+1 -\lambda& 2\\
+0 & -1-\lambda
+\end{bmatrix} \linebreak \newline \tab (1-\lambda)(-1-\lambda)-0 \implies (\lambda-1)(\lambda+1) =P(\lambda) \implies  P(\lambda)=0\implies\lambda=1\hspace{1mm} e\hspace{1mm} \lambda=-1\newline
+ $\newline
+\tab $\lambda=1 \implies \begin{cases}
+    x+2y=x\\
+   \hspace{6mm}-y=y
+  \end{cases} \implies y=0 \hspace{1mm}e\hspace{1mm}x=x \implies \mathnormal{v}=(x,0)\vspace{3mm}\newline
+ $
+\tab $\lambda=-1\implies 
+ \begin{cases}
+    x+2y=-x\\
+   \hspace{6mm}-y=-y
+  \end{cases} \implies y=y $ e $x=-y \implies \mathnormal{v}=(-y,y)\vspace{3mm}\newline
+ $ \linebreak 
+\textbf{5. Exercícios}\linebreak
+\tab \textbf{1) Verifique se as seguintes afirmações são verdadeiras ou falsas} \linebreak
+\taba \textbf{(a) Qualquer operador linear em $V$ é tal que $V = Ker(T) \oplus Im(T)$} \linebreak
+\taba Veradeiro. Peguemos $x \in V$. Sendo $T = T^2$, temos $Tx = T^2x$ e logo $T(x-Tx) = 0$ \linebreak
+\taba Sendo $x-Tx = \xi$ para alguns $\xi \in Ker(T)$, isso mostra que $V = Im(T) + Ker(P)$.
+\taba Agora pegue $y \in Im(T) \bigcap Ker(T)$. Visto que $y \in Im(T)$ temos que $y = Tz$ para alguns $z \in V$. Aplicando $T$ em ambos os lados nós obtemos $Ty = T^2z$. Só que $y \in Ker(T)$,  logo $0 = Ty = T^2z = Tz = y$. Isso mostra que $Im(T) \bigcap Ker(T) = 0 $ e logo temos que $V = Im(T) \oplus Ker(T)$. \linebreak
+\\
+\taba \textbf{(b) Se $T:P_2\rightarrow\mathbb{R}^2$ uma transformação linear definida por $T:(at^2+bt+c) = (a-b$ $+c,  2a +b-c)$, então $\vv{p}(t)=5t+5 \in Ker(T)$} \linebreak
+\taba Verdadeiro. $T(at^2+bt+c) = (a-b+c, 2a+b-c) \implies T(5t+5) = (-5+5,5-5) = (0,0)$ \linebreak
+\taba Logo, $P(t) 5t+5 \in Ker(T)$ \linebreak \newline 
+\taba \textbf{(c) Se $Ker(T)$ é gerado por três vetores $\vv{v_1}, \vv{v_2}, \vv{v_3}$, então a imagem de qualquer operador linear $T:\mathbb{R}^5\rightarrow\mathbb{R}^5$ tem dimensão 2}\linebreak
+taba Verdadeiro. Pelo teorema do núcleo e da imagem podemos afirmar que dado $T: V \rightarrow W$, $dim(V) = dim(Ker(T)) + dim(Im(T)) \implies 5 = 3 +x \implies x = 2 \implies dim(Im(T)) = 2$ \linebreak
+\newline \ \taba \textbf{(d) A aplicação linear $T:M(2,2)\rightarrow\mathbb{R}$ definida por $T\begin{pmatrix}\begin{bmatrix} a & b \\c & d\end{bmatrix}\end{pmatrix} = $ $2a+c-d$ é uma transformação linear}\linebreak 
+\taba Verdadeiro. Para ser transofrmação linear:\linebreak 
+\taba a) $0 \in T$?  $\rightarrow T: \begin{bmatrix} 0 \ 0 \\ 0 \ 0 \end{bmatrix} = 0$ \linebreak
+\taba b) $T(\vv{u} + \vv{v}) = T(\vv{u}) + T(\vv{v})$\linebreak
+\taba \hspace{0.4cm}  $T(\vv{u} + \vv{v}) = T\begin{pmatrix} {\begin{bmatrix} a_1 & b_1 \\c_1 & d_1 \end{bmatrix}} + {\begin{bmatrix} a_2 & b_2 \\c_2 & d_2\end{bmatrix}}\end{pmatrix}$ \linebreak
+\taba \hspace{0.4cm}  $T(\vv{u} + \vv{v}) = (2(a_1+a-2) + (c_1+c_2) + (d_1+d_2))$ \linebreak
+\taba \hspace{0.4cm}  $T(\vv{u} + \vv{v}) = (2a_1 + c_1 + d_1) + (2a_2+c_2+d_2)$ \linebreak
+\taba \hspace{0.4cm}  $T(\vv{u} + \vv{v}) = T\begin{pmatrix}\begin{bmatrix} a_1 & b_1 \\c_1 & d_1\end{bmatrix}\end{pmatrix} +  T\begin{pmatrix}\begin{bmatrix} a_2 & b_2 \\c_2 & d_2\end{bmatrix}\end{pmatrix}$ 
+\linebreak \taba \hspace{0.4cm} $T(\vv{u} + \vv{v}) = T(\vv{u}) + T(\vv{v})$ \linebreak \newline
+\taba c) $T(\alpha \vv{u}) = \alpha T(\vv{u})$\linebreak
+\taba \hspace{0.4cm} $T(\alpha \vv{u}) = T\begin{pmatrix} {\alpha\begin{bmatrix} a_1 & b_1 \\c_1 & d_1 \end{bmatrix}}\end{pmatrix}$\linebreak
+\taba \hspace{0.4cm} $T(\alpha \vv{u}) = (2 \alpha a_1,\alpha c_1,-\alpha d_1)$ \linebreak
+\taba \hspace{0.4cm} $T( \alpha \vv{u} ) = \alpha T {\begin{pmatrix} {\begin{bmatrix} a_1 & b_1 \\c_1 & d_1 \end{bmatrix} } \end{pmatrix}} $ \linebreak
+\taba \hspace{0.4cm} $T(\alpha \vv{u}) = \alpha T(\vv{u})$ \linebreak
+\newline
+\taba \textbf{(e) Existem transformações lineares $T:P_1 \rightarrow P_3$ sobrejetoras}\linebreak
+\taba Falso, pois a transformação linear do domínio ($P_1$) não é capaz de gerar o contradomínio ($P_3$) por completo, por isso não é sobrejetora. 
+\newline \newline
+\tab \textbf{2) Seja a transformação linear $T:\mathbb{R}^3 \rightarrow \mathbb{R}^2$ definida por $T(x,y,z) = (x-y+2z,4x+ $ $3y-z)$ determine: \linebreak
+\taba(a) A matriz canônica de $T$}\linebreak
+\taba T:$R^3\rightarrow R^2$ por t(x,y,z)=(x-y+2z,4x+y-z), A.v=T(v)\linebreak
+\taba$\begin{bmatrix}
+a & b & c\\
+d & e & f
+\end{bmatrix}.
+\begin{bmatrix} 
+x\\y\\z
+\end{bmatrix}=
+\begin{bmatrix}
+ax+by+cz\\
+dx+ey+fz
+\end{bmatrix}\implies\begin{bmatrix}
+a & b & c\\
+d & e & f
+\end{bmatrix}.
+\begin{bmatrix}
+x\\y\\z\\
+\end{bmatrix}=
+\begin{bmatrix}
+x &-y-&2z\\
+4x&+2y&-z
+\end{bmatrix}
+$\linebreak
+\taba$ax=x$ a=1\linebreak
+\taba$by=-y$ b=-1\linebreak
+\taba$cz=2z$ c=2\linebreak
+\taba$dx=4x$ d=4\linebreak
+\taba$ey=2y$ e=2\linebreak
+\taba$fz=-z$ f=-1\linebreak
+\taba Matriz A=$\begin{bmatrix}
+1&-1&2\\
+4&2&-1
+\end{bmatrix}$\linebreak
+\newline \newline
+\taba\textbf{(b) O núcleo de $T$, uma base e a dimensão }\linebreak
+\taba$
+\begin{cases}
+x-y+2z\\
+4x+2y-z
+\end{cases}\implies\begin{cases}
+2x-2y+4z=0\\
++4x+2y-z=0
+\end{cases}\implies6x+3z=0\implies6x=-3z\implies x=z/2\linebreak
+$
+\taba$
+\begin{cases}
+x-y+2z\implies z/2-y+2z=0 \implies -y=-z/2-2z \implies  y=5z/2
+\end{cases}
+$\linebreak
+\taba Ker(t)={(x,y,z):(x-y+2z,4x+2y-z)=(0,0)}\linebreak
+\taba Ker(t)={(z/2,5z/2,z)z$\mathnormal{R}$}\linebreak
+\taba base de ker(t)=[(1/2,5/2,1)]\linebreak
+\taba dim Ker(t)=1\linebreak \newline \newline
+\taba\textbf{(c) A imagem de $T$, uma base e a dimensão} \linebreak
+\taba Im(t)=(x-y+2z,4x+2y-z)=(x,4x)+(-y,2y)+(2z,-z)=x(1,4)+y(-1,2)+z(2,-1)\linebreak
+\taba Im(t)=[(1,4)+(-1,2)+(2,-1)]\linebreak
+\taba base de Im(t)[(1,4)+(2,-1)]\linebreak
+\taba dim Im(t)=2\linebreak
+\\
+\tab \textbf{3) Determine a transformação linear que leva os vetores $\vv{c_1}, \vv{c_2}, \vv{c_3}$ nos vetores $\vv{w_1}=$ $(1,0,0)$, $\vv{w_2}=(3,1,0)$ e $\vv{w_3}=(1,2,4)$ respectivamente. e responda se esta transformação linear é um isomorfismo} \linebreak
+\taba \textbf{(a)} T(e1)=(1,0,0)\linebreak
+\taba t(e2)=(3,1,0)\linebreak
+\taba t(e3)=(1,2,4)\linebreak
+\linebreak
+\taba T(1,0,0)=(1,0,0)\linebreak
+\taba T(0,1,0)=(3,1,0)\linebreak
+\taba T(0,0,1)=(1,2,4)\linebreak
+\linebreak
+\taba \textbf{(b)} Verificando se é injetora, condição Ker(T)=(0,0,0)\linebreak
+\taba T(x,y,z)=(x+3y+z,y+2z, 4z)=(0,0,0)\linebreak
+\taba $\begin{cases}
+x+3y+z=0\\
+\hspace{6mm}y+2z=0\\
+\hspace{13mm}4z=0
+\end{cases}\implies z=0, y=0, x=0$\linebreak
+\\ \pagebreak
+\tab \textbf{ 4) Dada a matriz canônica $[T]= \begin{bmatrix}
+1 & 0 & 0\\ 2 & 1 & 0\\ 3 & -2 & -1 \end{bmatrix}$ de um operador linear em $\mathbb{R}^3$, verifique se $T$ é um isomorfismo e justifique se $\vv{w}=(2,-1,0) \in Im(T)$ e se $\vv{u}= $ $(0,3,4) \in Ker(T)$? }\linebreak
+
+\taba $T:R^3\rightarrow R^3$\linebreak
+\taba \textbf{ (a) Para ser isomórfica ela temdi a possuir apenas um T(x,y,z)}
+\taba T(x,y,z)=$\begin{bmatrix}
+x & Y & z
+\end{bmatrix} \begin{bmatrix}
+1&0&0\\
+2&1&0\\
+3&-2&-1
+\end{bmatrix} =\begin{bmatrix}
+x+2y+3z\\
+ \hspace{9mm}y-2z\\
+ \hspace{18mm}z
+\end{bmatrix}
+$\linebreak
+\taba(x,y,z)=(x+2y+3z,y-2z,z)\linebreak
+\taba ker(T)$\implies$(x+23z,y-2z,z)=(0,0,0)\linebreak
+\taba $\begin{cases}
+x+2y+3z=0\\
+\hspace{9mm}y-2z=0\\
+\hspace{18mm}z=0
+\end{cases}\implies$ Logo ela é injetora\linebreak
+\taba Como $T:R^3\rightarrow R^3$ é um op. linear, podemos dizer que ela é isomorfica.\linebreak
+\newline
+\taba \textbf{b) Transformar todos os elementos do plano original}\linebreak
+\taba $\vv{w}$=(0,-1,0) e IM(t)\linebreak
+\taba $\begin{cases}
+x+2y+3z=2\\
+\hspace{9mm}y-2z=-1\\
+\hspace{18mm}z=o
+\end{cases}\implies x=4, y=-1, z=0 \implies
+$Logo $\vv{w}\in$Im(t)\linebreak
+\taba \textbf{$\vv{u}(0,3,4)\in Ker(t)$}\linebreak
+\newline
+%
+% BIBLIOGRAFIA
+%
+\textbf{Bibliografia: }BOLDRINI, Jose Luís. \textit{Álgebra Linear}. 3ª Edição. \linebreak
+\taba COELHO, Flávio Uhoa. \textit{Um Curso de Álgebra Linear}. 2ª Edição.
+\taba WIKIBOOKS. \textit{Álgebra Linear}. Edição de 24/01/2014. \linebreak
+
+\end{flushleft}
+
+\end{document}

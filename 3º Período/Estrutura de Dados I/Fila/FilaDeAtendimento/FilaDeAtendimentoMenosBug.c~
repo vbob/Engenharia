@@ -1,0 +1,51 @@
+#include "../Bibliotecas/iQueue.h"
+
+void chamaProx(int *caixa, iQueue *fila, int nCaixa, int nClientes);
+int achaCaixaLivre(int *caixa, iQueue *fila, int nCaixas);
+
+int main() {
+	int caixa[10] = {0,0};
+	iQueue fila;
+	init(&fila);
+	enqueue(&fila,20);
+	enqueue(&fila,10);
+	enqueue(&fila,5);
+	enqueue(&fila,50);
+	enqueue(&fila,15);
+	enqueue(&fila,25);
+	enqueue(&fila,20);
+	enqueue(&fila,12);
+	enqueue(&fila,18);
+	enqueue(&fila,7);
+	
+	int nClientes = size(&fila);
+	int i = 0;
+
+	for (i = 0; !isEmpty(&fila); i++)
+		chamaProx(caixa, &fila, achaCaixaLivre(caixa, &fila, 2), nClientes);
+
+	printf("\nO atendimento demorou %i minutos\n\n", i);
+}
+
+void chamaProx(int *caixa, iQueue *fila, int nCaixa, int nClientes) {
+	if (caixa[nCaixa] == 0) {
+		caixa[nCaixa] = dequeue(fila);	
+		printf("Cliente %i vá para o caixa %i\n", nClientes - size(fila), nCaixa+1);
+	}
+
+	else
+		caixa[nCaixa]--;
+}
+
+int achaCaixaLivre(int *caixa, iQueue *fila, int nCaixas) {
+	int i = 0;
+	while (i < nCaixas) {
+		if (caixa[i] == 0)
+			return i;
+		else
+			caixa[i]--;
+		i++;
+	}
+
+	return achaCaixaLivre(caixa, fila, nCaixas);
+}

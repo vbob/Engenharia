@@ -1,0 +1,25 @@
+start
+
+number n = 1;
+number aux = 1;
+number primo = 1;
+
+until (aux == n) {
+  aux = aux+1;
+  number divisao = n/aux;
+
+  when (n-(aux*divisao) == 0) {
+     primo = 0;
+     aux = n;
+  } 
+}
+
+show n;
+
+when (primo == 1) {
+  show " e primo";
+} else {
+  show " nao e primo";
+}
+	
+finish

@@ -1,0 +1,41 @@
+# Usuário digitou 142
+
+ASCII(142) = DEC(49   52   50   10 ) 
+ASCII(142) = HEX(0x31 0x34 0x32 0xA)
+
+# Você deseja converter 49 52 50 para 1 4 2
+# Só que ele está salvo assim: 110001 110100 110010 001010
+
+# 1o: Separar em blocos e adicionar na pilha
+X = 1
+
+function() {
+	Pegar o byte X
+	se (byteX != 001010)
+		Salvar na pilha
+		X++
+		function()
+	senao 
+		converter()
+}
+
+casaDecimal = 1
+resultado = 0
+
+converter() {
+	se (X >= 0)
+		desempilhar em Y
+		subtrarir 0x30
+		multiplicar por casaDecimal
+		resultado += Y
+		casaDecimal*=10
+		X--
+	senao
+		fim
+}
+
+# PILHA
+
+110010
+110100
+110001
