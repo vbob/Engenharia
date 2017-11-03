@@ -1,0 +1,117 @@
+#Options
+GenerateScanner = true
+GenerateParser = true
+Language = Java
+ScannerName = Lexico
+ParserName = Sintatico
+SemanticName = Semantico
+ScannerCaseSensitive = true
+ScannerTable = Full
+Input = Stream
+Parser = LL
+#RegularDefinitions
+WS: [\ \n \t]
+NUMEROS: [0-9]
+LETRAS: [a-z]|[A-Z]
+
+#Tokens
+:{WS}*
+
+// Tokens de Comandos
+tk_inicio: "start"
+tk_fim: "finish"
+tk_escrever: "show"
+tk_ler: "scan"
+tk_repeticao: "until"
+tk_condicao_se: "when"
+tk_condicao_senao: "else"
+
+// Tokens de Lógica e Matemática
+tk_matematica_soma: \+
+tk_matematica_subtracao: \-
+tk_matematica_multiplicacao: \*
+tk_matematica_divisao: /
+tk_atribuicao: "="
+tk_logica_menor: "<"
+tk_logica_maior: ">"
+tk_logica_igualdade: "=="
+tk_logica_diferente: "!="
+tk_final_linha: ";"
+tk_parenteses_abre: \(
+tk_parenteses_fecha: \)
+tk_chaves_abre: \{
+tk_chaves_fecha: \}
+
+// Tokens de Tipo
+tk_tipo_numerico: "number"
+var_numerico: {NUMEROS}*
+tk_id: {LETRAS}({LETRAS}|{NUMEROS})*
+tk_texto: \"({LETRAS}|{NUMEROS}|\ )*\"
+
+#NonTerminals
+<PROGRAMA>
+<LISTA_COMANDOS>
+<COMANDO>
+<ARGUMENTO_GERAL>
+<MATEMATICA>
+<EXPRESSAO_ARITMETICA>
+<ARGUMENTO_STRING>
+<ARGUMENTO_NUMERICO>
+<LOGICA>
+<EXPRESSAO_LOGICA>
+<STRING>
+<DECLARACAO>
+<ATRIBUICAO>
+<ALTERAR_VALOR>
+<SENAO>
+<OP_MATEMATICA>
+<OP_LOGICA>
+#Grammar
+// Estrutura Global do Programa
+<PROGRAMA> ::= tk_inicio <LISTA_COMANDOS> tk_fim;
+<LISTA_COMANDOS> ::= <COMANDO> <LISTA_COMANDOS>;
+<LISTA_COMANDOS> ::= î;
+
+// Comandos
+<COMANDO> ::= tk_escrever <ARGUMENTO_GERAL> tk_final_linha;
+<COMANDO> ::= tk_ler tk_id tk_final_linha;
+<COMANDO> ::= tk_repeticao <LOGICA> tk_chaves_abre <LISTA_COMANDOS> tk_chaves_fecha;
+<COMANDO> ::= tk_condicao_se <LOGICA> tk_chaves_abre <LISTA_COMANDOS> tk_chaves_fecha <SENAO>;
+<COMANDO> ::= <DECLARACAO> tk_final_linha;
+<COMANDO> ::= <ALTERAR_VALOR> tk_final_linha;
+
+// Verificação de Sintaxe - Lógica
+<LOGICA> ::= tk_parenteses_abre <EXPRESSAO_LOGICA> tk_parenteses_fecha;
+<EXPRESSAO_LOGICA> ::= <MATEMATICA> <OP_LOGICA> <MATEMATICA>;
+<SENAO> ::=  tk_condicao_senao tk_chaves_abre <LISTA_COMANDOS> tk_chaves_fecha;
+<SENAO> ::= î;
+
+// Verificação de Sintaxe - Matemática
+<MATEMATICA> ::= <ARGUMENTO_NUMERICO> <EXPRESSAO_ARITMETICA>;
+<MATEMATICA> ::= tk_parenteses_abre <MATEMATICA> tk_parenteses_fecha <EXPRESSAO_ARITMETICA>;
+<EXPRESSAO_ARITMETICA> ::= <OP_MATEMATICA> <MATEMATICA>;
+<EXPRESSAO_ARITMETICA> ::= î;
+
+// Operacoes Logicas ou Matematicas
+<OP_MATEMATICA> ::= tk_matematica_soma;
+<OP_MATEMATICA> ::= tk_matematica_subtracao;
+<OP_MATEMATICA> ::= tk_matematica_multiplicacao;
+<OP_MATEMATICA> ::= tk_matematica_divisao;
+
+<OP_LOGICA> ::= tk_logica_menor;
+<OP_LOGICA> ::= tk_logica_maior;
+<OP_LOGICA> ::= tk_logica_igualdade;
+<OP_LOGICA> ::= tk_logica_diferente;
+
+// Argumentos
+<ARGUMENTO_GERAL> ::= <ARGUMENTO_STRING>;
+<ARGUMENTO_GERAL> ::= <MATEMATICA>;
+<ARGUMENTO_NUMERICO> ::= var_numerico;
+<ARGUMENTO_NUMERICO> ::= tk_id;
+<ARGUMENTO_STRING> ::= tk_texto;
+
+// Declaração e Atribuição
+<DECLARACAO> ::= tk_tipo_numerico tk_id <ATRIBUICAO>;
+<ATRIBUICAO> ::= tk_atribuicao <MATEMATICA>;
+<ATRIBUICAO> ::= î;
+<ALTERAR_VALOR> ::= tk_id tk_atribuicao <MATEMATICA>;
