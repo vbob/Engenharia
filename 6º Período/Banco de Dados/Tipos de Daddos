@@ -1,9 +1,0 @@
-Redução de um DER a tabelas:
-
-Tipos de Dados:
-
-1) Numéricos (Inteiro/INTEGER ou Real/NUMERIC(qtde_digitos, precisao))
-2) Cadeia de Caracteres (Existe Padrão/CHAR(n) ou Variável/VARCHAR(n))
-3) Data e Hora (Data/DATE, Data e Hora/DATETIME ou TIMESTAMP, Hora/TIME) 
-
-

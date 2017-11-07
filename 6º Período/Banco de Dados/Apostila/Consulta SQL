@@ -1,0 +1,6 @@
+SELECT campo1, campo2, ..., campoN  		/* 1º Defina os campos (atributos) que serão mostrados */
+FROM tabela1, tabela2		    						/* 2º Liste as tabelas necessárias à consulta */
+WHERE tabela1.campoX = tabela2.campoX 	/* 3º Identifique os campos (atributos) de ligação */
+	AND campo2>10													/* mais alguma condição */
+ORDER BY campo1, campo 2								/* 4º Defina a ordem da consulta */
+

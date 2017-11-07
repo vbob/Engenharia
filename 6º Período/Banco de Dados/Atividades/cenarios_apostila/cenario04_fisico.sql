@@ -1,6 +1,6 @@
 CREATE TABLE forma_pagto (
 	id_forma_pagto INTEGER PRIMARY KEY,
-	descricao VARCHAR(10)
+	descricao VARCHAR(20)
 )
 
 CREATE TABLE cliente (
@@ -13,8 +13,8 @@ CREATE TABLE cliente (
 
 CREATE TABLE compra (
 	id_compra INTEGER PRIMARY KEY,
-	dt_compra TIMESTAMP,
-	valor_total NUMERIC(8,2),
+	dt_compra DATE,
+	valor_total NUMERIC(7,2),
 	nome_caixa VARCHAR(20),
 	id_cliente INTEGER,
 	id_forma_pagto INTEGER,
@@ -26,7 +26,7 @@ CREATE TABLE produto (
 	id_produto INTEGER PRIMARY KEY,
 	marca VARCHAR(20),
 	descricao VARCHAR(50),
-	valor_unitario NUMERIC(7,2),
+	valor_unitario NUMERIC(5,2),
 	quantidade_estoque INTEGER
 )
 
@@ -35,7 +35,7 @@ CREATE TABLE compra_produto (
 	id_compra INTEGER,
 	id_produto INTEGER,
 	quantidade INTEGER,
-	valor_total_produto NUMERIC(7,2),
+	valor_total_produto NUMERIC(6,2),
 	FOREIGN KEY(id_compra) REFERENCES compra (id_compra),
 	FOREIGN KEY(id_produto) REFERENCES
 )
