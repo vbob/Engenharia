@@ -1,0 +1,6 @@
+UPDATE nome_tabela
+	SET atributo_a_ser_alterado = novo_valor
+	WHERE atributo_referencia = valor_atual_atributo_referencia;
+
+DELETE FROM nome_tabela
+	WHERE atributo_referencia = valor_atual_atributo_referencia;

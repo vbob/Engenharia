@@ -1,0 +1,211 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            padding : 10px ;
+
+        }
+
+        #exTab1 .tab-content {
+            color : black;
+            background-color: #fff;
+            padding : 5px 15px;
+        }
+
+    </style>
+    <title>CRUD em JSP</title>
+</head>
+
+<div class="container"><h1>CRUD em JSP</h1></div>
+<div id="exTab1" class="container">	
+    <ul  class="nav nav-tabs">
+        <li class="active">
+            <a  href="#1a" data-toggle="tab">Adicionar</a>
+        </li>
+        <li><a href="#2a" data-toggle="tab">Editar</a>
+        </li>
+        <li><a href="#3a" data-toggle="tab">Pesquisar</a>
+        </li>
+        <li><a href="#4a" data-toggle="tab">Remover</a>
+        </li>
+    </ul>
+
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="1a">
+            <h3>Adicionar Amigo</h3>
+            <form id="adicionar">
+                <div class="row">
+                    <label class="col-md-2"><h4>Nome:</h4></label>
+                    <input class="col-md-4" type="text" name="nome" id="nome" required>
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>Telefone:</h4></label>
+                    <input class="col-md-4" type="text" name="telefone" id="telefone" required>
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>E-mail</h4></label>
+                    <input class="col-md-4" type="email" name="email" id="email" required>
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>Sexo:</h4></label>
+                    <div class="col-md-2"><input class="col-md-1" type="radio" name="sexo" id="sexo" value="M" required><h5> Masculino</h5></div>
+                    <div class="col-md-2"><input class="col-md-1" type="radio" name="sexo" id="sexo" value="F" required><h5> Feminino</h5></div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Adicionar">
+                </div>  
+            </form>
+        </div>
+        <div class="tab-pane" id="2a">
+            <h3>Editar Amigo</h3>
+            <form method="POST" id="editar">
+                <div class="row">
+                    <label class="col-md-2"><h4>Id: </h4></label>
+                    <input class="col-md-4" type="text" name="id" required>
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>Nome:</h4></label>
+                    <input class="col-md-4" type="text" name="nome" id="nome">
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>Telefone:</h4></label>
+                    <input class="col-md-4" type="text" name="telefone" id="telefone">
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>E-mail</h4></label>
+                    <input class="col-md-4" type="email" name="email" id="email">
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>Sexo:</h4></label>
+                    <div class="col-md-2"><input class="col-md-1" type="radio" name="sexo" id="sexo" value="M"><h5> Masculino</h5></div>
+                    <div class="col-md-2"><input class="col-md-1" type="radio" name="sexo" id="sexo" value="F"><h5> Feminino</h5></div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Editar">
+                </div>  
+            </form>
+        </div>
+        <div class="tab-pane" id="3a">
+            <h3>Listar Amigos</h3>
+            <form method="POST" id="listar">
+                <div class="row">
+                    <label class="col-md-2"><h4>Id: </h4></label>
+                    <input class="col-md-4" type="text" name="id">
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>Nome:</h4></label>
+                    <input class="col-md-4" type="text" name="nome" id="nome">
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>Telefone:</h4></label>
+                    <input class="col-md-4" type="text" name="telefone" id="telefone">
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>E-mail</h4></label>
+                    <input class="col-md-4" type="email" name="email" id="email">
+                </div>
+                <div class="row">
+                    <label class="col-md-2"><h4>Sexo:</h4></label>
+                    <div class="col-md-2"><input class="col-md-1" type="radio" name="sexo" id="sexo" value="M"><h5> Masculino</h5></div>
+                    <div class="col-md-2"><input class="col-md-1" type="radio" name="sexo" id="sexo" value="F"><h5> Feminino</h5></div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Buscar">
+                </div>  
+            </form>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-Mail</th>
+                        <th>Sexo</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-listar">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="4a">
+            <h3>Remover Amigo</h3>
+            <form method="POST" id="remover">
+                <div class="row">
+                    <label class="col-md-2"><h4>Id: </h4></label>
+                    <input class="col-md-4" type="text" name="id" required>
+                </div>
+                 <div class="row">
+                    <input type="submit" value="Remover">
+                </div>  
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#adicionar").submit(function (e) {
+        $.ajax({
+            type: 'POST',
+            url: 'adicionar',
+            data: $("#adicionar").serialize(),
+            success: function (response) {
+                alert(response)
+            }
+        });
+        e.preventDefault();
+        $("#adicionar")[0].reset();
+    });
+
+    $("#editar").submit(function (e) {
+        $.ajax({
+            type: 'POST',
+            url: 'editar',
+            data: $("#editar").serialize(),
+            success: function (response) {
+                alert(response)
+            }
+        });
+
+        e.preventDefault();
+    });
+
+    $("#listar").submit(function (e) {
+        $.ajax({
+            type: 'POST',
+            url: 'listar',
+            data: $("#listar").serialize(),
+            success: function (response) {
+                $("#tabela-listar").html(response)
+            }
+        });
+
+        e.preventDefault();
+    });
+    
+        $("#remover").submit(function (e) {
+        $.ajax({
+            type: 'POST',
+            url: 'remover',
+            data: $("#remover").serialize(),
+            success: function (response) {
+                alert(response)
+            }
+        });
+
+        e.preventDefault();
+    });
+
+</script>
+
+
+
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

@@ -1,0 +1,40 @@
+-- Testar: Multiplicar o vl_unitario por uma constante
+SELECT produto.id_produto, produto.marca, 3*produto.valor_unitario AS "3*Valor Unitário"
+	FROM produto;
+
+-- Testar: Multiplicar vl_unitario por quantidade
+SELECT produto.marca, produto.valor_unitario * compra_produto.quantidade AS "Valor Total"
+	FROM produto, compra_produto
+	WHERE produto.id_produto = compra_produto.id_produto;
+
+-- 1) Atualizar o preço de cada produto
+UPDATE produto
+	SET valor_unitario = 3*valor_unitario;
+
+-- 2) Atualizar o vl_total_produto em cad compra_produto
+-- Método 1: SELECT Embutido
+UPDATE compra_produto AS CP
+	SET valor_total_produto = (SELECT produto.valor_unitario*compra_produto.quantidade 
+	 FROM produto, compra_produto	
+	 WHERE produto.id_produto = compra_produto.id_produto 
+	 AND compra_produto.id_produto = CP.id_produto
+	 AND compra_produto.id_compra = CP.id_compra);
+
+
+-- Método 2: FROM
+UPDATE compra_produto
+	SET valor_total_produto = (valor_unitario*quantidade)
+	FROM produto 
+	WHERE produto.id_produto = compra_produto.id_produto
+
+
+-- 3) Atualizar o vl_total_compra
+UPDATE compra AS C
+	SET valor_total = (SELECT SUM(compra_produto.valor_total_produto) 
+										FROM compra_produto 
+										WHERE C.id_compra = compra_produto.id_compra 
+										GROUP BY compra_produto.id_compra)
+							
+	
+
+

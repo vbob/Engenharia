@@ -1,0 +1,6 @@
+Funções de Agregação
+
+- Soma -> SUM(atributo)
+- Média -> AVG(atributo)
+
+Cláusula: GROUP BY

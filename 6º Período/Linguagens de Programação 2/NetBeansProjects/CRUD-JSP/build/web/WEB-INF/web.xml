@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>adicionar</servlet-name>
+        <servlet-class>adicionar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editar</servlet-name>
+        <servlet-class>editar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>listar</servlet-name>
+        <servlet-class>listar</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>remover</servlet-name>
+        <servlet-class>remover</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adicionar</servlet-name>
+        <url-pattern>/adicionar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editar</servlet-name>
+        <url-pattern>/editar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>listar</servlet-name>
+        <url-pattern>/listar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>remover</servlet-name>
+        <url-pattern>/remover</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

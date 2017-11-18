@@ -1,0 +1,28 @@
+(Matricula)
+- Data de Matricula 
+- Status
+
+(Presenca)
+- Presenca TEM Matricula
+- Tipo de Aula (Normal, Reposicao)
+- Presenca TEM Professor
+
+(Caixa)
+- Tipo Operação CHAR(1) (Entrada/Saida)
+- Data Pagamento (Caixa)
+- Caixa tem Matricula
+
+(Lancamentos) -> (Pagamentos)
+- Mes e Ano Base
+
+(Professor)
+- Valor Hora Aula
+
+(Relacionamentos com Pagamentos)
+- Observação
+
+- Nomes dos Relacionamentos
+
+
+- Organizar a Cardinalidade entre Pagamentos de Aluno  e Professor
+- Data de Nascimento do Aluno

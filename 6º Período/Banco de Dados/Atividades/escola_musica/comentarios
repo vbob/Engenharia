@@ -1,0 +1,4 @@
+- Aluno com Instrumentos
+- Cardinalidade aluno agenda_aluno
+- Tabela de Dias da Semana, Horario, Salas
+- Tabela de Curso (Matricula, Instrumento, Valores)
