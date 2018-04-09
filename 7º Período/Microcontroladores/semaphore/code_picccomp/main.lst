@@ -1,0 +1,316 @@
+CCS PCM C Compiler, Version 5.008, 5967               03-abr-18 17:00
+
+               Filename:   C:\Users\VBOB-NP910S3K\Documents\Semaphore2\main.lst
+
+               ROM used:   186 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   8 (2%) at main() level
+                           10 (3%) worst case
+               Stack used: 2 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   095
+0003:  NOP
+.................... #include <main.h> 
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=20000000) 
+0004:  MOVLW  24
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  06
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  7B
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETURN
+.................... #use FIXED_IO( D_outputs=PIN_D4,PIN_D3,PIN_D2,PIN_D1,PIN_D0 ) 
+....................  
+....................  
+....................  
+....................  
+....................  
+.................... // This program controls two semaphores: 
+.................... // S1 -> Semaphore 1 (Cars) 
+.................... // S2 -> Semaphore 2 (Pedestrians) 
+....................  
+.................... // When the pedestrian button is pressed, S1 closes and S2 opens 
+....................  
+.................... // PINOUT DEFINITION 
+.................... #define PEDESTRIAN_BUTTON   PIN_B0 
+.................... #define S1_RED   PIN_D0 
+.................... #define S1_YELLOW   PIN_D1 
+.................... #define S1_GREEN   PIN_D2 
+.................... #define S2_RED   PIN_D3 
+.................... #define S2_GREEN   PIN_D4 
+....................  
+.................... // CYCLE DEFINITION 
+.................... #define S2_TIME 5000 
+.................... #define ATTENTION_TIME 1000 
+.................... #define BLINK_NUMBER 4 
+....................  
+.................... // GLOBAL VARIABLES 
+.................... int S1_STOP = 0; 
+.................... int COUNTER = 0; 
+.................... int CYCLE_COUNTER = 0; 
+....................  
+.................... // SIGNATURES 
+.................... void loop(); 
+.................... void checkPedestrianButton(); 
+....................  
+.................... // PROGRAM START 
+.................... void main() 
+*
+0095:  MOVF   03,W
+0096:  ANDLW  1F
+0097:  MOVWF  03
+0098:  CLRF   20
+0099:  CLRF   21
+009A:  CLRF   22
+009B:  BSF    03.5
+009C:  BSF    1F.0
+009D:  BSF    1F.1
+009E:  BSF    1F.2
+009F:  BCF    1F.3
+00A0:  MOVLW  07
+00A1:  MOVWF  1C
+00A2:  BCF    03.7
+.................... { 
+....................    // INITIAL STATE 
+....................    output_low(S1_RED); 
+00A3:  MOVLW  E0
+00A4:  MOVWF  08
+00A5:  BCF    03.5
+00A6:  BCF    08.0
+....................    output_low(S1_YELLOW); 
+00A7:  BSF    03.5
+00A8:  MOVWF  08
+00A9:  BCF    03.5
+00AA:  BCF    08.1
+....................    output_high(S1_GREEN); 
+00AB:  BSF    03.5
+00AC:  MOVWF  08
+00AD:  BCF    03.5
+00AE:  BSF    08.2
+....................     
+....................    output_high(S2_RED); 
+00AF:  BSF    03.5
+00B0:  MOVWF  08
+00B1:  BCF    03.5
+00B2:  BSF    08.3
+....................    output_low(S2_GREEN); 
+00B3:  BSF    03.5
+00B4:  MOVWF  08
+00B5:  BCF    03.5
+00B6:  BCF    08.4
+....................  
+....................    // OPERATION 
+....................    while(TRUE) {       
+....................       loop(); 
+00B7:  GOTO   018
+00B8:  GOTO   0B7
+....................    } 
+.................... } 
+....................  
+00B9:  SLEEP
+.................... void loop() { 
+....................    checkPedestrianButton(); 
+....................     
+....................    if (S1_STOP) { 
+*
+001C:  MOVF   20,F
+001D:  BTFSC  03.2
+001E:  GOTO   091
+....................       // S1 GREEN -> YELLOW 
+....................       Delay_ms(ATTENTION_TIME); 
+001F:  MOVLW  04
+0020:  MOVWF  23
+0021:  MOVLW  FA
+0022:  MOVWF  24
+0023:  CALL   004
+0024:  DECFSZ 23,F
+0025:  GOTO   021
+....................       output_low(S1_GREEN); 
+0026:  MOVLW  E0
+0027:  BSF    03.5
+0028:  MOVWF  08
+0029:  BCF    03.5
+002A:  BCF    08.2
+....................       output_high(S1_YELLOW);    
+002B:  BSF    03.5
+002C:  MOVWF  08
+002D:  BCF    03.5
+002E:  BSF    08.1
+....................        
+....................       // S1 YELLOW -> RED 
+....................       Delay_ms(ATTENTION_TIME); 
+002F:  MOVLW  04
+0030:  MOVWF  23
+0031:  MOVLW  FA
+0032:  MOVWF  24
+0033:  CALL   004
+0034:  DECFSZ 23,F
+0035:  GOTO   031
+....................       output_low(S1_YELLOW); 
+0036:  MOVLW  E0
+0037:  BSF    03.5
+0038:  MOVWF  08
+0039:  BCF    03.5
+003A:  BCF    08.1
+....................       output_high(S1_RED);  
+003B:  BSF    03.5
+003C:  MOVWF  08
+003D:  BCF    03.5
+003E:  BSF    08.0
+....................        
+....................       // S2 RED -> GREEN 
+....................       Delay_ms(ATTENTION_TIME); 
+003F:  MOVLW  04
+0040:  MOVWF  23
+0041:  MOVLW  FA
+0042:  MOVWF  24
+0043:  CALL   004
+0044:  DECFSZ 23,F
+0045:  GOTO   041
+....................       output_low(S2_RED); 
+0046:  MOVLW  E0
+0047:  BSF    03.5
+0048:  MOVWF  08
+0049:  BCF    03.5
+004A:  BCF    08.3
+....................       output_high(S2_GREEN);  
+004B:  BSF    03.5
+004C:  MOVWF  08
+004D:  BCF    03.5
+004E:  BSF    08.4
+....................         
+....................       Delay_ms(S2_TIME); 
+004F:  MOVLW  14
+0050:  MOVWF  23
+0051:  MOVLW  FA
+0052:  MOVWF  24
+0053:  CALL   004
+0054:  DECFSZ 23,F
+0055:  GOTO   051
+....................        
+....................       // BLINK S2 RED 
+....................       output_low(S2_GREEN); 
+0056:  MOVLW  E0
+0057:  BSF    03.5
+0058:  MOVWF  08
+0059:  BCF    03.5
+005A:  BCF    08.4
+....................        for (COUNTER = 0; COUNTER < BLINK_NUMBER; COUNTER++) { 
+005B:  CLRF   21
+005C:  MOVF   21,W
+005D:  SUBLW  03
+005E:  BTFSS  03.0
+005F:  GOTO   07A
+....................             output_high(S2_RED); 
+0060:  MOVLW  E0
+0061:  BSF    03.5
+0062:  MOVWF  08
+0063:  BCF    03.5
+0064:  BSF    08.3
+....................             Delay_ms(ATTENTION_TIME/2); 
+0065:  MOVLW  02
+0066:  MOVWF  23
+0067:  MOVLW  FA
+0068:  MOVWF  24
+0069:  CALL   004
+006A:  DECFSZ 23,F
+006B:  GOTO   067
+....................             output_low(S2_RED); 
+006C:  MOVLW  E0
+006D:  BSF    03.5
+006E:  MOVWF  08
+006F:  BCF    03.5
+0070:  BCF    08.3
+....................             Delay_ms(ATTENTION_TIME/2); 
+0071:  MOVLW  02
+0072:  MOVWF  23
+0073:  MOVLW  FA
+0074:  MOVWF  24
+0075:  CALL   004
+0076:  DECFSZ 23,F
+0077:  GOTO   073
+0078:  INCF   21,F
+0079:  GOTO   05C
+....................        } 
+....................         
+....................       output_high(S2_RED); 
+007A:  MOVLW  E0
+007B:  BSF    03.5
+007C:  MOVWF  08
+007D:  BCF    03.5
+007E:  BSF    08.3
+....................        
+....................       // S1 RED -> GREEN 
+....................       Delay_ms(ATTENTION_TIME); 
+007F:  MOVLW  04
+0080:  MOVWF  23
+0081:  MOVLW  FA
+0082:  MOVWF  24
+0083:  CALL   004
+0084:  DECFSZ 23,F
+0085:  GOTO   081
+....................       output_low(S1_RED); 
+0086:  MOVLW  E0
+0087:  BSF    03.5
+0088:  MOVWF  08
+0089:  BCF    03.5
+008A:  BCF    08.0
+....................       output_high(S1_GREEN);  
+008B:  BSF    03.5
+008C:  MOVWF  08
+008D:  BCF    03.5
+008E:  BSF    08.2
+....................        
+....................       S1_STOP = 0; 
+008F:  CLRF   20
+....................       CYCLE_COUNTER = 0; 
+0090:  CLRF   22
+....................    } 
+....................     
+....................    CYCLE_COUNTER++; 
+0091:  INCF   22,F
+0092:  BCF    0A.3
+0093:  BCF    0A.4
+0094:  GOTO   0B8 (RETURN)
+.................... } 
+....................  
+.................... void checkPedestrianButton() { 
+....................      if (input_state(PEDESTRIAN_BUTTON) == 1) 
+*
+0018:  BTFSS  06.0
+0019:  GOTO   01C
+....................         S1_STOP = 1; 
+001A:  MOVLW  01
+001B:  MOVWF  20
+.................... } 
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

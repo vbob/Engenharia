@@ -1,0 +1,73 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-02F led_map
+030-037 pins
+038     now_number
+039     incrementing
+03A     @delay_ms1.P1
+03A     writeOnDisplay.number
+03A     loop.@SCRATCH1
+03B     writeOnDisplay.leds
+03C     writeOnDisplay.i
+03D     writeOnDisplay.@SCRATCH1
+03E     @WRITEBITA.P1
+03F     @WRITEBITA.P1
+040-041 @WRITEBITA.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  clear
+000028  @WRITEBITA
+000048  writeOnDisplay
+000079  loop
+000090  @delay_ms1
+0000A6  MAIN
+0000A6  @cinit1
+0000B3  @cinit2
+
+Project Directory:
+    D:\engenharia\7º Período\Microcontroladores\7segmentdisplay\code_picccomp\
+
+Project Files:
+    main.c                                                  [08-abr-18 20:41  CRC=F048884A]
+    C:\Program Files (x86)\PICC\Devices\16F877A.h           [03-jul-13 14:28  CRC=4E65664C]
+
+Source signature=8D1354E2
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.h.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

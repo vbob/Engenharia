@@ -1,0 +1,86 @@
+// This program writes a number on a 7 segment display
+
+#include <main.h>
+
+#define LED_A_PORT PIN_B3
+#define LED_B_PORT PIN_B4
+#define LED_C_PORT PIN_C0
+#define LED_D_PORT PIN_C1
+#define LED_E_PORT PIN_C2
+#define LED_F_PORT PIN_D2
+#define LED_G_PORT PIN_D4
+#define LED_H_PORT PIN_D7
+
+#define BUTTON PIN_B0
+
+// ARRAY OF LEDS TO ITERATE
+unsigned char pins[] = {LED_A_PORT,
+                       LED_B_PORT,
+                       LED_C_PORT,
+                       LED_D_PORT,
+                       LED_E_PORT,
+                       LED_F_PORT,
+                       LED_G_PORT,
+                       LED_H_PORT};
+
+// On format LED_ABCDEFGH
+unsigned char led_mapping[] = {
+   0b11111100, // 0
+   0b01100000, // 1
+   0b11011010, // 2
+   0b11110010, // 3
+   0b01100110, // 4
+   0b10110110, // 5
+   0b10111110, // 6
+   0b11100000, // 7
+   0b11111110, // 8
+   0b11110110, // 9
+   0b11101110, // A
+   0b00111110, // b
+   0b10011100, // C
+   0b01111010, // d
+   0b10011110, // E
+   0b10011100 //  F
+};
+
+// Turn of all leds
+void clear() {
+   output_low(LED_A_PORT);
+   output_low(LED_B_PORT);
+   output_low(LED_C_PORT);
+   output_low(LED_D_PORT);
+   output_low(LED_E_PORT);
+   output_low(LED_F_PORT);
+   output_low(LED_G_PORT);
+   output_low(LED_H_PORT);
+}
+
+void writeOnDisplay(int number) {
+   unsigned char led_map = led_mapping[number];
+   clear();
+   if (led_map & 0b11111100 && number < 16)
+      output_high(LED_A_PORT);
+}
+
+int now_number = 0;
+int incrementing = 1;
+
+void loop() {   
+   if (input_state(BUTTON) == 1) {  
+      writeOnDisplay(now_number);
+   }
+   now_number = now_number + 1;
+}
+
+void main() {
+   clear();
+   writeOnDisplay(0);
+   while(TRUE)
+   {
+      loop();
+   }
+}
+
+
+
+

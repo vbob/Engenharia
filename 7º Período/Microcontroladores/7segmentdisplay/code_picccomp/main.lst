@@ -1,0 +1,377 @@
+CCS PCM C Compiler, Version 5.008, 5967               08-abr-18 20:41
+
+               Filename:   D:\engenharia\7º Período\Microcontroladores\7segmentdisplay\code_picccomp\main.lst
+
+               ROM used:   235 words (3%)
+                           Largest free fragment is 2048
+               RAM used:   31 (8%) at main() level
+                           39 (11%) worst case
+               Stack used: 3 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   0A6
+0003:  NOP
+.................... // This program writes a number on a 7 segment display 
+....................  
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+*
+0028:  MOVF   3E,W
+0029:  ANDLW  07
+002A:  MOVWF  77
+002B:  RRF    3E,W
+002C:  MOVWF  78
+002D:  RRF    78,F
+002E:  RRF    78,F
+002F:  MOVLW  1F
+0030:  ANDWF  78,F
+0031:  MOVF   78,W
+0032:  ADDWF  40,W
+0033:  MOVWF  04
+0034:  BCF    03.7
+0035:  BTFSC  41.0
+0036:  BSF    03.7
+0037:  CLRF   78
+0038:  INCF   78,F
+0039:  INCF   77,F
+003A:  GOTO   03C
+003B:  RLF    78,F
+003C:  DECFSZ 77,F
+003D:  GOTO   03B
+003E:  MOVF   3F,F
+003F:  BTFSC  03.2
+0040:  GOTO   044
+0041:  MOVF   78,W
+0042:  IORWF  00,F
+0043:  GOTO   047
+0044:  COMF   78,F
+0045:  MOVF   78,W
+0046:  ANDWF  00,F
+0047:  RETURN
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+.................... #FUSES BROWNOUT 
+....................  
+.................... #use delay(crystal=20000000) 
+*
+0090:  MOVLW  3A
+0091:  MOVWF  04
+0092:  BCF    03.7
+0093:  MOVF   00,W
+0094:  BTFSC  03.2
+0095:  GOTO   0A3
+0096:  MOVLW  06
+0097:  MOVWF  78
+0098:  CLRF   77
+0099:  DECFSZ 77,F
+009A:  GOTO   099
+009B:  DECFSZ 78,F
+009C:  GOTO   098
+009D:  MOVLW  7B
+009E:  MOVWF  77
+009F:  DECFSZ 77,F
+00A0:  GOTO   09F
+00A1:  DECFSZ 00,F
+00A2:  GOTO   096
+....................  
+.................... #use FIXED_IO(B_outputs=PIN_B3,PIN_B4) 
+.................... #use FIXED_IO(C_outputs=PIN_C0,PIN_C1,PIN_C2) 
+.................... #use FIXED_IO(D_outputs=PIN_D7,PIN_D4,PIN_D2) 
+....................  
+....................  
+.................... #define LED_A_PORT PIN_B3 
+.................... #define LED_B_PORT PIN_B4 
+.................... #define LED_C_PORT PIN_C0 
+.................... #define LED_D_PORT PIN_C1 
+.................... #define LED_E_PORT PIN_C2 
+.................... #define LED_F_PORT PIN_D2 
+.................... #define LED_G_PORT PIN_D4 
+.................... #define LED_H_PORT PIN_D7 
+....................  
+.................... #define BUTTON PIN_B0 
+....................  
+.................... // Number to Led Map 
+.................... // On format ABCDEFGH 
+.................... unsigned char led_map [] = { 
+....................    0b11111100, // 0 
+....................    0b01100000, // 1 
+....................    0b11011010, // 2 
+....................    0b11110010, // 3  
+....................    0b01100110, // 4 
+....................    0b10110110, // 5 
+....................    0b10111110, // 6 
+....................    0b11100000, // 7 
+....................    0b11111110, // 8 
+....................    0b11110110, // 9 
+....................    0b11101110, // A 
+....................    0b00111110, // b 
+....................    0b10011100, // C 
+....................    0b01111010, // d 
+....................    0b10011110, // E 
+....................    0b10001110  // F 
+.................... }; 
+*
+00B4:  MOVLW  FC
+00B5:  BCF    03.5
+00B6:  MOVWF  20
+00B7:  MOVLW  60
+00B8:  MOVWF  21
+00B9:  MOVLW  DA
+00BA:  MOVWF  22
+00BB:  MOVLW  F2
+00BC:  MOVWF  23
+00BD:  MOVLW  66
+00BE:  MOVWF  24
+00BF:  MOVLW  B6
+00C0:  MOVWF  25
+00C1:  MOVLW  BE
+00C2:  MOVWF  26
+00C3:  MOVLW  E0
+00C4:  MOVWF  27
+00C5:  MOVLW  FE
+00C6:  MOVWF  28
+00C7:  MOVLW  F6
+00C8:  MOVWF  29
+00C9:  MOVLW  EE
+00CA:  MOVWF  2A
+00CB:  MOVLW  3E
+00CC:  MOVWF  2B
+00CD:  MOVLW  9C
+00CE:  MOVWF  2C
+00CF:  MOVLW  7A
+00D0:  MOVWF  2D
+00D1:  MOVLW  9E
+00D2:  MOVWF  2E
+00D3:  MOVLW  8E
+00D4:  MOVWF  2F
+....................  
+.................... // Pins Map 
+.................... unsigned char pins[] = {LED_A_PORT, 
+....................                         LED_B_PORT, 
+....................                         LED_C_PORT, 
+....................                         LED_D_PORT, 
+....................                         LED_E_PORT, 
+....................                         LED_F_PORT, 
+....................                         LED_G_PORT, 
+....................                         LED_H_PORT}; 
+00D5:  MOVLW  33
+00D6:  MOVWF  30
+00D7:  MOVLW  34
+00D8:  MOVWF  31
+00D9:  MOVLW  38
+00DA:  MOVWF  32
+00DB:  MOVLW  39
+00DC:  MOVWF  33
+00DD:  MOVLW  3A
+00DE:  MOVWF  34
+00DF:  MOVLW  42
+00E0:  MOVWF  35
+00E1:  MOVLW  44
+00E2:  MOVWF  36
+00E3:  MOVLW  47
+00E4:  MOVWF  37
+....................                         
+.................... // Turn off all leds 
+.................... void clear() { 
+....................    output_low(LED_A_PORT); 
+*
+0004:  MOVLW  E7
+0005:  BSF    03.5
+0006:  MOVWF  06
+0007:  BCF    03.5
+0008:  BCF    06.3
+....................    output_low(LED_B_PORT); 
+0009:  BSF    03.5
+000A:  MOVWF  06
+000B:  BCF    03.5
+000C:  BCF    06.4
+....................    output_low(LED_C_PORT); 
+000D:  MOVLW  F8
+000E:  BSF    03.5
+000F:  MOVWF  07
+0010:  BCF    03.5
+0011:  BCF    07.0
+....................    output_low(LED_D_PORT); 
+0012:  BSF    03.5
+0013:  MOVWF  07
+0014:  BCF    03.5
+0015:  BCF    07.1
+....................    output_low(LED_E_PORT); 
+0016:  BSF    03.5
+0017:  MOVWF  07
+0018:  BCF    03.5
+0019:  BCF    07.2
+....................    output_low(LED_F_PORT); 
+001A:  MOVLW  6B
+001B:  BSF    03.5
+001C:  MOVWF  08
+001D:  BCF    03.5
+001E:  BCF    08.2
+....................    output_low(LED_G_PORT); 
+001F:  BSF    03.5
+0020:  MOVWF  08
+0021:  BCF    03.5
+0022:  BCF    08.4
+....................    output_low(LED_H_PORT); 
+0023:  BSF    03.5
+0024:  MOVWF  08
+0025:  BCF    03.5
+0026:  BCF    08.7
+0027:  RETURN
+.................... } 
+....................  
+.................... void writeOnDisplay(int number) { 
+*
+0048:  MOVLW  20
+0049:  ADDWF  3A,W
+004A:  MOVWF  04
+004B:  BCF    03.7
+004C:  MOVF   00,W
+004D:  MOVWF  3B
+....................    unsigned char leds = led_map[number]; 
+....................    clear(); 
+004E:  CALL   004
+....................    for (int i =0; i < 8; i++) { 
+004F:  CLRF   3C
+0050:  MOVF   3C,W
+0051:  SUBLW  07
+0052:  BTFSS  03.0
+0053:  GOTO   078
+....................       // Moves the map one bit to the right and compares to 1 
+....................       if ((leds >> i) & 0x01) 
+0054:  MOVF   3B,W
+0055:  MOVWF  77
+0056:  MOVF   3C,W
+0057:  MOVWF  78
+0058:  BTFSC  03.2
+0059:  GOTO   05E
+005A:  BCF    03.0
+005B:  RRF    77,F
+005C:  DECFSZ 78,F
+005D:  GOTO   05A
+005E:  MOVF   77,W
+005F:  ANDLW  01
+0060:  BTFSC  03.2
+0061:  GOTO   076
+....................          output_high(pins[7-i]); 
+0062:  MOVF   3C,W
+0063:  SUBLW  07
+0064:  ADDLW  30
+0065:  MOVWF  04
+0066:  BCF    03.7
+0067:  MOVF   00,W
+0068:  MOVWF  3D
+0069:  MOVWF  3E
+006A:  MOVLW  01
+006B:  MOVWF  3F
+006C:  CLRF   41
+006D:  CLRF   40
+006E:  CALL   028
+006F:  MOVF   3D,W
+0070:  MOVWF  3E
+0071:  CLRF   3F
+0072:  CLRF   41
+0073:  MOVLW  80
+0074:  MOVWF  40
+0075:  CALL   028
+0076:  INCF   3C,F
+0077:  GOTO   050
+....................    } 
+0078:  RETURN
+.................... } 
+....................  
+.................... // Global vars 
+.................... int now_number = 1; 
+.................... int incrementing = 1; 
+....................  
+.................... void loop() {    
+....................    if (input_state(BUTTON) == 1) { 
+0079:  BTFSS  06.0
+007A:  GOTO   0A3
+....................  
+....................       writeOnDisplay(now_number); 
+007B:  MOVF   38,W
+007C:  MOVWF  3A
+007D:  CALL   048
+....................       if (incrementing) { 
+007E:  MOVF   39,F
+007F:  BTFSC  03.2
+0080:  GOTO   087
+....................          now_number++; 
+0081:  INCF   38,F
+....................          if (now_number == 15) 
+0082:  MOVF   38,W
+0083:  SUBLW  0F
+0084:  BTFSC  03.2
+....................             incrementing = 0; 
+0085:  CLRF   39
+....................       } else if (!incrementing) { 
+0086:  GOTO   08E
+0087:  MOVF   39,F
+0088:  BTFSS  03.2
+0089:  GOTO   08E
+....................          now_number--; 
+008A:  DECFSZ 38,F
+....................          if (now_number == 0) 
+008B:  GOTO   08E
+....................             incrementing = 1; 
+008C:  MOVLW  01
+008D:  MOVWF  39
+....................       } 
+....................       // If not have delay, it may increment  
+....................       // more than 1 time at each press 
+....................       delay_ms(50); 
+008E:  MOVLW  32
+008F:  MOVWF  3A
+....................    } 
+*
+00A3:  BCF    0A.3
+00A4:  BCF    0A.4
+00A5:  GOTO   0E9 (RETURN)
+.................... } 
+....................  
+.................... void main() { 
+00A6:  MOVF   03,W
+00A7:  ANDLW  1F
+00A8:  MOVWF  03
+00A9:  MOVLW  01
+00AA:  MOVWF  38
+00AB:  MOVWF  39
+00AC:  BSF    03.5
+00AD:  BSF    1F.0
+00AE:  BSF    1F.1
+00AF:  BSF    1F.2
+00B0:  BCF    1F.3
+00B1:  MOVLW  07
+00B2:  MOVWF  1C
+00B3:  BCF    03.7
+....................    clear(); 
+*
+00E5:  CALL   004
+....................    writeOnDisplay(0); 
+00E6:  CLRF   3A
+00E7:  CALL   048
+....................    while(TRUE) 
+....................    { 
+....................       loop(); 
+00E8:  GOTO   079
+00E9:  GOTO   0E8
+....................    } 
+.................... } 
+....................  
+00EA:  SLEEP
+....................  
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT
