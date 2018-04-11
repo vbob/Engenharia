@@ -9,18 +9,17 @@
 
 #use delay(crystal=20000000)
 
-#use FIXED_IO(B_outputs=PIN_B0,PIN_B1)
-#use FIXED_IO(D_outputs=PIN_D2,PIN_D3,PIN_D4, PIN_D5, PIN_D6,PIN_D7)
+#use FIXED_IO(B_outputs=PIN_B0,PIN_B1,PIN_B2,PIN_B3,PIN_B4,PIN_B5,PIN_B6,PIN_B7)
 
 
-#define LED_A_PORT PIN_D3
-#define LED_B_PORT PIN_D2
-#define LED_C_PORT PIN_D5
-#define LED_D_PORT PIN_D6
-#define LED_E_PORT PIN_D7
-#define LED_F_PORT PIN_B0
-#define LED_G_PORT PIN_B1
-#define LED_H_PORT PIN_D4
+#define LED_A_PORT PIN_B0
+#define LED_B_PORT PIN_B1
+#define LED_C_PORT PIN_B2
+#define LED_D_PORT PIN_B3
+#define LED_E_PORT PIN_B4
+#define LED_F_PORT PIN_B5
+#define LED_G_PORT PIN_B6
+#define LED_H_PORT PIN_B7
 
 #define BUTTON PIN_D1 
 
@@ -82,7 +81,7 @@ int now_number = 1;
 int incrementing = 1;
 
 void loop() {   
-   if (input_state(BUTTON) == 1) {
+   if (TRUE) {
 
       writeOnDisplay(now_number);
       if (incrementing) {

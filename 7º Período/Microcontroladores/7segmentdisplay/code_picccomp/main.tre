@@ -6,7 +6,7 @@
       ³  ÃÄclear  0/36  Ram=0
       ³  ÃÄ@WRITEBITA  0/32  Ram=6
       ³  ÀÄ@WRITEBITA  0/32  Ram=6
-      ÀÄloop  0/45  Ram=1
+      ÀÄloop  0/49  Ram=1
          ÃÄwriteOnDisplay  0/49  Ram=3
          ³  ÀÄ*
          ÀÄ@delay_ms1  (Inline)  Ram=1

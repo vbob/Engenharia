@@ -1,8 +1,8 @@
-CCS PCM C Compiler, Version 5.008, 5967               08-abr-18 20:41
+CCS PCM C Compiler, Version 5.008, 5967               09-abr-18 09:53
 
                Filename:   D:\engenharia\7º Período\Microcontroladores\7segmentdisplay\code_picccomp\main.lst
 
-               ROM used:   235 words (3%)
+               ROM used:   239 words (3%)
                            Largest free fragment is 2048
                RAM used:   31 (8%) at main() level
                            39 (11%) worst case
@@ -12,7 +12,7 @@ CCS PCM C Compiler, Version 5.008, 5967               08-abr-18 20:41
 *
 0000:  MOVLW  00
 0001:  MOVWF  0A
-0002:  GOTO   0A6
+0002:  GOTO   0AA
 0003:  NOP
 .................... // This program writes a number on a 7 segment display 
 ....................  
@@ -63,41 +63,40 @@ CCS PCM C Compiler, Version 5.008, 5967               08-abr-18 20:41
 ....................  
 .................... #use delay(crystal=20000000) 
 *
-0090:  MOVLW  3A
-0091:  MOVWF  04
-0092:  BCF    03.7
-0093:  MOVF   00,W
-0094:  BTFSC  03.2
-0095:  GOTO   0A3
-0096:  MOVLW  06
-0097:  MOVWF  78
-0098:  CLRF   77
-0099:  DECFSZ 77,F
-009A:  GOTO   099
-009B:  DECFSZ 78,F
-009C:  GOTO   098
-009D:  MOVLW  7B
-009E:  MOVWF  77
-009F:  DECFSZ 77,F
-00A0:  GOTO   09F
-00A1:  DECFSZ 00,F
-00A2:  GOTO   096
+0092:  MOVLW  3B
+0093:  MOVWF  04
+0094:  BCF    03.7
+0095:  MOVF   00,W
+0096:  BTFSC  03.2
+0097:  GOTO   0A5
+0098:  MOVLW  06
+0099:  MOVWF  78
+009A:  CLRF   77
+009B:  DECFSZ 77,F
+009C:  GOTO   09B
+009D:  DECFSZ 78,F
+009E:  GOTO   09A
+009F:  MOVLW  7B
+00A0:  MOVWF  77
+00A1:  DECFSZ 77,F
+00A2:  GOTO   0A1
+00A3:  DECFSZ 00,F
+00A4:  GOTO   098
 ....................  
-.................... #use FIXED_IO(B_outputs=PIN_B3,PIN_B4) 
-.................... #use FIXED_IO(C_outputs=PIN_C0,PIN_C1,PIN_C2) 
-.................... #use FIXED_IO(D_outputs=PIN_D7,PIN_D4,PIN_D2) 
+.................... #use FIXED_IO(B_outputs=PIN_B0,PIN_B1) 
+.................... #use FIXED_IO(D_outputs=PIN_D2,PIN_D3,PIN_D4, PIN_D5, PIN_D6,PIN_D7) 
 ....................  
 ....................  
-.................... #define LED_A_PORT PIN_B3 
-.................... #define LED_B_PORT PIN_B4 
-.................... #define LED_C_PORT PIN_C0 
-.................... #define LED_D_PORT PIN_C1 
-.................... #define LED_E_PORT PIN_C2 
-.................... #define LED_F_PORT PIN_D2 
-.................... #define LED_G_PORT PIN_D4 
-.................... #define LED_H_PORT PIN_D7 
+.................... #define LED_A_PORT PIN_D3 
+.................... #define LED_B_PORT PIN_D2 
+.................... #define LED_C_PORT PIN_D5 
+.................... #define LED_D_PORT PIN_D6 
+.................... #define LED_E_PORT PIN_D7 
+.................... #define LED_F_PORT PIN_B0 
+.................... #define LED_G_PORT PIN_B1 
+.................... #define LED_H_PORT PIN_D4 
 ....................  
-.................... #define BUTTON PIN_B0 
+.................... #define BUTTON PIN_D1  
 ....................  
 .................... // Number to Led Map 
 .................... // On format ABCDEFGH 
@@ -120,39 +119,39 @@ CCS PCM C Compiler, Version 5.008, 5967               08-abr-18 20:41
 ....................    0b10001110  // F 
 .................... }; 
 *
-00B4:  MOVLW  FC
-00B5:  BCF    03.5
-00B6:  MOVWF  20
-00B7:  MOVLW  60
-00B8:  MOVWF  21
-00B9:  MOVLW  DA
-00BA:  MOVWF  22
-00BB:  MOVLW  F2
-00BC:  MOVWF  23
-00BD:  MOVLW  66
-00BE:  MOVWF  24
-00BF:  MOVLW  B6
-00C0:  MOVWF  25
-00C1:  MOVLW  BE
-00C2:  MOVWF  26
-00C3:  MOVLW  E0
-00C4:  MOVWF  27
-00C5:  MOVLW  FE
-00C6:  MOVWF  28
-00C7:  MOVLW  F6
-00C8:  MOVWF  29
-00C9:  MOVLW  EE
-00CA:  MOVWF  2A
-00CB:  MOVLW  3E
-00CC:  MOVWF  2B
-00CD:  MOVLW  9C
-00CE:  MOVWF  2C
-00CF:  MOVLW  7A
-00D0:  MOVWF  2D
-00D1:  MOVLW  9E
-00D2:  MOVWF  2E
-00D3:  MOVLW  8E
-00D4:  MOVWF  2F
+00B8:  MOVLW  FC
+00B9:  BCF    03.5
+00BA:  MOVWF  20
+00BB:  MOVLW  60
+00BC:  MOVWF  21
+00BD:  MOVLW  DA
+00BE:  MOVWF  22
+00BF:  MOVLW  F2
+00C0:  MOVWF  23
+00C1:  MOVLW  66
+00C2:  MOVWF  24
+00C3:  MOVLW  B6
+00C4:  MOVWF  25
+00C5:  MOVLW  BE
+00C6:  MOVWF  26
+00C7:  MOVLW  E0
+00C8:  MOVWF  27
+00C9:  MOVLW  FE
+00CA:  MOVWF  28
+00CB:  MOVLW  F6
+00CC:  MOVWF  29
+00CD:  MOVLW  EE
+00CE:  MOVWF  2A
+00CF:  MOVLW  3E
+00D0:  MOVWF  2B
+00D1:  MOVLW  9C
+00D2:  MOVWF  2C
+00D3:  MOVLW  7A
+00D4:  MOVWF  2D
+00D5:  MOVLW  9E
+00D6:  MOVWF  2E
+00D7:  MOVLW  8E
+00D8:  MOVWF  2F
 ....................  
 .................... // Pins Map 
 .................... unsigned char pins[] = {LED_A_PORT, 
@@ -163,69 +162,69 @@ CCS PCM C Compiler, Version 5.008, 5967               08-abr-18 20:41
 ....................                         LED_F_PORT, 
 ....................                         LED_G_PORT, 
 ....................                         LED_H_PORT}; 
-00D5:  MOVLW  33
-00D6:  MOVWF  30
-00D7:  MOVLW  34
-00D8:  MOVWF  31
-00D9:  MOVLW  38
-00DA:  MOVWF  32
-00DB:  MOVLW  39
-00DC:  MOVWF  33
-00DD:  MOVLW  3A
-00DE:  MOVWF  34
-00DF:  MOVLW  42
-00E0:  MOVWF  35
-00E1:  MOVLW  44
-00E2:  MOVWF  36
-00E3:  MOVLW  47
-00E4:  MOVWF  37
+00D9:  MOVLW  43
+00DA:  MOVWF  30
+00DB:  MOVLW  42
+00DC:  MOVWF  31
+00DD:  MOVLW  45
+00DE:  MOVWF  32
+00DF:  MOVLW  46
+00E0:  MOVWF  33
+00E1:  MOVLW  47
+00E2:  MOVWF  34
+00E3:  MOVLW  30
+00E4:  MOVWF  35
+00E5:  MOVLW  31
+00E6:  MOVWF  36
+00E7:  MOVLW  44
+00E8:  MOVWF  37
 ....................                         
 .................... // Turn off all leds 
 .................... void clear() { 
 ....................    output_low(LED_A_PORT); 
 *
-0004:  MOVLW  E7
+0004:  MOVLW  03
 0005:  BSF    03.5
-0006:  MOVWF  06
+0006:  MOVWF  08
 0007:  BCF    03.5
-0008:  BCF    06.3
+0008:  BCF    08.3
 ....................    output_low(LED_B_PORT); 
 0009:  BSF    03.5
-000A:  MOVWF  06
+000A:  MOVWF  08
 000B:  BCF    03.5
-000C:  BCF    06.4
+000C:  BCF    08.2
 ....................    output_low(LED_C_PORT); 
-000D:  MOVLW  F8
-000E:  BSF    03.5
-000F:  MOVWF  07
-0010:  BCF    03.5
-0011:  BCF    07.0
+000D:  BSF    03.5
+000E:  MOVWF  08
+000F:  BCF    03.5
+0010:  BCF    08.5
 ....................    output_low(LED_D_PORT); 
-0012:  BSF    03.5
-0013:  MOVWF  07
-0014:  BCF    03.5
-0015:  BCF    07.1
+0011:  BSF    03.5
+0012:  MOVWF  08
+0013:  BCF    03.5
+0014:  BCF    08.6
 ....................    output_low(LED_E_PORT); 
-0016:  BSF    03.5
-0017:  MOVWF  07
-0018:  BCF    03.5
-0019:  BCF    07.2
+0015:  BSF    03.5
+0016:  MOVWF  08
+0017:  BCF    03.5
+0018:  BCF    08.7
 ....................    output_low(LED_F_PORT); 
-001A:  MOVLW  6B
-001B:  BSF    03.5
-001C:  MOVWF  08
-001D:  BCF    03.5
-001E:  BCF    08.2
+0019:  MOVLW  FC
+001A:  BSF    03.5
+001B:  MOVWF  06
+001C:  BCF    03.5
+001D:  BCF    06.0
 ....................    output_low(LED_G_PORT); 
-001F:  BSF    03.5
-0020:  MOVWF  08
-0021:  BCF    03.5
-0022:  BCF    08.4
+001E:  BSF    03.5
+001F:  MOVWF  06
+0020:  BCF    03.5
+0021:  BCF    06.1
 ....................    output_low(LED_H_PORT); 
+0022:  MOVLW  03
 0023:  BSF    03.5
 0024:  MOVWF  08
 0025:  BCF    03.5
-0026:  BCF    08.7
+0026:  BCF    08.4
 0027:  RETURN
 .................... } 
 ....................  
@@ -295,8 +294,8 @@ CCS PCM C Compiler, Version 5.008, 5967               08-abr-18 20:41
 ....................  
 .................... void loop() {    
 ....................    if (input_state(BUTTON) == 1) { 
-0079:  BTFSS  06.0
-007A:  GOTO   0A3
+0079:  BTFSS  08.1
+007A:  GOTO   0A7
 ....................  
 ....................       writeOnDisplay(now_number); 
 007B:  MOVF   38,W
@@ -329,46 +328,50 @@ CCS PCM C Compiler, Version 5.008, 5967               08-abr-18 20:41
 ....................       } 
 ....................       // If not have delay, it may increment  
 ....................       // more than 1 time at each press 
-....................       delay_ms(50); 
-008E:  MOVLW  32
+....................       delay_ms(300); 
+008E:  MOVLW  02
 008F:  MOVWF  3A
-....................    } 
+0090:  MOVLW  96
+0091:  MOVWF  3B
 *
-00A3:  BCF    0A.3
-00A4:  BCF    0A.4
-00A5:  GOTO   0E9 (RETURN)
+00A5:  DECFSZ 3A,F
+00A6:  GOTO   090
+....................    } 
+00A7:  BCF    0A.3
+00A8:  BCF    0A.4
+00A9:  GOTO   0ED (RETURN)
 .................... } 
 ....................  
 .................... void main() { 
-00A6:  MOVF   03,W
-00A7:  ANDLW  1F
-00A8:  MOVWF  03
-00A9:  MOVLW  01
-00AA:  MOVWF  38
-00AB:  MOVWF  39
-00AC:  BSF    03.5
-00AD:  BSF    1F.0
-00AE:  BSF    1F.1
-00AF:  BSF    1F.2
-00B0:  BCF    1F.3
-00B1:  MOVLW  07
-00B2:  MOVWF  1C
-00B3:  BCF    03.7
+00AA:  MOVF   03,W
+00AB:  ANDLW  1F
+00AC:  MOVWF  03
+00AD:  MOVLW  01
+00AE:  MOVWF  38
+00AF:  MOVWF  39
+00B0:  BSF    03.5
+00B1:  BSF    1F.0
+00B2:  BSF    1F.1
+00B3:  BSF    1F.2
+00B4:  BCF    1F.3
+00B5:  MOVLW  07
+00B6:  MOVWF  1C
+00B7:  BCF    03.7
 ....................    clear(); 
 *
-00E5:  CALL   004
+00E9:  CALL   004
 ....................    writeOnDisplay(0); 
-00E6:  CLRF   3A
-00E7:  CALL   048
+00EA:  CLRF   3A
+00EB:  CALL   048
 ....................    while(TRUE) 
 ....................    { 
 ....................       loop(); 
-00E8:  GOTO   079
-00E9:  GOTO   0E8
+00EC:  GOTO   079
+00ED:  GOTO   0EC
 ....................    } 
 .................... } 
 ....................  
-00EA:  SLEEP
+00EE:  SLEEP
 ....................  
 ....................  
 ....................  

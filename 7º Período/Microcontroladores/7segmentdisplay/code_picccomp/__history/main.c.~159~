@@ -82,7 +82,7 @@ int now_number = 1;
 int incrementing = 1;
 
 void loop() {   
-   if (input_state(BUTTON) == 1) {
+   while (input_state(BUTTON) == 1) {
 
       writeOnDisplay(now_number);
       if (incrementing) {

@@ -9,20 +9,21 @@
 
 #use delay(crystal=20000000)
 
-#use FIXED_IO(B_outputs=PIN_B0,PIN_B1)
-#use FIXED_IO(D_outputs=PIN_D2,PIN_D3,PIN_D4, PIN_D5, PIN_D6,PIN_D7)
+#use FIXED_IO(B_outputs=PIN_B3,PIN_B4)
+#use FIXED_IO(C_outputs=PIN_C0,PIN_C1,PIN_C2)
+#use FIXED_IO(D_outputs=PIN_D7,PIN_D4,PIN_D2)
 
 
-#define LED_A_PORT PIN_D3
-#define LED_B_PORT PIN_D2
-#define LED_C_PORT PIN_D5
-#define LED_D_PORT PIN_D6
-#define LED_E_PORT PIN_D7
-#define LED_F_PORT PIN_B0
-#define LED_G_PORT PIN_B1
-#define LED_H_PORT PIN_D4
+#define LED_A_PORT PIN_B3
+#define LED_B_PORT PIN_B4
+#define LED_C_PORT PIN_C0
+#define LED_D_PORT PIN_C1
+#define LED_E_PORT PIN_C2
+#define LED_F_PORT PIN_D2
+#define LED_G_PORT PIN_D4
+#define LED_H_PORT PIN_D7
 
-#define BUTTON PIN_D1 
+#define BUTTON PIN_B0
 
 // Number to Led Map
 // On format ABCDEFGH
@@ -96,7 +97,7 @@ void loop() {
       }
       // If not have delay, it may increment 
       // more than 1 time at each press
-      delay_ms(300);
+      delay_ms(50);
    }
 }
 

@@ -11,9 +11,9 @@
 030-037 pins
 038     now_number
 039     incrementing
-03A     @delay_ms1.P1
 03A     writeOnDisplay.number
 03A     loop.@SCRATCH1
+03B     @delay_ms1.P1
 03B     writeOnDisplay.leds
 03C     writeOnDisplay.i
 03D     writeOnDisplay.@SCRATCH1
@@ -35,19 +35,19 @@ ROM Allocation:
 000028  @WRITEBITA
 000048  writeOnDisplay
 000079  loop
-000090  @delay_ms1
-0000A6  MAIN
-0000A6  @cinit1
-0000B3  @cinit2
+000092  @delay_ms1
+0000AA  MAIN
+0000AA  @cinit1
+0000B7  @cinit2
 
 Project Directory:
     D:\engenharia\7º Período\Microcontroladores\7segmentdisplay\code_picccomp\
 
 Project Files:
-    main.c                                                  [08-abr-18 20:41  CRC=F048884A]
+    main.c                                                  [09-abr-18 09:53  CRC=2D4662DE]
     C:\Program Files (x86)\PICC\Devices\16F877A.h           [03-jul-13 14:28  CRC=4E65664C]
 
-Source signature=8D1354E2
+Source signature=CA112F76
 
 Units:
     main (main)
@@ -62,7 +62,7 @@ Compiler Settings:
 
 Output Files:
     XREF file:   main.xsym
-    Errors:      main.h.err
+    Errors:      main.err
     Ext Symbols: main.esym
     INHX8:       main.hex
     Symbols:     main.sym

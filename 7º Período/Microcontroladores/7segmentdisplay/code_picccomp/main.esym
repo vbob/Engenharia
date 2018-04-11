@@ -1,7 +1,7 @@
-D G "__PCM__" 0 116 ""5.008""
-D G "__DEVICE__" 0 116 "877"
-D G "__DATE__" 0 116 ""08-abr-18""
-D G "__TIME__" 0 116 ""20:41:04"" "This program writes a number on a 7 segment display"
+D G "__PCM__" 0 115 ""5.008""
+D G "__DEVICE__" 0 115 "877"
+D G "__DATE__" 0 115 ""09-abr-18""
+D G "__TIME__" 0 115 ""09:53:40"" "This program writes a number on a 7 segment display"
 c L "set_tris_a" 1 1 14 "FUNCTION"
 v L "value" 1 28 "int8" `54 
 f B "set_tris_a" 1 28 "void(int8 value)" `53 
@@ -774,31 +774,31 @@ d G "INT_BUSCOL" 1 655 "0x008D08"
 d G "INT_EEPROM" 1 656 "0x008D10"
 d G "INT_TIMER0" 1 657 "0x000B20"
 d G "INT_COMP" 1 658 "0x008D40"
-D G "LED_A_PORT" 0 17 "PIN_B3"
-D G "LED_B_PORT" 0 18 "PIN_B4"
-D G "LED_C_PORT" 0 19 "PIN_C0"
-D G "LED_D_PORT" 0 20 "PIN_C1"
-D G "LED_E_PORT" 0 21 "PIN_C2"
-D G "LED_F_PORT" 0 22 "PIN_D2"
-D G "LED_G_PORT" 0 23 "PIN_D4"
-D G "LED_H_PORT" 0 24 "PIN_D7"
-D G "BUTTON" 0 26 "PIN_B0"
-C L "jump_to_irs" 0 28 2 "FUNCTION"
-V G "led_map" 0 30 "int8[1]" `619 
-C L "jump_to_irs" 0 28 1 "FUNCTION"
-V G "pins" 0 50 "int8[1]" `620 
-C L "jump_to_irs" 0 28 1 "FUNCTION"
-F G "clear" 0 60 "void()" `621 
-V L "number" 0 71 "int8" `623 
-F G "writeOnDisplay" 0 71 "void(int8 number)" `622 
-V L "leds" 0 72 "int8" `624 
-V L "i" 0 74 "int8" `625 
-C L "writeOnDisplay" 0 28 1 "FUNCTION"
-V G "now_number" 0 82 "int8" `630 
-V G "incrementing" 0 83 "int8" `631 
-F G "loop" 0 85 "void()" `632 
-C L "loop" 0 28 2 "FUNCTION"
-F G "MAIN" 0 104 "void()" `633 
+D G "LED_A_PORT" 0 16 "PIN_D3"
+D G "LED_B_PORT" 0 17 "PIN_D2"
+D G "LED_C_PORT" 0 18 "PIN_D5"
+D G "LED_D_PORT" 0 19 "PIN_D6"
+D G "LED_E_PORT" 0 20 "PIN_D7"
+D G "LED_F_PORT" 0 21 "PIN_B0"
+D G "LED_G_PORT" 0 22 "PIN_B1"
+D G "LED_H_PORT" 0 23 "PIN_D4"
+D G "BUTTON" 0 25 "PIN_D1"
+C L "jump_to_irs" 0 27 2 "FUNCTION"
+V G "led_map" 0 29 "int8[1]" `619 
+C L "jump_to_irs" 0 27 1 "FUNCTION"
+V G "pins" 0 49 "int8[1]" `620 
+C L "jump_to_irs" 0 27 1 "FUNCTION"
+F G "clear" 0 59 "void()" `621 
+V L "number" 0 70 "int8" `623 
+F G "writeOnDisplay" 0 70 "void(int8 number)" `622 
+V L "leds" 0 71 "int8" `624 
+V L "i" 0 73 "int8" `625 
+C L "writeOnDisplay" 0 27 1 "FUNCTION"
+V G "now_number" 0 81 "int8" `630 
+V G "incrementing" 0 82 "int8" `631 
+F G "loop" 0 84 "void()" `632 
+C L "loop" 0 27 2 "FUNCTION"
+F G "MAIN" 0 103 "void()" `633 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

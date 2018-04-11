@@ -96,7 +96,7 @@ void loop() {
       }
       // If not have delay, it may increment 
       // more than 1 time at each press
-      delay_ms(300);
+      delay_ms(50);
    }
 }
 
