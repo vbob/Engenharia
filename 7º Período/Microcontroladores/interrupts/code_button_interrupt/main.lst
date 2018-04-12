@@ -1,0 +1,122 @@
+CCS PCM C Compiler, Version 5.008, 5967               11-abr-18 11:04
+
+               Filename:   D:\engenharia\7º Período\Microcontroladores\interrupts\code_button_interrupt\main.lst
+
+               ROM used:   76 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   12 (3%) at main() level
+                           12 (3%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   039
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  BTFSS  0B.4
+0018:  GOTO   01B
+0019:  BTFSC  0B.1
+001A:  GOTO   02C
+001B:  MOVF   22,W
+001C:  MOVWF  04
+001D:  MOVF   23,W
+001E:  MOVWF  77
+001F:  MOVF   24,W
+0020:  MOVWF  78
+0021:  MOVF   25,W
+0022:  MOVWF  79
+0023:  MOVF   26,W
+0024:  MOVWF  7A
+0025:  MOVF   20,W
+0026:  MOVWF  0A
+0027:  SWAPF  21,W
+0028:  MOVWF  03
+0029:  SWAPF  7F,F
+002A:  SWAPF  7F,W
+002B:  RETFIE
+002C:  BCF    0A.3
+002D:  BCF    0A.4
+002E:  GOTO   02F
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES BROWNOUT 
+....................  
+.................... #use delay(crystal=20000000) 
+.................... #use FIXED_IO( D_outputs=PIN_D1 ) 
+....................  
+.................... #INT_EXT 
+.................... void  EXT_isr(void)  
+.................... { 
+....................  output_toggle(PIN_D1); 
+002F:  MOVLW  FD
+0030:  BSF    03.5
+0031:  MOVWF  08
+0032:  MOVLW  02
+0033:  BCF    03.5
+0034:  XORWF  08,F
+0035:  BCF    0B.1
+0036:  BCF    0A.3
+0037:  BCF    0A.4
+0038:  GOTO   01B
+.................... } 
+....................  
+.................... void main() 
+0039:  MOVF   03,W
+003A:  ANDLW  1F
+003B:  MOVWF  03
+003C:  BSF    03.5
+003D:  BSF    1F.0
+003E:  BSF    1F.1
+003F:  BSF    1F.2
+0040:  BCF    1F.3
+0041:  MOVLW  07
+0042:  MOVWF  1C
+0043:  BCF    03.7
+.................... { 
+....................    enable_interrupts(INT_EXT); 
+0044:  BCF    03.5
+0045:  BSF    0B.4
+....................    enable_interrupts(GLOBAL); 
+0046:  MOVLW  C0
+0047:  IORWF  0B,F
+....................  
+....................    ext_int_edge(L_TO_H);  
+0048:  BSF    03.5
+0049:  BSF    01.6
+....................  
+....................    while(TRUE) 
+....................    { 
+004A:  GOTO   04A
+....................    } 
+.................... } 
+004B:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT
