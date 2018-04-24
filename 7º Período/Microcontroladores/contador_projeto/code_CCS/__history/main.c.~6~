@@ -1,0 +1,42 @@
+#include <16F628A.h>
+#include <stdint.h>
+
+#FUSES NOWDT                    //No Watch Dog Timer
+#FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+
+#use delay(crystal=20000000)
+
+#define TCLK PIN_B0 
+#define TDIO PIN_B1
+
+uint8_t m_brightness = 0;
+
+void setBrightness(uint8_t brightness, int on) {
+   m_brightness = (brightness & 0x7) | (on? 0x08 : 0x00);
+}
+
+void bitDelay() {
+   delay_us(100);
+}
+
+void start() {
+   output_high(TDIO);
+   bitDelay();
+}
+
+void setSegments(uint8_t segments[], uint8_t length, uint8_t pos) {
+   start();
+}
+
+void main()
+{
+
+   output_low(TCLK);
+   output_low(TDIO);
+   
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}

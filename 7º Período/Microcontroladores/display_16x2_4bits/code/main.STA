@@ -1,19 +1,19 @@
 
-ROM used:   1127/8192 (14%)
-            1127/8192 (14%) including unused fragments
+ROM used:   1480/8192 (18%)
+            1480/8192 (18%) including unused fragments
 
-            0.4 Average locations per line
-            2.5 Average locations per statement
+            0.5 Average locations per line
+            3.2 Average locations per statement
 
 RAM used:   15/368 (4%) at main() level
-            37/368 (10%) worst case
+            45/368 (12%) worst case
 
 Stack used: 5 worst case (5 in main + 0 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   43    13   3  main.c
+   45    13   3  main.c
   639     0   0  C:\Program Files (x86)\PICC\Devices\16F877.h
   456    84  18  C:\Program Files (x86)\PICC\Drivers\LCD.C
  1351   359  79  C:\Program Files (x86)\PICC\Drivers\stdlib.h
@@ -23,47 +23,47 @@ Lines Stmts  %   Files
    37     0   0  C:\Program Files (x86)\PICC\Drivers\stdio.h
   163     0   0  C:\Program Files (x86)\PICC\Drivers\stdint.h
 ----- -----
- 3172   456 Total
+ 3174   456 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     20   2    1             @delay_ms1
+0     20   1    1             @delay_ms1
  Inline         3   596  5.9  lcd_read_byte
-0      6   1    0    59  4.2  lcd_read_nibble
+0      6   0    0    59  4.2  lcd_read_nibble
 0     23   2    1   181  3.9  lcd_send_nibble
-0     93   8    3   415  3.7  lcd_send_byte
-0     69   6    6   770  7.2  lcd_init
-0     18   2    4   208  6.3  lcd_gotoxy
-0     44   4    1   354  4.7  lcd_putc
-0    119  11   13             @MULFF
-0     31   3    2             @ITOF
-0    204  18   14   322  3.6  @DIVFF
-0    158  14    4   374  3.7  MAIN
+0     93   6    3   415  3.7  lcd_send_byte
+0     69   5    6   770  7.2  lcd_init
+0     18   1    4   208  6.3  lcd_gotoxy
+0     44   3    1   354  4.7  lcd_putc
+0    117   8   13             @MULFF
+0     31   2    2             @ITOF
+0    321  22   16             @ADDFF
+0    234  16    4   398  4.1  MAIN
 0      9   1    0             @const952
-0     88   8    4             @PSTRINGC7_646
+0     88   6    4             @PSTRINGC7_646
 0     11   1    0             @const956
-0     33   3    4             @SFTOI
-0     87   8    5             @PSTRINGCN7_646
-0     21   2    3             @DIV88
-0     89   8    6             @PRINTF_D_646
+0     87   6    5             @PSTRINGCN7_646
+ Inline         5             @FTOSD
+0     79   5   13             @DIV3232
+0    226  15   13             @PRINTF_L32D_646FPFPF
  Inline         0             @cinit1
 
 Program metrics:
-    Functions               9
+    Functions               8
     Statements              456
     Comments                791
-    Volume (V)              5123
-    Difficulty (D)          40.5
-    Effort to implement (E) 207382
-    Time to implement (T)   3 hours, 12 minutes
+    Volume (V)              4550
+    Difficulty (D)          37.3
+    Effort to implement (E) 169606
+    Time to implement (T)   2 hours, 37 minutes
     Est Delivered Bugs (B)  1
     Cyclomatic Complexity   8
-    Maintainability (MI)    121
+    Maintainability (MI)    87
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF  1123  921  
+00004-007FF  1476  568  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

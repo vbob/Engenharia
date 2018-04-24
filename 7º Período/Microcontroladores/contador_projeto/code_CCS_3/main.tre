@@ -1,0 +1,29 @@
+ÀÄmain
+   ÀÄMAIN  0/57  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄstart  0/6  Ram=0
+      ³  ÀÄbitDelay  0/6  Ram=0
+      ÃÄwriteByte  0/69  Ram=2
+      ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ÀÄbitDelay  0/6  Ram=0
+      ÃÄstop  0/16  Ram=0
+      ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ÀÄbitDelay  0/6  Ram=0
+      ÃÄstart  0/6  Ram=0
+      ³  ÀÄ*
+      ÃÄwriteByte  0/69  Ram=2
+      ³  ÀÄ*
+      ÃÄstop  0/16  Ram=0
+      ³  ÀÄ*
+      ÃÄstart  0/6  Ram=0
+      ³  ÀÄ*
+      ÃÄwriteByte  0/69  Ram=2
+      ³  ÀÄ*
+      ÀÄstop  0/16  Ram=0
+         ÀÄ*

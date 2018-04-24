@@ -1,0 +1,41 @@
+ÀÄmain
+   ÀÄMAIN  0/102  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄsetSegments  0/36  Ram=5
+      ³  ÃÄstart  0/7  Ram=0
+      ³  ³  ÀÄbitDelay  0/6  Ram=0
+      ³  ÃÄwriteByte  0/68  Ram=3
+      ³  ³  ÃÄwriteBit  (Inline)  Ram=1
+      ³  ³  ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ³  ³  ÀÄbitDelay  0/6  Ram=0
+      ³  ³  ÀÄreadAck  (Inline)  Ram=0
+      ³  ³     ÀÄbitDelay  0/6  Ram=0
+      ³  ÃÄstop  0/19  Ram=0
+      ³  ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ³  ÃÄbitDelay  0/6  Ram=0
+      ³  ³  ÀÄbitDelay  0/6  Ram=0
+      ³  ÃÄstart  0/7  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄwriteByte  0/68  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄwriteByte  0/68  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄstop  0/19  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄstart  0/7  Ram=0
+      ³  ³  ÀÄ*
+      ³  ÃÄwriteByte  0/68  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÀÄstop  0/19  Ram=0
+      ³     ÀÄ*
+      ÃÄwriteDigits  0/256  Ram=32
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄ@MUL88  (Inline)  Ram=2
+      ³  ÀÄsetSegments  0/36  Ram=5
+      ³     ÀÄ*
+      ÀÄwriteDigits  0/256  Ram=32
+         ÀÄ*

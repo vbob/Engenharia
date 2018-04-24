@@ -1,5 +1,5 @@
 #include <16F877.h>
-#device ADC=8
+#device ADC=10
 
 #FUSES NOWDT                    //No Watch Dog Timer
 #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
@@ -20,11 +20,13 @@
 #include <stdint.h>
 
 
+#define 0 
+
 
 void main()
 {
    setup_adc_ports(AN0);
-   setup_adc(ADC_CLOCK_DIV_2);
+   setup_adc(ADC_CLOCK_DIV_32);
    set_adc_channel(0); 
    lcd_init();
    delay_us(20);
@@ -34,9 +36,9 @@ void main()
    while(TRUE)
    { 
       r =read_adc();          
-      Temp = (r*100)/255.0;
-      printf(lcd_putc,"\r\nTemp: %d          \n", (int) Temp); 
-      delay_ms(50);
+      Temp =  0.0005524*r*r-2.5*r+579.5;
+      printf(lcd_putc,"\r\nLDR: %f          \n", Temp); 
+      delay_ms(500);
    }
 
 }

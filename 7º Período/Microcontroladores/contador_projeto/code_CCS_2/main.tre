@@ -1,0 +1,52 @@
+ÀÄmain
+   ÀÄMAIN  0/55  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄinitDisplay  0/18  Ram=0
+      ÃÄsetBrightness  0/12  Ram=3
+      ÀÄsetSegments  0/39  Ram=5
+         ÃÄstart  0/7  Ram=0
+         ³  ÀÄbitDelay  0/6  Ram=0
+         ÃÄwriteByte  0/160  Ram=4
+         ³  ÃÄbitDelay  0/6  Ram=0
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄbitDelay  0/6  Ram=0
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄbitDelay  0/6  Ram=0
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄbitDelay  0/6  Ram=0
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄbitDelay  0/6  Ram=0
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@READBITA  0/23  Ram=5
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄbitDelay  0/6  Ram=0
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÃÄ@WRITEBITA  0/32  Ram=6
+         ³  ÀÄbitDelay  0/6  Ram=0
+         ÃÄstop  0/19  Ram=0
+         ³  ÃÄbitDelay  0/6  Ram=0
+         ³  ÃÄbitDelay  0/6  Ram=0
+         ³  ÀÄbitDelay  0/6  Ram=0
+         ÃÄstart  0/7  Ram=0
+         ³  ÀÄ*
+         ÃÄwriteByte  0/160  Ram=4
+         ³  ÀÄ*
+         ÃÄwriteByte  0/160  Ram=4
+         ³  ÀÄ*
+         ÃÄstop  0/19  Ram=0
+         ³  ÀÄ*
+         ÃÄstart  0/7  Ram=0
+         ³  ÀÄ*
+         ÃÄwriteByte  0/160  Ram=4
+         ³  ÀÄ*
+         ÀÄstop  0/19  Ram=0
+            ÀÄ*

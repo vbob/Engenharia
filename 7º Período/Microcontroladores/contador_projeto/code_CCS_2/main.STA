@@ -1,0 +1,59 @@
+
+ROM used:   375/2048 (18%)
+            375/2048 (18%) including unused fragments
+
+            0.1 Average locations per line
+            0.9 Average locations per statement
+
+RAM used:   28/224 (12%) at main() level
+            44/224 (20%) worst case
+
+Stack used: 3 worst case (3 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  160    56  13  main.c
+  518     0   0  C:\Program Files (x86)\PICC\Devices\16F628A.h
+ 1351   359  87  C:\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
+  423     0   0  C:\Program Files (x86)\PICC\Drivers\string.h
+   28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
+   37     0   0  C:\Program Files (x86)\PICC\Drivers\stdio.h
+  163     0   0  C:\Program Files (x86)\PICC\Drivers\stdint.h
+----- -----
+ 2712   415 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     55  15    0   104  2.5  MAIN
+0     18   5    0    67  1.2  initDisplay
+0     12   3    3    92  3.8  setBrightness
+0      7   2    0    27  0.9  start
+0     19   5    0    88  1.2  stop
+0      6   2    0    17  0.8  bitDelay
+0    160  43    4   729  6.2  writeByte
+0     32   9    6    86  1.6  @WRITEBITA
+0     23   6    5    86  1.6  @READBITA
+0     39  10    5   382  5.2  setSegments
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               10
+    Statements              415
+    Comments                701
+    Volume (V)              2620
+    Difficulty (D)          25.6
+    Effort to implement (E) 67102
+    Time to implement (T)   1 hours, 2 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   4
+    Maintainability (MI)    101
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   371  1673  
+
+
+

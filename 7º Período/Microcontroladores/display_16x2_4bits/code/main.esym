@@ -1,7 +1,7 @@
-D G "__PCM__" 0 44 ""5.015""
-D G "__DEVICE__" 0 44 "877"
-D G "__DATE__" 0 44 ""22-abr-18""
-D G "__TIME__" 0 44 ""19:26:41"" "Standard Header file for the PIC16F877 device ////////////////"
+D G "__PCM__" 0 46 ""5.015""
+D G "__DEVICE__" 0 46 "877"
+D G "__DATE__" 0 46 ""23-abr-18""
+D G "__TIME__" 0 46 ""15:22:58"" "Standard Header file for the PIC16F877 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 v L "value" 1 37 "int8" `53 
 f B "set_tris_a" 1 37 "void(int8 value)" `52 
@@ -1265,10 +1265,10 @@ D G "UINT_FAST16_MAX" 8 126 " (65535)"
 D G "INT_FAST32_MAX" 8 128 " (2147483647)"
 D G "INT_FAST32_MIN" 8 129 " (-2147483648)"
 D G "UINT_FAST32_MAX" 8 130 " (4294967295)"
-C L "MAIN" 8 2 9 "FUNCTION"
-F G "MAIN" 0 25 "void()" `949 
-V L "temp" 0 32 "float" `954 
-V L "r" 0 33 "float" `955 
+D G "0" 0 23 ""
+F G "MAIN" 0 27 "void()" `949 
+V L "temp" 0 34 "float" `954 
+V L "r" 0 35 "float" `955 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

@@ -15,7 +15,8 @@ Type=4
 [Opened Files]
 1=main.c
 2=main.h
-3=
+3=..\..\7segmentdisplay\code_picccomp\main.h
+4=
 [main.c]
 Type=4
 [Units]

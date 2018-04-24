@@ -1,0 +1,59 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020     m_brightness
+021-030 digitToSegment
+031     writeByte.b
+032     writeByte.data
+033     writeByte.i
+034     writeByte.ack
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  bitDelay
+00000A  start
+000010  writeByte
+000055  stop
+000065  MAIN
+000065  @cinit1
+00006B  @cinit2
+
+Project Directory:
+    D:\engenharia\7º Período\Microcontroladores\contador_projeto\code_CCS\
+
+Project Files:
+    main.c                                                  [23-abr-18 20:03  CRC=7C5A2235]
+    C:\Program Files (x86)\PICC\Devices\16F628A.h           [12-nov-13 14:34  CRC=44569924]
+    C:\Program Files (x86)\PICC\Drivers\stdint.h            [30-dez-08 09:01  CRC=9F7F640F]
+
+Source signature=FFAF8377
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

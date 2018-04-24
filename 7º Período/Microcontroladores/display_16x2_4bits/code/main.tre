@@ -1,5 +1,5 @@
 ÀÄmain
-   ÀÄMAIN  0/158  Ram=4
+   ÀÄMAIN  0/234  Ram=4
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄlcd_init  0/69  Ram=6
       ³  ÃÄ@delay_ms1  0/20  Ram=1
@@ -30,25 +30,29 @@
       ³  ÀÄlcd_putc  0/44  Ram=1
       ³     ÀÄ*
       ÃÄ@ITOF  0/31  Ram=2
-      ÃÄ@MULFF  0/119  Ram=13
-      ÃÄ@DIVFF  0/204  Ram=14
-      ÃÄ@SFTOI  0/33  Ram=4
+      ÃÄ@MULFF  0/117  Ram=13
+      ÃÄ@MULFF  0/117  Ram=13
+      ÃÄ@MULFF  0/117  Ram=13
+      ÃÄ@ADDFF  0/321  Ram=16
+      ÃÄ@ADDFF  0/321  Ram=16
       ÃÄ@PSTRINGCN7_646  0/87  Ram=5
       ³  ÃÄlcd_putc  0/44  Ram=1
       ³  ³  ÀÄ*
       ³  ÀÄlcd_putc  0/44  Ram=1
       ³     ÀÄ*
-      ÃÄ@PRINTF_D_646  0/89  Ram=6
-      ³  ÃÄ@DIV88  0/21  Ram=3
-      ³  ÃÄ@DIV88  0/21  Ram=3
+      ÃÄ@PRINTF_L32D_646FPFPF  0/226  Ram=13
+      ³  ÃÄ@MULFF  0/117  Ram=13
+      ³  ÃÄ@FTOSD  (Inline)  Ram=5
+      ³  ÃÄ@DIV3232  0/79  Ram=13
       ³  ÃÄlcd_putc  0/44  Ram=1
       ³  ³  ÀÄ*
       ³  ÃÄlcd_putc  0/44  Ram=1
       ³  ³  ÀÄ*
       ³  ÃÄlcd_putc  0/44  Ram=1
       ³  ³  ÀÄ*
-      ³  ÀÄlcd_putc  0/44  Ram=1
-      ³     ÀÄ*
+      ³  ÃÄlcd_putc  0/44  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄ@DIV3232  0/79  Ram=13
       ÃÄ@PSTRINGCN7_646  0/87  Ram=5
       ³  ÀÄ*
       ÀÄ@delay_ms1  0/20  Ram=1

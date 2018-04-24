@@ -1,0 +1,4 @@
+>>> Warning 202 "main.c" Line 12(9,23): Variable never used:   digitToSegment
+      Memory usage:   ROM=8%      RAM=12% - 14%
+      0 Errors,  1 Warnings.
+Build Successful.
