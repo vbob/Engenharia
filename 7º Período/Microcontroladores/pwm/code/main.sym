@@ -1,0 +1,68 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+021-022 main.i
+023-024 main.j
+025-026 @MUL1616.P1
+025     main.@SCRATCH1
+026     main.@SCRATCH2
+027-028 @MUL1616.P1
+027     main.@SCRATCH3
+028     @delay_us1.P1
+029     @MUL1616.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @MUL1616
+000019  @delay_us1
+000028  main
+000028  @cinit1
+000032  @cinit2
+
+Project Directory:
+    D:\engenharia\7º Período\Microcontroladores\pwm\code\
+
+Project Files:
+    main.c                                                  [25-abr-18 11:01  CRC=5D16CF66]
+    main.h                                                  [25-abr-18 10:20  CRC=D872A938]
+    C:\Program Files (x86)\PICC\Devices\16F877A.h           [12-nov-13 14:35  CRC=81334808]
+    C:\Program Files (x86)\PICC\Drivers\stdint.h            [30-dez-08 09:01  CRC=9F7F640F]
+
+Source signature=F5BB88C4
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

@@ -15,7 +15,15 @@ Type=4
 [Opened Files]
 1=main.c
 2=main.h
-3=
+3=C:\Program Files (x86)\PICC\Devices\16F628A.h
+4=C:\Program Files (x86)\PICC\Drivers\float.h
+5=C:\Program Files (x86)\PICC\Drivers\stdlib.h
+6=C:\Program Files (x86)\PICC\Drivers\stddef.h
+7=C:\Program Files (x86)\PICC\Drivers\string.h
+8=C:\Program Files (x86)\PICC\Drivers\ctype.h
+9=C:\Program Files (x86)\PICC\Drivers\stdint.h
+10=C:\Program Files (x86)\PICC\Drivers\stdio.h
+11=
 [main.c]
 Type=4
 [Units]

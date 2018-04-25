@@ -1,0 +1,24 @@
+#include <main.h>
+
+void main()
+{
+   while(TRUE)
+   {
+      // Should take 3000ms
+      // Each 100ms it should update the Pulse Width
+   
+      // External Loop
+      // 30 times
+      for (int i = 0; i < 300; i++) {
+         // Internal loop
+         // Should take 100ms
+         for (int j = 0; j < 100; j++) {
+            output_high(PIN_C2);
+            delay_us(i*(100/300));
+            output_low(PIN_C2);
+            delay_us(100-(i*(100/300)));
+         }
+      }
+   }
+
+}
