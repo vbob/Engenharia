@@ -67,15 +67,22 @@ public class Main extends Application {
 		double minutos = LocalDateTime.now().getMinute();
 		double segundos = LocalDateTime.now().getSecond();
 		
-		var anguloHora = Math.toRadians(360*horas%12/12);
-		var anguloMinuto = Math.toRadians(360*minutos/60);
-		var anguloSegundo = Math.toRadians(360*segundos/60);
+		//double horas = 0;
+		//double minutos = 0;
+		//double segundos = 0;
+		
+		var anguloHora = Math.toRadians((360*horas/12));
+		var anguloMinuto = Math.toRadians((360*minutos/60));
+		var anguloSegundo = Math.toRadians((360*segundos/60));
+		System.out.println(horas);
+		System.out.println(minutos);
+		System.out.println(segundos);
 	    Line sLine = new Line();
 	    
 	    sLine.setStartX(100);
 	    sLine.setStartY(100);
 	    sLine.setEndX(100+(60*Math.sin(anguloSegundo)));
-	    sLine.setEndY(100+(60*Math.cos(anguloSegundo)));
+	    sLine.setEndY(100-(60*Math.cos(anguloSegundo)));
 	    sLine.setStroke(Color.RED);
 	    sLine.setStyle("-fx-stroke: #FF5476; -fx-stroke-width: 2px;");
 	    pane.getChildren().add(sLine);
@@ -84,7 +91,7 @@ public class Main extends Application {
 	    mLine.setStartX(100);
 	    mLine.setStartY(100);
 	    mLine.setEndX(100+(55*Math.sin(anguloMinuto)));
-	    mLine.setEndY(100+(55*Math.cos(anguloMinuto)));
+	    mLine.setEndY(100-(55*Math.cos(anguloMinuto)));
 	    mLine.setStroke(Color.BLACK);
 	    mLine.setStyle("-fx-stroke: #7A7A7A; -fx-stroke-width: 2px;");
 	    pane.getChildren().add(mLine);
@@ -92,8 +99,8 @@ public class Main extends Application {
 	    Line hLine = new Line();
 	    hLine.setStartX(100);
 	    hLine.setStartY(100);
-	    hLine.setEndX(100+(50*Math.sin(anguloHora)));
-	    hLine.setEndY(100+(50*Math.cos(anguloHora)));
+	    hLine.setEndX(100+(40*Math.sin(anguloHora)));
+	    hLine.setEndY(100-(40*Math.cos(anguloHora)));
 	    hLine.setStroke(Color.BLACK);
 	    hLine.setStyle("-fx-stroke: #262626; -fx-stroke-width: 2px;");
 	    pane.getChildren().add(hLine);
