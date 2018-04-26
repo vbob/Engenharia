@@ -1,5 +1,8 @@
 package application;
 
+import java.time.LocalDateTime;
+import java.util.Date;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -8,7 +11,6 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
 public class Main extends Application {
@@ -61,11 +63,19 @@ public class Main extends Application {
 	    double minuteY = centerY - mLength * 
 	      Math.cos(minute * (2 * Math.PI / 60));*/
 		
+		double horas = LocalDateTime.now().getHour();
+		double minutos = LocalDateTime.now().getMinute();
+		double segundos = LocalDateTime.now().getSecond();
+		
+		var anguloHora = Math.toRadians(360*horas%12/12);
+		var anguloMinuto = Math.toRadians(360*minutos/60);
+		var anguloSegundo = Math.toRadians(360*segundos/60);
 	    Line sLine = new Line();
+	    
 	    sLine.setStartX(100);
 	    sLine.setStartY(100);
-	    sLine.setEndX(100);
-	    sLine.setEndY(30);
+	    sLine.setEndX(100+(60*Math.sin(anguloSegundo)));
+	    sLine.setEndY(100+(60*Math.cos(anguloSegundo)));
 	    sLine.setStroke(Color.RED);
 	    sLine.setStyle("-fx-stroke: #FF5476; -fx-stroke-width: 2px;");
 	    pane.getChildren().add(sLine);
@@ -73,8 +83,8 @@ public class Main extends Application {
 	    Line mLine = new Line();
 	    mLine.setStartX(100);
 	    mLine.setStartY(100);
-	    mLine.setEndX(165);
-	    mLine.setEndY(100);
+	    mLine.setEndX(100+(55*Math.sin(anguloMinuto)));
+	    mLine.setEndY(100+(55*Math.cos(anguloMinuto)));
 	    mLine.setStroke(Color.BLACK);
 	    mLine.setStyle("-fx-stroke: #7A7A7A; -fx-stroke-width: 2px;");
 	    pane.getChildren().add(mLine);
@@ -82,8 +92,8 @@ public class Main extends Application {
 	    Line hLine = new Line();
 	    hLine.setStartX(100);
 	    hLine.setStartY(100);
-	    hLine.setEndX(100);
-	    hLine.setEndY(145);
+	    hLine.setEndX(100+(50*Math.sin(anguloHora)));
+	    hLine.setEndY(100+(50*Math.cos(anguloHora)));
 	    hLine.setStroke(Color.BLACK);
 	    hLine.setStyle("-fx-stroke: #262626; -fx-stroke-width: 2px;");
 	    pane.getChildren().add(hLine);
