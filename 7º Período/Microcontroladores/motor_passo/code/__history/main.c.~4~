@@ -1,0 +1,21 @@
+#include <main.h>
+
+byte steps[] = {
+   0b00010000,
+   0b00100000,
+   0b01000000,
+   0b10000000
+};
+
+void main()
+{
+   int i = 0;
+   while(TRUE)
+   {
+      if (i == 3)
+         i = 0;
+      
+         output_d(steps[i]);
+   }
+
+}

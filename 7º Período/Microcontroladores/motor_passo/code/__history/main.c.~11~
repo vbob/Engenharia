@@ -1,0 +1,26 @@
+#include <main.h>
+
+byte steps[] = {
+   0b00000001,
+   0b00000010,
+   0b01000100,
+   0b00001000
+};
+
+void main()
+{
+   int i = 0;
+   while(TRUE)
+   {
+      
+      
+      output_d(steps[i]);
+      delay_ms(10);
+      
+      i++;
+      if (i == 4) {
+         i = 0;
+      }
+   }
+
+}
