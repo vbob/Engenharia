@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c00000002000000030000000083ffff0083fffffffffffffffffffff9ffffff020000002503000037020000</PLACEMENT>
+  <PLACEMENT>2c00000002000000030000000083ffff0083fffffffffffffffffffff9ffffff02000000250300005a020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -67,7 +67,7 @@
    <POPUP w="114" x="337" flags="00000008" y="270" h="127" pid="7" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="357" flags="80000002" y="290" h="8" pid="8" iid="1">
+   <POPUP w="8" x="357" flags="00000000" y="290" h="8" pid="8" iid="1">
     <PROPERTIES>
      <ITEM name="DataType">2</ITEM>
      <ITEM name="DispChars">Yes</ITEM>

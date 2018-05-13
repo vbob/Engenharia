@@ -4,79 +4,66 @@
 015     CCP_1_LOW
 015     CCP_1
 016     CCP_1_HIGH
-01B     CCP_2
 01B     CCP_2_LOW
+01B     CCP_2
 01C     CCP_2_HIGH
-020     @INTERRUPT_AREA
-021     @INTERRUPT_AREA
-022     @INTERRUPT_AREA
-023     @INTERRUPT_AREA
-024     @INTERRUPT_AREA
-025     @INTERRUPT_AREA
-026     @INTERRUPT_AREA
-027-02A steps
-02B     direita
-02C     MAIN.i
-02D     @delay_ms1.P1
-02D     MAIN.@SCRATCH1
+020-023 steps
+024     passo_direita
+025     vel_passo
+026     vel_cc
+027     pos
+028-02B scanPorts.ports
+02C     scanPorts.linha
+02D-02E girarMotores.delay_us_passo
+02D     scanPorts.@SCRATCH1
+02E     @WRITEBITA.P1
+02F     @WRITEBITA.P1
+02F-030 girarMotores.delay_off_cc
+030-031 @WRITEBITA.P1
+031-032 girarMotores.delay_on_cc
+033-034 girarMotores.qtd_pulsos
+035-036 girarMotores.i
+037     @MUL88.P1
+037-038 @MUL1616.P2
+037-038 @DIV1616.P3
+037     girarMotores.@SCRATCH1
+038     @delay_us1.P1
+038     @MUL88.P2
+039-03A @MUL1616.P1
+039-03A @DIV1616.P2
+03B     @MUL1616.@SCRATCH1
+03B     @DIV1616.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
 079     @SCRATCH
 07A     @SCRATCH
-07F     @INTERRUPT_AREA
 09C.6   C1OUT
 09C.7   C2OUT
-0FF     @INTERRUPT_AREA
-10D-10E @READ_PROGRAM_MEMORY8.P1
-10D-10E @WRITE_PROGRAM_MEMORY8.P2
-17F     @INTERRUPT_AREA
-1FF     @INTERRUPT_AREA
-27F     @INTERRUPT_AREA
-2FF     @INTERRUPT_AREA
-37F     @INTERRUPT_AREA
-3FF     @INTERRUPT_AREA
-47F     @INTERRUPT_AREA
-4FF     @INTERRUPT_AREA
-57F     @INTERRUPT_AREA
-5FF     @INTERRUPT_AREA
-67F     @INTERRUPT_AREA
-6FF     @INTERRUPT_AREA
-77F     @INTERRUPT_AREA
-7FF     @INTERRUPT_AREA
-87F     @INTERRUPT_AREA
-8FF     @INTERRUPT_AREA
-97F     @INTERRUPT_AREA
-9FF     @INTERRUPT_AREA
-A7F     @INTERRUPT_AREA
-AFF     @INTERRUPT_AREA
-B7F     @INTERRUPT_AREA
-BFF     @INTERRUPT_AREA
-C7F     @INTERRUPT_AREA
-CFF     @INTERRUPT_AREA
-D7F     @INTERRUPT_AREA
-DFF     @INTERRUPT_AREA
-E7F     @INTERRUPT_AREA
-EFF     @INTERRUPT_AREA
-F7F     @INTERRUPT_AREA
-FFF     @INTERRUPT_AREA
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-00002F  EXT_isr
-00003A  @delay_ms1
-000050  MAIN
-000050  @cinit1
-00005B  @cinit2
+000004  @WRITEBITA
+000024  @delay_us1
+000033  girarMotores
+000055  @MUL1616
+000078  @MUL88
+0000B6  @DIV1616
+000117  scanPorts
+0001D6  MAIN
+0001D6  @cinit1
+0001E5  @cinit2
 
 Project Directory:
     D:\engenharia\7º Período\Microcontroladores\motor_passo\code\
 
 Project Files:
-    main.c                                                  [02-mai-18 10:52  CRC=60849549]
-    main.h                                                  [02-mai-18 10:39  CRC=2EB8624F]
+    main.c                                                  [05-mai-18 23:38  CRC=CD8EE18D]
     C:\Program Files (x86)\PICC\Devices\16F877A.h           [12-nov-13 14:35  CRC=81334808]
+    C:\Program Files (x86)\PICC\Drivers\stdint.h            [30-dez-08 09:01  CRC=9F7F640F]
 
-Source signature=91A387A8
+Source signature=8DC0F1B3
 
 Units:
     main (main)

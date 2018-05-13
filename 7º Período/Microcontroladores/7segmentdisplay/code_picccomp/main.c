@@ -1,6 +1,7 @@
 // This program writes a number on a 7 segment display
 
 #include <16F877A.h>
+#include <stdint.h>
 #device ADC=16
 
 #FUSES NOWDT                    //No Watch Dog Timer
@@ -72,7 +73,7 @@ void writeOnDisplay(int number) {
    clear();
    for (int i =0; i < 8; i++) {
       // Moves the map one bit to the right and compares to 1
-      if ((leds >> i) & 0x01)
+      if ((leds >> i) & 0b00000001)
          output_high(pins[7-i]);
    }
 }

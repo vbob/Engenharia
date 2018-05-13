@@ -1,5 +1,30 @@
 ÀÄmain
-   ÃÄMAIN  0/56  Ram=1
-   ³  ÃÄ@cinit1  (Inline)  Ram=0
-   ³  ÀÄ@delay_ms1  0/22  Ram=1
-   ÀÄEXT_isr  0/11  Ram=0
+   ÀÄMAIN  0/32  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄscanPorts  0/191  Ram=5
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄ@WRITEBITA  0/32  Ram=6
+      ³  ÃÄgirarMotores  0/228  Ram=1
+      ³  ³  ÃÄ@MUL1616  (Inline)  Ram=5
+      ³  ³  ÃÄ@MUL88  (Inline)  Ram=2
+      ³  ³  ÃÄ@DIV1616  (Inline)  Ram=5
+      ³  ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ³  ÃÄ@delay_us1  0/15  Ram=1
+      ³  ³  ÀÄ@delay_us1  0/15  Ram=1
+      ³  ÃÄgirarMotores  0/228  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄgirarMotores  0/228  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄgirarMotores  0/228  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄgirarMotores  0/228  Ram=1
+      ³     ÀÄ*
+      ÀÄgirarMotores  0/228  Ram=1
+         ÀÄ*

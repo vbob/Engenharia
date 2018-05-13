@@ -20,7 +20,7 @@
 #include <stdint.h>
 
 
-#define 0 
+ 
 
 
 void main()
