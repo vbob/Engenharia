@@ -1,0 +1,50 @@
+#include <16F877A.h>
+#device ADC=16
+
+#FUSES NOWDT                    //No Watch Dog Timer
+#FUSES NOBROWNOUT               //No brownout reset
+#FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+
+#use delay(crystal=20000000)
+#use FIXED_IO( B_outputs=PIN_B2 )
+#use FIXED_IO( C_outputs=PIN_C4, PIN_C5 )
+#use FIXED_IO( D_outputs=PIN_D0 )
+
+#include <stdint.h>
+
+#define LED PIN_C4
+
+
+int current_state = 1;
+uint16_t count = 0;
+
+
+#INT_RTCC
+void  RTCC_isr(void) 
+{
+   set_timer0(251);
+   count++;
+   if (count == 500) {
+      if (current_state)
+         output_low(LED);
+      else
+         output_high(LED);
+      current_state = !current_state;
+      count = 0;
+   }
+}
+
+void main()
+{
+   setup_timer_0(RTCC_EXTERNAL|RTCC_DIV_1|RTCC_8_bit);    
+   output_low(LED);
+   set_timer0(251);
+   enable_interrupts(INT_RTCC);
+   enable_interrupts(GLOBAL);
+
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}

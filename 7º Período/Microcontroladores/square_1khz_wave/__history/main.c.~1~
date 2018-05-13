@@ -1,0 +1,24 @@
+#include <main.h>
+
+#include <stdint.h>
+
+#INT_RTCC
+void  RTCC_isr(void) 
+{
+
+}
+
+void main()
+{
+	setup_timer_0(RTCC_INTERNAL|RTCC_DIV_1|RTCC_8_bit);		//51,2 us overflow
+
+
+	enable_interrupts(INT_RTCC);
+	enable_interrupts(GLOBAL);
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}
