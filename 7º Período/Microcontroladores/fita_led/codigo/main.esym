@@ -1,7 +1,8 @@
-D G "__PCM__" 0 358 ""5.008""
-D G "__DEVICE__" 0 358 "877"
-D G "__DATE__" 0 358 ""25-mai-18""
-D G "__TIME__" 0 358 ""21:32:35"" "Standard Header file for the PIC16F877A device ////////////////"
+D G "BLUE_PIN" 0 103 "PIN_D2"
+D G "__PCM__" 0 305 ""5.008""
+D G "__DEVICE__" 0 305 "877"
+D G "__DATE__" 0 305 ""27-mai-18""
+D G "__TIME__" 0 305 ""11:28:34"" "Standard Header file for the PIC16F877A device ////////////////"
 c L "set_tris_a" 1 5 13 "FUNCTION"
 v L "value" 1 28 "int8" `54 
 f B "set_tris_a" 1 28 "void(int8 value)" `53 
@@ -958,97 +959,104 @@ C L "strupr" 3 19 3 "FUNCTION"
 V L "s" 3 408 "*int8" `726 
 F G "strupr" 3 409 "*int8(*int8 s)" `725 
 V L "p" 3 410 "*int8" `727 
-D G "LCD_CLEARDISPLAY" 0 11 "0x01"
-D G "LCD_RETURNHOME" 0 12 "0x02"
-D G "LCD_ENTRYMODESET" 0 13 "0x04"
-D G "LCD_DISPLAYCONTROL" 0 14 "0x08"
-D G "LCD_CURSORSHIFT" 0 15 "0x10"
-D G "LCD_FUNCTIONSET" 0 16 "0x20"
-D G "LCD_SETCGRAMADDR" 0 17 "0x40"
-D G "LCD_SETDDRAMADDR" 0 18 "0x80"
-D G "LCD_ENTRYRIGHT" 0 21 "0x00"
-D G "LCD_ENTRYLEFT" 0 22 "0x02"
-D G "LCD_ENTRYSHIFTINCREMENT" 0 23 "0x01"
-D G "LCD_ENTRYSHIFTDECREMENT" 0 24 "0x00"
-D G "LCD_DISPLAYON" 0 27 "0x04"
-D G "LCD_DISPLAYOFF" 0 28 "0x00"
-D G "LCD_CURSORON" 0 29 "0x02"
-D G "LCD_CURSOROFF" 0 30 "0x00"
-D G "LCD_BLINKON" 0 31 "0x01"
-D G "LCD_BLINKOFF" 0 32 "0x00"
-D G "LCD_DISPLAYMOVE" 0 35 "0x08"
-D G "LCD_CURSORMOVE" 0 36 "0x00"
-D G "LCD_MOVERIGHT" 0 37 "0x04"
-D G "LCD_MOVELEFT" 0 38 "0x00"
-D G "LCD_8BITMODE" 0 41 "0x10"
-D G "LCD_4BITMODE" 0 42 "0x00"
-D G "LCD_2LINE" 0 43 "0x08"
-D G "LCD_1LINE" 0 44 "0x00"
-D G "LCD_5x10DOTS" 0 45 "0x04"
-D G "LCD_5x8DOTS" 0 46 "0x00"
-D G "LCD_BACKLIGHT" 0 49 "0x08"
-D G "LCD_NOBACKLIGHT" 0 50 "0x00"
-D G "En" 0 52 "0b00000100" "Enable bit"
-D G "Rw" 0 53 "0b00000010" "Read/Write bit"
-D G "Rs" 0 54 "0b00000001" "Register select bit"
-V G "_backlightval" 0 59 "uint8_t" `737 
-V G "_displayControl" 0 60 "uint8_t" `738 
-V G "_displayFunction" 0 61 "uint8_t" `739 
-V G "_displayMode" 0 62 "uint8_t" `740 
-V L "_data" 0 64 "uint8_t" `742 
-F G "expanderWrite" 0 64 "void(uint8_t _data)" `741 
-V L "_data" 0 73 "uint8_t" `744 
-F G "pulseEnable" 0 73 "void(uint8_t _data)" `743 
-V L "value" 0 81 "uint8_t" `746 
-F G "write4bits" 0 81 "void(uint8_t value)" `745 
-V L "value" 0 86 "uint8_t" `748 
-V L "mode" 0 86 "uint8_t" `749 
-F G "send" 0 86 "void(uint8_t value,uint8_t mode)" `747 
-V L "MSB" 0 87 "uint8_t" `750 
-V L "LSB" 0 88 "uint8_t" `751 
-V L "value" 0 93 "uint8_t" `753 
-F G "command" 0 93 "void(uint8_t value)" `752 
-F G "display" 0 97 "void()" `754 
-F G "clear" 0 102 "void()" `755 
-F G "home" 0 107 "void()" `756 
-V L "value" 0 112 "uint8_t" `758 
-F G "write" 0 112 "int8(uint8_t value)" `757 
-V L "c" 0 117 "*int8" `760 
-F G "printstr" 0 117 "void(*int8 c)" `759 
-V L "i" 0 118 "int8" `762 
-V L "col" 0 125 "uint8_t" `764 
-V L "row" 0 125 "uint8_t" `765 
-F G "setCursor" 0 125 "void(uint8_t col,uint8_t row)" `763 
-V L "row_offsets" 0 126 "int8[1]" `766 
-C L "setCursor" 0 20 1 "FUNCTION"
-D G "LINHA0" 0 133 "PIN_B7"
-D G "LINHA1" 0 134 "PIN_B6"
-D G "LINHA2" 0 135 "PIN_B5"
-D G "LINHA3" 0 136 "PIN_B4"
-D G "COLUN0" 0 137 "PIN_B3"
-D G "COLUN1" 0 138 "PIN_B2"
-D G "COLUN2" 0 139 "PIN_B1"
-D G "COLUN3" 0 140 "PIN_B0"
-V G "pos_cursor" 0 145 "uint8_t" `767 
-V G "red" 0 147 "uint16_t" `768 
-V G "green" 0 148 "uint16_t" `769 
-V G "blue" 0 149 "uint16_t" `770 
-V G "red1" 0 151 "uint8_t" `771 
-V G "green1" 0 152 "uint8_t" `772 
-V G "blue1" 0 153 "uint8_t" `773 
-D G "RED_PIN" 0 155 "PIN_D1"
-D G "GREEN_PIN" 0 156 "PIN_D0"
-D G "BLUE_PIN" 0 157 "PIN_D2"
-V L "digited" 0 159 "int8" `775 
-F G "jumpCursor" 0 159 "void(int8 digited)" `774 
-F G "scanPorts" 0 219 "void()" `779 
-V L "ports" 0 220 "uint8_t[1]" `780 
-V L "linha" 0 222 "int8" `781 
-V G "counter" 0 292 "uint8_t" `786 
-F G "TIMER2_isr" 0 297 "void()" `787 
-F G "MAIN" 0 304 "void()" `788 
-V L "c" 0 341 "int8[16]" `791 
-V L "d" 0 345 "int8[16]" `792 
+D G "LCD_CLEARDISPLAY" 6 2 "0x01"
+D G "LCD_RETURNHOME" 6 3 "0x02"
+D G "LCD_ENTRYMODESET" 6 4 "0x04"
+D G "LCD_DISPLAYCONTROL" 6 5 "0x08"
+D G "LCD_CURSORSHIFT" 6 6 "0x10"
+D G "LCD_FUNCTIONSET" 6 7 "0x20"
+D G "LCD_SETCGRAMADDR" 6 8 "0x40"
+D G "LCD_SETDDRAMADDR" 6 9 "0x80"
+D G "LCD_ENTRYRIGHT" 6 12 "0x00"
+D G "LCD_ENTRYLEFT" 6 13 "0x02"
+D G "LCD_ENTRYSHIFTINCREMENT" 6 14 "0x01"
+D G "LCD_ENTRYSHIFTDECREMENT" 6 15 "0x00"
+D G "LCD_DISPLAYON" 6 19 "0x04"
+D G "LCD_DISPLAYOFF" 6 20 "0x00"
+D G "LCD_CURSORON" 6 21 "0x02"
+D G "LCD_CURSOROFF" 6 22 "0x00"
+D G "LCD_BLINKON" 6 23 "0x01"
+D G "LCD_BLINKOFF" 6 24 "0x00"
+D G "LCD_DISPLAYMOVE" 6 27 "0x08"
+D G "LCD_CURSORMOVE" 6 28 "0x00"
+D G "LCD_MOVERIGHT" 6 29 "0x04"
+D G "LCD_MOVELEFT" 6 30 "0x00"
+D G "LCD_8BITMODE" 6 33 "0x10"
+D G "LCD_4BITMODE" 6 34 "0x00"
+D G "LCD_2LINE" 6 35 "0x08"
+D G "LCD_1LINE" 6 36 "0x00"
+D G "LCD_5x10DOTS" 6 37 "0x04"
+D G "LCD_5x8DOTS" 6 38 "0x00"
+D G "LCD_BACKLIGHT" 6 41 "0x08"
+D G "LCD_NOBACKLIGHT" 6 42 "0x00"
+D G "En" 6 45 "0b00000100" "Enable bit"
+D G "Rw" 6 46 "0b00000010" "Read/Write bit"
+D G "Rs" 6 47 "0b00000001" "Register select bit"
+V G "_address" 6 49 "uint8_t" `737 
+V G "_backlightVal" 6 50 "uint8_t" `738 
+V G "_displayControl" 6 51 "uint8_t" `739 
+V G "_displayFunction" 6 52 "uint8_t" `740 
+V G "_displayMode" 6 53 "uint8_t" `741 
+V G "_rows" 6 54 "uint8_t" `742 
+V G "_columns" 6 55 "uint8_t" `743  "sends code to pcf8574 so it redirects to the display"
+V L "_data" 6 58 "uint8_t" `745 
+F G "expanderWrite" 6 58 "void(uint8_t _data)" `744 
+V L "address" 6 68 "uint8_t" `747 
+V L "columns" 6 68 "uint8_t" `748 
+V L "rows" 6 68 "uint8_t" `749 
+F G "initializeLCD" 6 68 "void(uint8_t address,uint8_t columns,uint8_t rows)" `746 
+V L "_data" 0 19 "uint8_t" `751 
+F G "pulseEnable" 0 19 "void(uint8_t _data)" `750 
+V L "value" 0 27 "uint8_t" `753 
+F G "write4bits" 0 27 "void(uint8_t value)" `752 
+V L "value" 0 32 "uint8_t" `755 
+V L "mode" 0 32 "uint8_t" `756 
+F G "send" 0 32 "void(uint8_t value,uint8_t mode)" `754 
+V L "MSB" 0 33 "uint8_t" `757 
+V L "LSB" 0 34 "uint8_t" `758 
+V L "value" 0 39 "uint8_t" `760 
+F G "command" 0 39 "void(uint8_t value)" `759 
+F G "display" 0 43 "void()" `761 
+F G "clear" 0 48 "void()" `762 
+F G "home" 0 53 "void()" `763 
+V L "value" 0 58 "uint8_t" `765 
+F G "write" 0 58 "int8(uint8_t value)" `764 
+V L "c" 0 63 "*int8" `767 
+F G "printstr" 0 63 "void(*int8 c)" `766 
+V L "i" 0 64 "int8" `769 
+V L "col" 0 71 "uint8_t" `771 
+V L "row" 0 71 "uint8_t" `772 
+F G "setCursor" 0 71 "void(uint8_t col,uint8_t row)" `770 
+V L "row_offsets" 0 72 "int8[1]" `773 
+C L "setCursor" 0 74 1 "FUNCTION"
+D G "LINHA0" 0 79 "PIN_B7"
+D G "LINHA1" 0 80 "PIN_B6"
+D G "LINHA2" 0 81 "PIN_B5"
+D G "LINHA3" 0 82 "PIN_B4"
+D G "COLUN0" 0 83 "PIN_B3"
+D G "COLUN1" 0 84 "PIN_B2"
+D G "COLUN2" 0 85 "PIN_B1"
+D G "COLUN3" 0 86 "PIN_B0"
+V G "pos_cursor" 0 91 "uint8_t" `774 
+V G "red" 0 93 "uint16_t" `775 
+V G "green" 0 94 "uint16_t" `776 
+V G "blue" 0 95 "uint16_t" `777 
+V G "red1" 0 97 "uint8_t" `778 
+V G "green1" 0 98 "uint8_t" `779 
+V G "blue1" 0 99 "uint8_t" `780 
+D G "RED_PIN" 0 101 "PIN_D1"
+D G "GREEN_PIN" 0 102 "PIN_D0"
+D G "BLUE_PIN" 0 103 "PIN_D2"
+V L "digited" 0 105 "uint16_t" `782 
+F G "jumpCursor" 0 105 "void(uint16_t digited)" `781 
+F G "scanPorts" 0 165 "void()" `786 
+V L "ports" 0 166 "uint8_t[1]" `787 
+V L "linha" 0 168 "int8" `788 
+V G "counter" 0 238 "uint8_t" `793 
+F G "TIMER2_isr" 0 243 "void()" `794 
+F G "MAIN" 0 250 "void()" `795 
+V L "c" 0 284 "int8[16]" `798 
+V L "d" 0 288 "int8[16]" `799 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

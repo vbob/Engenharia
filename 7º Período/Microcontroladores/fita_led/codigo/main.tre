@@ -1,6 +1,7 @@
 ÀÄmain
-   ÃÄMAIN  0/541  Ram=1
+   ÃÄMAIN  0/558  Ram=1
    ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄinitializeLCD  0/9  Ram=3
    ³  ÃÄ@delay_ms1  0/20  Ram=1
    ³  ÃÄ@delay_ms1  0/20  Ram=1
    ³  ÃÄexpanderWrite  0/25  Ram=2
@@ -72,59 +73,59 @@
    ³     ÃÄ@WRITEBITA  0/32  Ram=6
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
-   ³     ³  ÃÄ@MUL88  0/37  Ram=2
-   ³     ³  ÃÄ@MUL88  0/37  Ram=2
+   ³     ÃÄjumpCursor  0/194  Ram=2
+   ³     ³  ÃÄ@MUL1616  0/21  Ram=5
+   ³     ³  ÃÄ@MUL1616  0/21  Ram=5
    ³     ³  ÃÄsetCursor  0/24  Ram=7
    ³     ³  ³  ÀÄ*
    ³     ³  ÃÄsetCursor  0/24  Ram=7
    ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@MUL88  0/37  Ram=2
-   ³     ³  ÃÄ@MUL88  0/37  Ram=2
+   ³     ³  ÃÄ@MUL1616  0/21  Ram=5
+   ³     ³  ÃÄ@MUL1616  0/21  Ram=5
    ³     ³  ÃÄsetCursor  0/24  Ram=7
    ³     ³  ³  ÀÄ*
    ³     ³  ÃÄsetCursor  0/24  Ram=7
    ³     ³  ³  ÀÄ*
-   ³     ³  ÃÄ@MUL88  0/37  Ram=2
-   ³     ³  ÃÄ@MUL88  0/37  Ram=2
+   ³     ³  ÃÄ@MUL1616  0/21  Ram=5
+   ³     ³  ÃÄ@MUL1616  0/21  Ram=5
    ³     ³  ÃÄsetCursor  0/24  Ram=7
    ³     ³  ³  ÀÄ*
    ³     ³  ÀÄsetCursor  0/24  Ram=7
    ³     ³     ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
+   ³     ÃÄjumpCursor  0/194  Ram=2
    ³     ³  ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
+   ³     ÃÄjumpCursor  0/194  Ram=2
    ³     ³  ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
+   ³     ÃÄjumpCursor  0/194  Ram=2
    ³     ³  ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
+   ³     ÃÄjumpCursor  0/194  Ram=2
    ³     ³  ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
+   ³     ÃÄjumpCursor  0/194  Ram=2
    ³     ³  ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
+   ³     ÃÄjumpCursor  0/194  Ram=2
    ³     ³  ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
+   ³     ÃÄjumpCursor  0/194  Ram=2
    ³     ³  ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÃÄjumpCursor  0/161  Ram=1
+   ³     ÃÄjumpCursor  0/194  Ram=2
    ³     ³  ÀÄ*
    ³     ÃÄwrite  0/8  Ram=1
    ³     ³  ÀÄ*
-   ³     ÀÄjumpCursor  0/161  Ram=1
+   ³     ÀÄjumpCursor  0/194  Ram=2
    ³        ÀÄ*
    ÀÄTIMER2_isr  0/45  Ram=2

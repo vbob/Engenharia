@@ -1,26 +1,27 @@
 
-ROM used:   1074/8192 (13%)
-            1074/8192 (13%) including unused fragments
+ROM used:   1117/8192 (14%)
+            1117/8192 (14%) including unused fragments
 
-            0.6 Average locations per line
+            0.7 Average locations per line
             3.4 Average locations per statement
 
-RAM used:   31/368 (8%) at main() level
-            89/368 (24%) worst case
+RAM used:   34/368 (9%) at main() level
+            93/368 (25%) worst case
 
 Stack used: 8 worst case (7 in main + 1 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  357   195  61  main.c
+  304   190  59  main.c
   661     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
   163     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h
   423   125  39  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
+   75     9   3  16x2_pcf8574.c
 ----- -----
- 1664   320 Total
+ 1686   324 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
@@ -28,6 +29,7 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0     15   1    1             @delay_us1
 0     16   1    1             @I2C_WRITEU_1
 0     25   2    2   134  1.8  expanderWrite
+0      9   1    3    92  2.3  initializeLCD
  Inline         2   108  2.6  pulseEnable
 0     25   2    1    40  1.3  write4bits
 0     21   2    5   185  3.6  send
@@ -38,31 +40,31 @@ Page ROM  %  RAM   Vol Diff  Functions:
 0      8   1    1    48  1.9  write
 0     23   2    4   114  3.4  printstr
 0     24   2    7   232  3.5  setCursor
-0    161  15    1  1339  5.4  jumpCursor
-0     37   3    2  2536  6.8  @MUL88
+0    194  17    2  1339  5.4  jumpCursor
+0     21   2    5             @MUL1616
  Inline         5  2536  6.8  scanPorts
-0     32   3    6   141  3.0  @WRITEBITA
+0     32   3    6             @WRITEBITA
 0     45   4    2   141  3.0  TIMER2_isr
-0    541  50    1  1105  4.4  MAIN
- Inline         0  1105  4.4  @cinit1
+0    558  50    1  1168  4.4  MAIN
+ Inline         0             @cinit1
 
 Program metrics:
-    Functions               18
-    Statements              320
-    Comments                285
-    Volume (V)              14866
-    Difficulty (D)          60.9
-    Effort to implement (E) 905876
-    Time to implement (T)   13 hours, 59 minutes
-    Est Delivered Bugs (B)  3
-    Cyclomatic Complexity   35
-    Maintainability (MI)    83
+    Functions               16
+    Statements              324
+    Comments                288
+    Volume (V)              9317
+    Difficulty (D)          48.0
+    Effort to implement (E) 446990
+    Time to implement (T)   6 hours, 54 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   24
+    Maintainability (MI)    103
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-00030    45  0  
-00031-007FF  1025  974  
+00031-007FF  1068  931  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

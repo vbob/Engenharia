@@ -1,74 +1,20 @@
 #include <16F877A.h>
 #device ADC=8
+
 #include <stdint.h>
 #include <string.h>
-
 
 #FUSES NOWDT                    //No Watch Dog Timer
 #FUSES NOBROWNOUT               //No brownout reset
 #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
 
-#define LCD_CLEARDISPLAY 0x01
-#define LCD_RETURNHOME 0x02
-#define LCD_ENTRYMODESET 0x04
-#define LCD_DISPLAYCONTROL 0x08
-#define LCD_CURSORSHIFT 0x10
-#define LCD_FUNCTIONSET 0x20
-#define LCD_SETCGRAMADDR 0x40
-#define LCD_SETDDRAMADDR 0x80
-
-// flags for display entry mode
-#define LCD_ENTRYRIGHT 0x00
-#define LCD_ENTRYLEFT 0x02
-#define LCD_ENTRYSHIFTINCREMENT 0x01
-#define LCD_ENTRYSHIFTDECREMENT 0x00
-
-// flags for display on/off control
-#define LCD_DISPLAYON 0x04
-#define LCD_DISPLAYOFF 0x00
-#define LCD_CURSORON 0x02
-#define LCD_CURSOROFF 0x00
-#define LCD_BLINKON 0x01
-#define LCD_BLINKOFF 0x00
-
-// flags for display/cursor shift
-#define LCD_DISPLAYMOVE 0x08
-#define LCD_CURSORMOVE 0x00
-#define LCD_MOVERIGHT 0x04
-#define LCD_MOVELEFT 0x00
-
-// flags for function set
-#define LCD_8BITMODE 0x10
-#define LCD_4BITMODE 0x00
-#define LCD_2LINE 0x08
-#define LCD_1LINE 0x00
-#define LCD_5x10DOTS 0x04
-#define LCD_5x8DOTS 0x00
-
-// flags for backlight control
-#define LCD_BACKLIGHT 0x08
-#define LCD_NOBACKLIGHT 0x00
-
-#define En 0b00000100  // Enable bit
-#define Rw 0b00000010  // Read/Write bit
-#define Rs 0b00000001  // Register select bit
 
 #use delay(crystal=20000000)
 #use i2c(MASTER, I2C1, FORCE_HW) 
 
-uint8_t _backlightval = LCD_BACKLIGHT;
-uint8_t _displayControl;
-uint8_t _displayFunction;
-uint8_t _displayMode;
+#include <16x2_pcf8574.c>
 
-void expanderWrite(uint8_t _data) {
-   I2C_Start();
-   I2C_Write(0x4E);
-   delay_ms(5); 
-   I2C_Write((int)(_data) | _backlightval);
-   I2C_stop();
-   delay_ms(1); 
-}
+
 
 void pulseEnable(uint8_t _data) {
    expanderWrite(_data | En);
@@ -156,7 +102,7 @@ uint8_t blue1 = 0;
 #define GREEN_PIN PIN_D0
 #define BLUE_PIN PIN_D2
 
-void jumpCursor(int digited) {
+void jumpCursor(uint16_t digited) {
    if (pos_cursor == 2) {
        red = digited*100;
    }
@@ -286,6 +232,10 @@ void scanPorts() {
          jumpCursor(0);
          while(!input(COLUN1));
       }
+      if (linha == 0 && !input(COLUN3)) {
+         
+         while(!input(COLUN3));
+      }
    }
 }
 
@@ -302,11 +252,8 @@ void  TIMER2_isr(void)
 
 void main()
 {
-   enable_interrupts(INT_TIMER2);
-   enable_interrupts(GLOBAL);
-
-   setup_timer_2(T2_DIV_BY_4,1,16);
-
+   initializeLCD(0x4E, 16, 2);
+   
    port_B_pullups(0xFF);
    delay_ms(1000);
    _displayFunction = LCD_4BITMODE | LCD_2LINE | LCD_5x8DOTS;
@@ -350,6 +297,10 @@ void main()
    output_high(BLUE_PIN);
    output_high(GREEN_PIN);
    output_high(RED_PIN);
+   
+   setup_timer_2(T2_DIV_BY_4,1,16);
+   enable_interrupts(INT_TIMER2);
+   enable_interrupts(GLOBAL);   
    
    while(TRUE) scanPorts();
 }
