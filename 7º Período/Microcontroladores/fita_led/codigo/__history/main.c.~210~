@@ -1,0 +1,244 @@
+#include <16F877A.h>
+#device ADC=8
+
+#include <stdint.h>
+#include <string.h>
+
+#FUSES NOWDT                    //No Watch Dog Timer
+#FUSES NOBROWNOUT               //No brownout reset
+#FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+
+
+#use delay(crystal=20000000)
+#use i2c(MASTER, I2C1, FORCE_HW) 
+
+#include <16x2_pcf8574.c>
+
+#define LINHA0 PIN_B7
+#define LINHA1 PIN_B6
+#define LINHA2 PIN_B5
+#define LINHA3 PIN_B4
+#define COLUN0 PIN_B3
+#define COLUN1 PIN_B2
+#define COLUN2 PIN_B1
+#define COLUN3 PIN_B0
+
+#use FIXED_IO(B_outputs=PIN_B4, PIN_B5, PIN_B6, PIN_B7)
+#use FIXED_IO(D_outputs=PIN_D0, PIN_D1, PIN_D2)
+#use FIXED_IO(C_outputs=PIN_C5)
+uint8_t pos_cursor = 1;
+
+uint16_t red = 0;
+uint16_t green = 0;
+uint16_t blue = 0;
+
+uint8_t red1 = 0;
+uint8_t green1 = 0;
+uint8_t blue1 = 0;
+
+#define RED_PIN PIN_D1
+#define GREEN_PIN PIN_D0
+#define BLUE_PIN PIN_D2
+
+void jumpCursor(uint16_t digited) {
+   if (pos_cursor == 2) {
+       red = digited*100;
+   }
+   if (pos_cursor == 3) {
+       red+=digited*10;
+   }
+   if (pos_cursor == 4) {
+      red+=digited;
+      if (red>255) {
+         setCursor(1,1);
+         pos_cursor = 1;
+      }
+      else {
+         setCursor(6,1);
+         pos_cursor = 6;
+         red1 = red;
+      }
+      
+   }
+   if (pos_cursor == 7) {
+       green = digited * 100;
+   }
+   if (pos_cursor ==8) {
+       green += digited * 10;
+   }
+   if (pos_cursor == 9) {
+      green += digited;
+       if (green>255) {
+         setCursor(6,1);
+         pos_cursor = 6;
+      }
+      else {
+         setCursor(11,1);
+         pos_cursor = 11;
+         green1 = green;
+      }
+   }
+   if (pos_cursor == 12) {
+       blue = digited * 100;
+   }
+   if (pos_cursor ==13) {
+       blue += digited * 10;
+   }
+   if (pos_cursor == 14) {
+      blue += digited;
+      
+      
+      if (blue>255) {
+         setCursor(11,1);
+         pos_cursor = 1;
+      }
+      else {
+         setCursor(1,1);
+         pos_cursor = 1;
+         blue1 = blue;
+      }
+   }
+}
+
+void scanPorts() {
+   uint8_t ports[] = {LINHA0, LINHA1, LINHA2, LINHA3};
+
+   for (int linha = 0; linha <= 3; linha++) {
+      output_high(ports[0]);
+      output_high(ports[1]);
+      output_high(ports[2]);
+      output_high(ports[3]);
+      output_low(ports[linha]);
+      
+      if (linha == 0 && !input(COLUN0)) {
+         write('1');
+         pos_cursor++;
+         jumpCursor(1);
+         while(!input(COLUN0));
+      }
+      if (linha == 0 && !input(COLUN1)) {
+         write('2');
+         pos_cursor++;
+         jumpCursor(2);
+         while(!input(COLUN1));
+      }
+      if (linha == 0 && !input(COLUN2)) {
+         write('3');
+         pos_cursor++;
+         jumpCursor(3);
+         while(!input(COLUN2));
+      }
+      if (linha == 1 && !input(COLUN0)) {
+         write('4');
+         pos_cursor++;
+         jumpCursor(4);
+         while(!input(COLUN0));
+      }
+      if (linha == 1 && !input(COLUN1)) {
+         write('5');
+         pos_cursor++;
+         jumpCursor(5);
+         while(!input(COLUN1));
+      }
+      if (linha == 1 && !input(COLUN2)) {
+         write('6');
+         pos_cursor++;
+         jumpCursor(6);
+         while(!input(COLUN2));
+      }
+      if (linha == 2 && !input(COLUN0)) {
+         write('7');
+         pos_cursor++;
+         jumpCursor(7);
+         while(!input(COLUN0));
+      }
+      if (linha == 2 && !input(COLUN1)) {
+         write('8');
+         pos_cursor++;
+         jumpCursor(8);
+         while(!input(COLUN1));
+      }
+      if (linha == 2 && !input(COLUN2)) {
+         write('9');
+         pos_cursor++;
+         jumpCursor(9);
+         while(!input(COLUN2));
+      }
+      if (linha == 3 && !input(COLUN1)) {
+         write('0');
+         pos_cursor++;
+         jumpCursor(0);
+         while(!input(COLUN1));
+      }
+      if (linha == 0 && !input(COLUN3)) {
+         
+         while(!input(COLUN3));
+      }
+   }
+}
+
+uint8_t counter = 0;
+
+#INT_TIMER2
+void  TIMER2_isr(void) 
+{
+   output_d(0b00000000 | ((red1>counter)<<1) | ((blue1>counter)<<2) | ((green1>counter)));
+   counter++;
+}
+
+
+void main()
+{
+   initializeLCD(0x4E, 16, 2);
+   
+   port_B_pullups(0xFF);
+   delay_ms(1000);
+   _displayFunction = LCD_4BITMODE | LCD_2LINE | LCD_5x8DOTS;
+   delay_ms(500);
+   expanderWrite(_backlightval);
+   delay_ms(1000);
+   
+   write4bits(0x03 << 4);
+   delay_us(4500);
+   
+   write4bits(0x03 << 4);
+   delay_us(4500);
+   
+   write4bits(0x03 << 4);
+   delay_us(1500);
+   
+   write4bits(0x02 << 4);
+   
+   command(LCD_FUNCTIONSET | _displayFunction);
+   
+   _displaycontrol = LCD_DISPLAYON | LCD_CURSORON | LCD_BLINKON;
+   
+   display();
+   clear();
+   
+   _displayMode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
+   
+   command(LCD_ENTRYMODESET | _displayMode);
+   
+   home();
+   
+   char c[16] = "Escolha a cor: ";
+   printstr(c);
+   
+   setCursor(0,1);
+   char d[16] = "R000 G000 B000";
+   printstr(d);
+   
+   setCursor(1,1);
+   
+   output_high(BLUE_PIN);
+   output_high(GREEN_PIN);
+   output_high(RED_PIN);
+   
+   setup_timer_2(T2_DIV_BY_4,1,16);
+   enable_interrupts(INT_TIMER2);
+   enable_interrupts(GLOBAL);   
+   
+   while(TRUE) scanPorts();
+}
+

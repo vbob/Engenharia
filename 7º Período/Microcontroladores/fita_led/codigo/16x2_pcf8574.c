@@ -44,7 +44,6 @@
 // function flags
 #define En 0b00000100  // Enable bit
 #define Rw 0b00000010  // Read/Write bit
-#define Rs 0b00000001  // Register select bit
 
 uint8_t _address;
 uint8_t _backlightVal = LCD_BACKLIGHT;
@@ -58,17 +57,131 @@ uint8_t _columns;
 void expanderWrite(uint8_t _data) {
    I2C_Start();
    I2C_Write(_address);
-   delay_ms(5); 
+   // Always write the backlight val
    I2C_Write((int)(_data) | _backlightval);
    I2C_stop();
-   delay_ms(1); 
 }
 
 
+// Pulse enable to write command
+void pulseEnable(uint8_t _data) {
+   expanderWrite(_data | En);
+   delay_us(1);
+   
+   expanderWrite(_data & ~En);
+   delay_us(50);
+}
+
+// Send 4 bits to expander, than pulse enable
+void write4bits(uint8_t value) {
+   expanderWrite(value);
+   pulseEnable(value);
+}
+
+// Send 8 bits dividing in two nibbles
+void send(uint8_t value, uint8_t mode) {
+   uint8_t MSB = value & 0b11110000;
+   uint8_t LSB = (value << 4) & 0b11110000;
+   write4bits((MSB)|mode);
+   write4bits((LSB)|mode);
+}
+
+// Command uses RS = 0
+void command(uint8_t value) {
+   send(value, 0b00000000);
+}
+
+// Write uses RS = 1
+int write(uint8_t value) {
+   send(value, 0b00000001);
+   return 1;
+}
+
+// Change display configurations
+void display() {
+   _displayControl |= LCD_DISPLAYON;
+   command(LCD_DISPLAYCONTROL | _displayControl);
+}
+
+// Clear display
+void clear() {
+   command(LCD_CLEARDISPLAY);
+   delay_us(2000);
+}
+
+// Put cursor home
+void home() {
+   command(LCD_RETURNHOME);
+   delay_us(2000);
+}
+
+// Put cursor on specified column/row
+// PS: Rows and Columns start with 0
+void setCursor(uint8_t col, uint8_t row){
+   int row_offsets[] = { 0x00, 0x40 };
+   row = (row%_rows);    
+   command(LCD_SETDDRAMADDR | (col + row_offsets[row]));
+}
+
+
+// Write an array of chars
+void printstr(char *c[]) {
+   int i = 0;
+   while (c[i]) {
+      write(c[i]);
+      i++;
+   }
+}
+
+// print single int
+void printint(uint16_t d) {
+    char c[16];
+    sprintf(c, "%lu", d);
+    printstr(c);
+}
+
+// print long in form 00X -> XXX
+void printlong(uint16_t d) {
+    char c[16];
+    sprintf(c, "%03lu", d);
+    printstr(c);
+}
+
+// Automatic display configuration
 void initializeLCD(uint8_t address, uint8_t columns, uint8_t rows) {
    _address = address;
    _columns = columns;
    _rows = rows;
+   
+   _displayFunction = LCD_4BITMODE | LCD_2LINE | LCD_5x8DOTS;
+   delay_ms(500);
+   expanderWrite(_backlightval);
+   delay_ms(1000);
+   
+   write4bits(0x03 << 4);
+   delay_us(4500);
+   
+   write4bits(0x03 << 4);
+   delay_us(4500);
+   
+   write4bits(0x03 << 4);
+   delay_us(1500);
+   
+   write4bits(0x02 << 4);
+   
+   command(LCD_FUNCTIONSET | _displayFunction);
+   
+   _displaycontrol = LCD_DISPLAYON | LCD_CURSORON | LCD_BLINKON;
+   
+   display();
+   
+   clear();
+   
+   _displayMode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
+   
+   command(LCD_ENTRYMODESET | _displayMode);
+   
+   home();
 }
 
 

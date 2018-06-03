@@ -3,302 +3,75 @@
 
 #include <stdint.h>
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #FUSES NOWDT                    //No Watch Dog Timer
 #FUSES NOBROWNOUT               //No brownout reset
 #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
 
-
 #use delay(crystal=20000000)
-#use i2c(MASTER, I2C1, FORCE_HW) 
 
-#include <16x2_pcf8574.c>
+// I2C Configuration: I2C1 == Default pins and use Hardware Interrupts
+#use i2c(MASTER, I2C1) 
 
-
-
-void pulseEnable(uint8_t _data) {
-   expanderWrite(_data | En);
-   delay_us(1);
-   
-   expanderWrite(_data & ~En);
-   delay_us(50);
-}
-
-void write4bits(uint8_t value) {
-   expanderWrite(value);
-   pulseEnable(value);
-}
-
-void send(uint8_t value, uint8_t mode) {
-   uint8_t MSB = value & 0b11110000;
-   uint8_t LSB = (value << 4) & 0b11110000;
-   write4bits((MSB)|mode);
-   write4bits((LSB)|mode);
-}
-
-void command(uint8_t value) {
-   send(value, 0);
-}
-
-void display() {
-   _displayControl |= LCD_DISPLAYON;
-   command(LCD_DISPLAYCONTROL | _displayControl);
-}
-
-void clear() {
-   command(LCD_CLEARDISPLAY);
-   delay_us(2000);
-}
-
-void home() {
-   command(LCD_RETURNHOME);
-   delay_us(2000);
-}
-
-int write(uint8_t value) {
-   send(value, Rs);
-   return 1;
-}
-
-void printstr(char *c[]) {
-   int i = 0;
-   while (c[i]) {
-      write(c[i]);
-      i++;
-   }
-}
-
-void setCursor(uint8_t col, uint8_t row){
-   int row_offsets[] = { 0x00, 0x40, 0x14, 0x54 };
-   if (row > 2) {
-      row = 2-1;    // we count rows starting w/0
-   }
-   command(LCD_SETDDRAMADDR | (col + row_offsets[row]));
-}
-
-#define LINHA0 PIN_B7
-#define LINHA1 PIN_B6
-#define LINHA2 PIN_B5
-#define LINHA3 PIN_B4
-#define COLUN0 PIN_B3
-#define COLUN1 PIN_B2
-#define COLUN2 PIN_B1
-#define COLUN3 PIN_B0
-
-#use FIXED_IO(B_outputs=PIN_B4, PIN_B5, PIN_B6, PIN_B7)
-#use FIXED_IO(D_outputs=PIN_D0, PIN_D1, PIN_D2)
-#use FIXED_IO(C_outputs=PIN_C5)
-uint8_t pos_cursor = 1;
-
-uint16_t red = 0;
-uint16_t green = 0;
-uint16_t blue = 0;
-
-uint8_t red1 = 0;
-uint8_t green1 = 0;
-uint8_t blue1 = 0;
-
+// Define Led Strip Pin References
 #define RED_PIN PIN_D1
 #define GREEN_PIN PIN_D0
 #define BLUE_PIN PIN_D2
 
-void jumpCursor(uint16_t digited) {
-   if (pos_cursor == 2) {
-       red = digited*100;
-   }
-   if (pos_cursor == 3) {
-       red+=digited*10;
-   }
-   if (pos_cursor == 4) {
-      red+=digited;
-      if (red>255) {
-         setCursor(1,1);
-         pos_cursor = 1;
-      }
-      else {
-         setCursor(6,1);
-         pos_cursor = 6;
-         red1 = red;
-      }
-      
-   }
-   if (pos_cursor == 7) {
-       green = digited * 100;
-   }
-   if (pos_cursor ==8) {
-       green += digited * 10;
-   }
-   if (pos_cursor == 9) {
-      green += digited;
-       if (green>255) {
-         setCursor(6,1);
-         pos_cursor = 6;
-      }
-      else {
-         setCursor(11,1);
-         pos_cursor = 11;
-         green1 = green;
-      }
-   }
-   if (pos_cursor == 12) {
-       blue = digited * 100;
-   }
-   if (pos_cursor ==13) {
-       blue += digited * 10;
-   }
-   if (pos_cursor == 14) {
-      blue += digited;
-      
-      
-      if (blue>255) {
-         setCursor(11,1);
-         pos_cursor = 1;
-      }
-      else {
-         setCursor(1,1);
-         pos_cursor = 1;
-         blue1 = blue;
-      }
-   }
-}
+// Color cache to see what user typed
+// 16 bit because user can type up to 999
+uint16_t rgb_buffer[3] = {0, 0, 0};
 
-void scanPorts() {
-   uint8_t ports[] = {LINHA0, LINHA1, LINHA2, LINHA3};
+// Color to be writen on LED strip
+uint16_t rgb_map[3] = {0, 0, 0};
 
-   for (int linha = 0; linha <= 3; linha++) {
-      output_high(ports[0]);
-      output_high(ports[1]);
-      output_high(ports[2]);
-      output_high(ports[3]);
-      output_low(ports[linha]);
-      
-      if (linha == 0 && !input(COLUN0)) {
-         write('1');
-         pos_cursor++;
-         jumpCursor(1);
-         while(!input(COLUN0));
-      }
-      if (linha == 0 && !input(COLUN1)) {
-         write('2');
-         pos_cursor++;
-         jumpCursor(2);
-         while(!input(COLUN1));
-      }
-      if (linha == 0 && !input(COLUN2)) {
-         write('3');
-         pos_cursor++;
-         jumpCursor(3);
-         while(!input(COLUN2));
-      }
-      if (linha == 1 && !input(COLUN0)) {
-         write('4');
-         pos_cursor++;
-         jumpCursor(4);
-         while(!input(COLUN0));
-      }
-      if (linha == 1 && !input(COLUN1)) {
-         write('5');
-         pos_cursor++;
-         jumpCursor(5);
-         while(!input(COLUN1));
-      }
-      if (linha == 1 && !input(COLUN2)) {
-         write('6');
-         pos_cursor++;
-         jumpCursor(6);
-         while(!input(COLUN2));
-      }
-      if (linha == 2 && !input(COLUN0)) {
-         write('7');
-         pos_cursor++;
-         jumpCursor(7);
-         while(!input(COLUN0));
-      }
-      if (linha == 2 && !input(COLUN1)) {
-         write('8');
-         pos_cursor++;
-         jumpCursor(8);
-         while(!input(COLUN1));
-      }
-      if (linha == 2 && !input(COLUN2)) {
-         write('9');
-         pos_cursor++;
-         jumpCursor(9);
-         while(!input(COLUN2));
-      }
-      if (linha == 3 && !input(COLUN1)) {
-         write('0');
-         pos_cursor++;
-         jumpCursor(0);
-         while(!input(COLUN1));
-      }
-      if (linha == 0 && !input(COLUN3)) {
-         
-         while(!input(COLUN3));
-      }
-   }
-}
+// Cursor reference to write on 16x2
+// Assuming it is on 2nd row
+uint8_t cursor_map[3] = {1, 6, 11};
 
+#include <16x2_pcf8574.c>
+#include <4x4_keyboard.c>
+
+#use FIXED_IO(B_outputs=PIN_B4, PIN_B5, PIN_B6, PIN_B7)
+#use FIXED_IO(D_outputs=PIN_D0, PIN_D1, PIN_D2)
+#use FIXED_IO(C_outputs=PIN_C5)
+
+// count from 0 to 255
 uint8_t counter = 0;
-
 
 #INT_TIMER2
 void  TIMER2_isr(void) 
 {
-   output_d(0b00000000 | ((red1>counter)<<1) | ((blue1>counter)<<2) | ((green1>counter)));
+   // it checks if the color value is greater than the pulse
+   // ex: if 127, when counter < 127 it is on, if >= 127 it is off
+   // do this for all leds and output_d
+   output_d(0b00000000 | ((rgb_map[0]>counter)<<1) | ((rgb_map[1]>counter)<<2) | ((rgb_map[2]>counter)));
    counter++;
 }
 
 
 void main()
 {
+   // PIC uses 7 bit + R/W 
+   // 0x4E = 0x27 << 7 
    initializeLCD(0x4E, 16, 2);
    
    port_B_pullups(0xFF);
    delay_ms(1000);
-   _displayFunction = LCD_4BITMODE | LCD_2LINE | LCD_5x8DOTS;
-   delay_ms(500);
-   expanderWrite(_backlightval);
-   delay_ms(1000);
-   
-   write4bits(0x03 << 4);
-   delay_us(4500);
-   
-   write4bits(0x03 << 4);
-   delay_us(4500);
-   
-   write4bits(0x03 << 4);
-   delay_us(1500);
-   
-   write4bits(0x02 << 4);
-   
-   command(LCD_FUNCTIONSET | _displayFunction);
-   
-   _displaycontrol = LCD_DISPLAYON | LCD_CURSORON | LCD_BLINKON;
-   
-   display();
-   clear();
-   
-   _displayMode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
-   
-   command(LCD_ENTRYMODESET | _displayMode);
-   
-   home();
-   
+      
    char c[16] = "Escolha a cor: ";
    printstr(c);
    
    setCursor(0,1);
+   
    char d[16] = "R000 G000 B000";
    printstr(d);
    
    setCursor(1,1);
    
-   output_high(BLUE_PIN);
-   output_high(GREEN_PIN);
-   output_high(RED_PIN);
-   
-   setup_timer_2(T2_DIV_BY_4,1,16);
+   setup_timer_2(T2_DIV_BY_4,5,13);      //4,8 us overflow, 62,4 us interrupt
    enable_interrupts(INT_TIMER2);
    enable_interrupts(GLOBAL);   
    

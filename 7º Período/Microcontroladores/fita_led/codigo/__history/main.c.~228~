@@ -1,0 +1,106 @@
+#include <16F877A.h>
+#device ADC=8
+
+#include <stdint.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+#FUSES NOWDT                    //No Watch Dog Timer
+#FUSES NOBROWNOUT               //No brownout reset
+#FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
+
+#use delay(crystal=20000000)
+
+// I2C Configuration: I2C1 == Default pins and use Hardware Interrupts
+#use i2c(MASTER, I2C1) 
+
+// Define Led Strip Pin References
+#define RED_PIN PIN_D1
+#define GREEN_PIN PIN_D0
+#define BLUE_PIN PIN_D2
+
+// Color cache to see what user typed
+// 16 bit because user can type up to 999
+uint16_t rgb_buffer[3] = {0, 0, 0};
+
+// Color to be writen on LED strip
+uint8_t rgb_map[3] = {0, 0, 0};
+
+// Cursor reference to write on 16x2
+// Assuming it is on 2nd row
+uint8_t cursor_map[3] = {1, 6, 11};
+
+#include <16x2_pcf8574.c>
+#include <4x4_keyboard.c>
+
+
+#use FIXED_IO(B_outputs=PIN_B4, PIN_B5, PIN_B6, PIN_B7)
+#use FIXED_IO(D_outputs=PIN_D0, PIN_D1, PIN_D2)
+#use FIXED_IO(C_outputs=PIN_C5)
+
+uint8_t counter = 0;
+
+#INT_TIMER2
+void  TIMER2_isr(void) 
+{
+   output_d(0b00000000 | ((rgb_map[0]>counter)<<1) | ((rgb_map[1]>counter)<<2) | ((rgb_map[2]>counter)));
+   counter++;
+}
+
+
+void main()
+{
+   initializeLCD(0x4E, 16, 2);
+   
+   port_B_pullups(0xFF);
+   delay_ms(1000);
+   _displayFunction = LCD_4BITMODE | LCD_2LINE | LCD_5x8DOTS;
+   delay_ms(500);
+   expanderWrite(_backlightval);
+   delay_ms(1000);
+   
+   write4bits(0x03 << 4);
+   delay_us(4500);
+   
+   write4bits(0x03 << 4);
+   delay_us(4500);
+   
+   write4bits(0x03 << 4);
+   delay_us(1500);
+   
+   write4bits(0x02 << 4);
+   
+   command(LCD_FUNCTIONSET | _displayFunction);
+   
+   _displaycontrol = LCD_DISPLAYON | LCD_CURSORON | LCD_BLINKON;
+   
+   display();
+   clear();
+   
+   _displayMode = LCD_ENTRYLEFT | LCD_ENTRYSHIFTDECREMENT;
+   
+   command(LCD_ENTRYMODESET | _displayMode);
+   
+   home();
+   
+   char c[16] = "Escolha a cor: ";
+   printstr(c);
+   
+   setCursor(0,1);
+   char d[16] = "R000 G000 B000";
+   printstr(d);
+   
+   setCursor(1,1);
+   
+   output_high(BLUE_PIN);
+   output_high(GREEN_PIN);
+   output_high(RED_PIN);
+   
+   setup_timer_2(T2_DIV_BY_4,1,16);
+   enable_interrupts(INT_TIMER2);
+   enable_interrupts(GLOBAL);   
+   
+   while(TRUE) scanPorts();
+}
+

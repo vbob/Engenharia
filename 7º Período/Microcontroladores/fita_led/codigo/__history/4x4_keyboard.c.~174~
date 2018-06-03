@@ -1,0 +1,127 @@
+// Define pin references
+#define LINHA0 PIN_B7
+#define LINHA1 PIN_B6
+#define LINHA2 PIN_B5
+#define LINHA3 PIN_B4
+#define COLUN0 PIN_B3
+#define COLUN1 PIN_B2
+#define COLUN2 PIN_B1
+#define COLUN3 PIN_B0
+
+// Cursor position is controled mannually 
+uint8_t pos_cursor = 0;
+
+// Color being edited: 0 => red; 1 => green; 2 => blue
+uint8_t color_selected = 0;
+
+// import the whole math.h uses many resources. Prefered to only implement ipow
+int ipow(uint16_t base, uint16_t exp)
+{
+    uint16_t result = 1;
+    for (;;)
+    {
+        if (exp & 1)
+            result *= base;
+        exp >>= 1;
+        if (!exp)
+            break;
+        base *= base;
+    }
+
+    return result;
+}
+
+char input_array[4][4] = {{'1','2','3','A'},{'4','5','6','B'},{'7','8','9','C',},{'*','0','#','D'}};
+
+void user_input(uint16_t digited) {
+   // convert from ascii to int
+   digited = digited - 48;
+ 
+   // if *
+   if (digited == 65530) {
+      if (rgb_map[color_selected] > 0) {
+         rgb_buffer[color_selected] = rgb_map[color_selected];
+         pos_cursor = 0;
+         setCursor(cursor_map[color_selected], 1);
+         printlong(--rgb_map[color_selected]);  
+         setCursor(cursor_map[color_selected], 1);
+         delay_ms(10);
+      }       
+   }
+   // if #
+   else if (digited == 65523) {
+       if (rgb_map[color_selected] < 255) {
+         rgb_buffer[color_selected] = rgb_map[color_selected];
+         pos_cursor = 0;
+         setCursor(cursor_map[color_selected], 1);
+         printlong(++rgb_map[color_selected]);  
+         setCursor(cursor_map[color_selected], 1);
+         delay_ms(10);
+      }       
+   }
+   // if A -> D
+   else if (digited >= 17 && digited <=19) {
+      if(rgb_buffer[color_selected] <= 255) {
+         rgb_map[color_selected] = rgb_buffer[color_selected];
+         color_selected = (digited-17);
+      } else {
+         setCursor(cursor_map[color_selected], 1);
+         char error_msg[4] = "ERR";
+         printstr(error_msg);
+         setCursor(cursor_map[color_selected], 1);
+         delay_ms(500);
+         setCursor(cursor_map[color_selected], 1);
+         printlong(rgb_map[color_selected]);
+      }
+      
+      pos_cursor = 0;
+      setCursor(cursor_map[color_selected], 1);
+   }
+   
+   // if typed the 3rd char
+   else if (pos_cursor > 1) {
+      rgb_buffer[color_selected] += digited*ipow(10, 2-pos_cursor++);
+      printint(digited);
+      delay_ms(50);
+      // if color selected is in range, send it to color array
+      // and change cursor pos
+      if(rgb_buffer[color_selected] <= 255) {
+         rgb_map[color_selected] = rgb_buffer[color_selected];
+         color_selected = (++color_selected%3);
+      } else {
+         setCursor(cursor_map[color_selected], 1);
+         char error_msg[4] = "ERR";
+         printstr(error_msg);
+         setCursor(cursor_map[color_selected], 1);
+         delay_ms(500);
+         setCursor(cursor_map[color_selected], 1);
+         printlong(rgb_map[color_selected]);
+      }
+      
+      pos_cursor = 0;
+      setCursor(cursor_map[color_selected], 1);
+   } 
+   
+   // if 1st or second char
+   else {   
+      if (pos_cursor==0) rgb_buffer[color_selected] = 0;
+      rgb_buffer[color_selected] += digited*ipow(10, 2-pos_cursor++); 
+      printint(digited); delay_ms(50); 
+  };
+}
+
+uint8_t linhas[4] = {LINHA0, LINHA1, LINHA2, LINHA3};
+uint8_t colunas[4] = {COLUN0, COLUN1, COLUN2, COLUN3};
+
+void scanPorts() {
+   for (int linha = 0; linha <= 3; linha++) {
+      output_low(linhas[linha]);
+      for (int coluna = 0; coluna <= 3; coluna++) {
+         if (!input(colunas[coluna])) {
+            user_input(input_array[linha][coluna]);
+         }
+      }
+      output_high(linhas[linha]);
+   }
+}
+

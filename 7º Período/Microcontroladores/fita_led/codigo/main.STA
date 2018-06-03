@@ -1,70 +1,82 @@
 
-ROM used:   1117/8192 (14%)
-            1117/8192 (14%) including unused fragments
+ROM used:   1768/8192 (22%)
+            1768/8192 (22%) including unused fragments
 
-            0.7 Average locations per line
-            3.4 Average locations per statement
+            0.6 Average locations per line
+            3.5 Average locations per statement
 
-RAM used:   34/368 (9%) at main() level
-            93/368 (25%) worst case
+RAM used:   71/368 (19%) at main() level
+            161/368 (44%) worst case
 
 Stack used: 8 worst case (7 in main + 1 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  304   190  59  main.c
+   81    16   3  main.c
   661     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
   163     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h
-  423   125  39  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
+  423     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h
    32     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h
    28     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h
-   75     9   3  16x2_pcf8574.c
+   37     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h
+ 1351   359  71  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h
+  188    52  10  16x2_pcf8574.c
+  158    77  15  4x4_keyboard.c
 ----- -----
- 1686   324 Total
+ 3122   504 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     20   2    1             @delay_ms1
-0     15   1    1             @delay_us1
-0     16   1    1             @I2C_WRITEU_1
-0     25   2    2   134  1.8  expanderWrite
-0      9   1    3    92  2.3  initializeLCD
+0     23   1    5    78  2.8  @MUL1616
+0     20   1    1  1121 10.1  @delay_ms1
+0     17   1    1    59  1.8  @delay_us1
+ Inline         1   858  7.4  @I2C_WRITEU_1
+0     58   3    2    90  1.8  expanderWrite
  Inline         2   108  2.6  pulseEnable
-0     25   2    1    40  1.3  write4bits
-0     21   2    5   185  3.6  send
-0      5   0    1    35  1.4  command
-0      9   1    1    43  1.8  display
-0      9   1    0    32  1.0  clear
-0      9   1    0    32  1.0  home
-0      8   1    1    48  1.9  write
-0     23   2    4   114  3.4  printstr
-0     24   2    7   232  3.5  setCursor
-0    194  17    2  1339  5.4  jumpCursor
-0     21   2    5             @MUL1616
- Inline         5  2536  6.8  scanPorts
-0     32   3    6             @WRITEBITA
-0     45   4    2   141  3.0  TIMER2_isr
-0    558  50    1  1168  4.4  MAIN
- Inline         0             @cinit1
+0     31   2    1    40  1.3  write4bits
+0     25   1    5   185  3.6  send
+0      7   0    1    35  1.4  command
+ Inline         1    48  1.9  write
+ Inline         1    43  1.8  display
+ Inline         0    32  1.0  clear
+ Inline         0    32  1.0  home
+0     27   2    5   162  4.0  setCursor
+0     23   1    3   162  4.0  @DIV88
+0     34   2    4   114  3.4  printstr
+ Inline        18    89  2.0  printint
+ Inline         1    44  1.9  @SPRINTF
+0    116   7    9   176  4.3  @PRINTF_LU_959
+ Inline        18    89  2.0  printlong
+0    150   8    4   702  2.9  initializeLCD
+ Inline         6   215  5.8  ipow
+0     89   5    6   169  2.7  write_color
+0    105   6    4   235  2.7  showErr
+ Inline         7  1693 10.3  user_input
+ Inline         1   307  4.6  scanPorts
+0     34   2    6  1168  4.4  @WRITEBITA
+0     27   2    5  1168  4.4  @READBITA
+0     58   3    2   176  3.5  TIMER2_isr
+0    875  49    1   406  3.3  MAIN
+ Inline         0    59  1.8  @cinit1
 
 Program metrics:
-    Functions               16
-    Statements              324
-    Comments                288
-    Volume (V)              9317
-    Difficulty (D)          48.0
-    Effort to implement (E) 446990
-    Time to implement (T)   6 hours, 54 minutes
-    Est Delivered Bugs (B)  2
-    Cyclomatic Complexity   24
-    Maintainability (MI)    103
+    Functions               31
+    Statements              504
+    Comments                748
+    Volume (V)              17194
+    Difficulty (D)          110.0
+    Effort to implement (E) 1891411
+    Time to implement (T)   29 hours, 11 minutes
+    Est Delivered Bugs (B)  5
+    Cyclomatic Complexity   32
+    Maintainability (MI)    141
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
 00004-00030    45  0  
-00031-007FF  1068  931  
+00031-007FF  1719  280  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  
