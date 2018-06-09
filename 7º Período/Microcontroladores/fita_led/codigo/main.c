@@ -13,12 +13,7 @@
 #use delay(crystal=20000000)
 
 // I2C Configuration: I2C1 == Default pins and use Hardware Interrupts
-#use i2c(MASTER, I2C1) 
-
-// Define Led Strip Pin References
-#define RED_PIN PIN_D1
-#define GREEN_PIN PIN_D0
-#define BLUE_PIN PIN_D2
+#use i2c(MASTER, I2C1)
 
 // Color cache to see what user typed
 // 16 bit because user can type up to 999
@@ -36,7 +31,6 @@ uint8_t cursor_map[3] = {1, 6, 11};
 
 #use FIXED_IO(B_outputs=PIN_B4, PIN_B5, PIN_B6, PIN_B7)
 #use FIXED_IO(D_outputs=PIN_D0, PIN_D1, PIN_D2)
-#use FIXED_IO(C_outputs=PIN_C5)
 
 // count from 0 to 255
 uint8_t counter = 0;
@@ -47,7 +41,7 @@ void  TIMER2_isr(void)
    // it checks if the color value is greater than the pulse
    // ex: if 127, when counter < 127 it is on, if >= 127 it is off
    // do this for all leds and output_d
-   output_d(0b00000000 | ((rgb_map[0]>counter)<<1) | ((rgb_map[1]>counter)<<2) | ((rgb_map[2]>counter)));
+   output_d(0b00000000 | ((rgb_map[1]>counter)<<2) | ((rgb_map[0]>counter)<<1) | ((rgb_map[2]>counter)));
    counter++;
 }
 
@@ -71,7 +65,7 @@ void main()
    
    setCursor(1,1);
    
-   setup_timer_2(T2_DIV_BY_4,5,13);      //4,8 us overflow, 62,4 us interrupt
+   setup_timer_2(T2_DIV_BY_4,5,13);      // 4,8 us overflow, 62,4 us interrupt
    enable_interrupts(INT_TIMER2);
    enable_interrupts(GLOBAL);   
    

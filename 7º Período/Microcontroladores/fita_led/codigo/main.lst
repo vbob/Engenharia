@@ -1,4 +1,4 @@
-CCS PCM C Compiler, Version 5.008, 5967               02-jun-18 20:46
+CCS PCM C Compiler, Version 5.008, 5967               04-jun-18 09:44
 
                Filename:   C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\fita_led\codigo\main.lst
 
@@ -3292,7 +3292,7 @@ CCS PCM C Compiler, Version 5.008, 5967               02-jun-18 20:46
 00E8:  RETURN
 ....................  
 .................... // I2C Configuration: I2C1 == Default pins and use Hardware Interrupts 
-.................... #use i2c(MASTER, I2C1)  
+.................... #use i2c(MASTER, I2C1) 
 *
 0087:  BCF    03.5
 0088:  BCF    14.7
@@ -3331,11 +3331,6 @@ CCS PCM C Compiler, Version 5.008, 5967               02-jun-18 20:46
 00B0:  MOVLW  01
 00B1:  BCF    03.5
 00B2:  MOVWF  78
-....................  
-.................... // Define Led Strip Pin References 
-.................... #define RED_PIN PIN_D1 
-.................... #define GREEN_PIN PIN_D0 
-.................... #define BLUE_PIN PIN_D2 
 ....................  
 .................... // Color cache to see what user typed 
 .................... // 16 bit because user can type up to 999 
@@ -4938,7 +4933,6 @@ CCS PCM C Compiler, Version 5.008, 5967               02-jun-18 20:46
 ....................  
 .................... #use FIXED_IO(B_outputs=PIN_B4, PIN_B5, PIN_B6, PIN_B7) 
 .................... #use FIXED_IO(D_outputs=PIN_D0, PIN_D1, PIN_D2) 
-.................... #use FIXED_IO(C_outputs=PIN_C5) 
 ....................  
 .................... // count from 0 to 255 
 .................... uint8_t counter = 0; 
@@ -4949,12 +4943,12 @@ CCS PCM C Compiler, Version 5.008, 5967               02-jun-18 20:46
 ....................    // it checks if the color value is greater than the pulse 
 ....................    // ex: if 127, when counter < 127 it is on, if >= 127 it is off 
 ....................    // do this for all leds and output_d 
-....................    output_d(0b00000000 | ((rgb_map[0]>counter)<<1) | ((rgb_map[1]>counter)<<2) | ((rgb_map[2]>counter))); 
+....................    output_d(0b00000000 | ((rgb_map[1]>counter)<<2) | ((rgb_map[0]>counter)<<1) |  ((rgb_map[2]>counter))); 
 *
-0031:  MOVF   35,F
+0031:  MOVF   37,F
 0032:  BTFSS  03.2
 0033:  GOTO   03A
-0034:  MOVF   34,W
+0034:  MOVF   36,W
 0035:  SUBWF  60,W
 0036:  BTFSS  03.0
 0037:  GOTO   03A
@@ -4962,27 +4956,27 @@ CCS PCM C Compiler, Version 5.008, 5967               02-jun-18 20:46
 0039:  GOTO   03B
 003A:  MOVLW  01
 003B:  MOVWF  77
-003C:  BCF    03.0
+003C:  RLF    77,F
 003D:  RLF    77,F
-003E:  MOVF   77,W
-003F:  BSF    03.5
-0040:  MOVWF  5F
-0041:  BCF    03.5
-0042:  MOVF   37,F
-0043:  BTFSS  03.2
-0044:  GOTO   04B
-0045:  MOVF   36,W
-0046:  SUBWF  60,W
-0047:  BTFSS  03.0
-0048:  GOTO   04B
-0049:  MOVLW  00
-004A:  GOTO   04C
-004B:  MOVLW  01
-004C:  MOVWF  77
-004D:  RLF    77,F
-004E:  RLF    77,F
-004F:  MOVLW  FC
-0050:  ANDWF  77,F
+003E:  MOVLW  FC
+003F:  ANDWF  77,F
+0040:  MOVF   77,W
+0041:  BSF    03.5
+0042:  MOVWF  5F
+0043:  BCF    03.5
+0044:  MOVF   35,F
+0045:  BTFSS  03.2
+0046:  GOTO   04D
+0047:  MOVF   34,W
+0048:  SUBWF  60,W
+0049:  BTFSS  03.0
+004A:  GOTO   04D
+004B:  MOVLW  00
+004C:  GOTO   04E
+004D:  MOVLW  01
+004E:  MOVWF  77
+004F:  BCF    03.0
+0050:  RLF    77,F
 0051:  MOVF   77,W
 0052:  BSF    03.5
 0053:  IORWF  5F,F

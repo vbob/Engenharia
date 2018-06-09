@@ -1,0 +1,270 @@
+CCS PCM C Compiler, Version 5.008, 5967               08-jun-18 11:23
+
+               Filename:   C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\rs232\codigo_analogico1\main.lst
+
+               ROM used:   218 words (3%)
+                           Largest free fragment is 2048
+               RAM used:   17 (5%) at main() level
+                           21 (6%) worst case
+               Stack used: 2 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   08B
+0003:  NOP
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+*
+0019:  MOVF   2E,W
+001A:  CLRF   78
+001B:  SUBWF  2D,W
+001C:  BTFSC  03.0
+001D:  GOTO   021
+001E:  MOVF   2D,W
+001F:  MOVWF  77
+0020:  GOTO   02D
+0021:  CLRF   77
+0022:  MOVLW  08
+0023:  MOVWF  2F
+0024:  RLF    2D,F
+0025:  RLF    77,F
+0026:  MOVF   2E,W
+0027:  SUBWF  77,W
+0028:  BTFSC  03.0
+0029:  MOVWF  77
+002A:  RLF    78,F
+002B:  DECFSZ 2F,F
+002C:  GOTO   024
+002D:  RETURN
+002E:  MOVF   20,W
+002F:  MOVWF  04
+0030:  BCF    03.7
+0031:  BTFSC  21.0
+0032:  BSF    03.7
+0033:  MOVF   2D,W
+0034:  MOVWF  00
+0035:  INCF   04,F
+0036:  CLRF   00
+0037:  INCF   20,F
+0038:  BTFSC  03.2
+0039:  INCF   21,F
+003A:  RETURN
+003B:  MOVF   78,W
+003C:  MOVF   2B,W
+003D:  MOVWF  2D
+003E:  MOVLW  64
+003F:  MOVWF  2E
+0040:  CALL   019
+0041:  MOVF   77,W
+0042:  MOVWF  2B
+0043:  MOVF   78,W
+0044:  MOVLW  30
+0045:  BTFSS  03.2
+0046:  GOTO   04E
+0047:  BTFSS  2C.1
+0048:  GOTO   055
+0049:  BTFSC  2C.3
+004A:  GOTO   055
+004B:  BTFSC  2C.4
+004C:  MOVLW  20
+004D:  GOTO   051
+004E:  BCF    2C.3
+004F:  BCF    2C.4
+0050:  BSF    2C.0
+0051:  ADDWF  78,F
+0052:  MOVF   78,W
+0053:  MOVWF  2D
+0054:  CALL   02E
+0055:  MOVF   2B,W
+0056:  MOVWF  2D
+0057:  MOVLW  0A
+0058:  MOVWF  2E
+0059:  CALL   019
+005A:  MOVF   77,W
+005B:  MOVWF  2B
+005C:  MOVF   78,W
+005D:  MOVLW  30
+005E:  BTFSS  03.2
+005F:  GOTO   066
+0060:  BTFSC  2C.3
+0061:  GOTO   06A
+0062:  BTFSS  2C.0
+0063:  GOTO   06A
+0064:  BTFSC  2C.4
+0065:  MOVLW  20
+0066:  ADDWF  78,F
+0067:  MOVF   78,W
+0068:  MOVWF  2D
+0069:  CALL   02E
+006A:  MOVLW  30
+006B:  ADDWF  2B,F
+006C:  MOVF   2B,W
+006D:  MOVWF  2D
+006E:  CALL   02E
+006F:  BCF    0A.3
+0070:  BCF    0A.4
+0071:  GOTO   0C2 (RETURN)
+0072:  MOVF   00,F
+0073:  BTFSC  03.2
+0074:  GOTO   088
+0075:  CLRF   2C
+0076:  MOVF   04,W
+0077:  MOVWF  2B
+0078:  BCF    2C.0
+0079:  BTFSC  03.7
+007A:  BSF    2C.0
+007B:  MOVF   00,W
+007C:  BTFSS  0C.4
+007D:  GOTO   07C
+007E:  MOVWF  19
+007F:  MOVF   2B,W
+0080:  MOVWF  04
+0081:  BCF    03.7
+0082:  BTFSC  2C.0
+0083:  BSF    03.7
+0084:  INCF   04,F
+0085:  BTFSC  03.2
+0086:  INCF   05,F
+0087:  GOTO   072
+0088:  BCF    0A.3
+0089:  BCF    0A.4
+008A:  GOTO   0C9 (RETURN)
+....................  
+.................... #list 
+....................  
+.................... #device ADC=8 
+....................  
+.................... #FUSES NOWDT                    //No Watch Dog Timer 
+.................... #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=16000000) 
+*
+0004:  MOVLW  2C
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  05
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  2E
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETURN
+.................... #use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8,stream=PORT1) 
+....................  
+....................  
+.................... void main() 
+*
+008B:  MOVF   03,W
+008C:  ANDLW  1F
+008D:  MOVWF  03
+008E:  MOVLW  19
+008F:  BSF    03.5
+0090:  MOVWF  19
+0091:  MOVLW  A2
+0092:  MOVWF  18
+0093:  MOVLW  90
+0094:  BCF    03.5
+0095:  MOVWF  18
+0096:  CLRF   21
+0097:  CLRF   20
+0098:  BSF    03.5
+0099:  BSF    1F.0
+009A:  BSF    1F.1
+009B:  BSF    1F.2
+009C:  BCF    1F.3
+009D:  MOVLW  07
+009E:  MOVWF  1C
+009F:  BCF    03.7
+.................... { 
+....................    unsigned int value; 
+....................    char buf[8]; 
+....................     
+....................    setup_adc_ports(AN0); 
+00A0:  BCF    1F.0
+00A1:  BSF    1F.1
+00A2:  BSF    1F.2
+00A3:  BSF    1F.3
+....................    setup_adc(ADC_CLOCK_DIV_32);  
+00A4:  BCF    1F.6
+00A5:  BCF    03.5
+00A6:  BCF    1F.6
+00A7:  BSF    1F.7
+00A8:  BSF    03.5
+00A9:  BCF    1F.7
+00AA:  BCF    03.5
+00AB:  BSF    1F.0
+....................    set_adc_channel(0); 
+00AC:  MOVLW  00
+00AD:  MOVWF  78
+00AE:  MOVF   1F,W
+00AF:  ANDLW  C7
+00B0:  IORWF  78,W
+00B1:  MOVWF  1F
+....................    delay_ms(10); 
+00B2:  MOVLW  0A
+00B3:  MOVWF  2C
+00B4:  CALL   004
+....................     
+....................    while(TRUE) 
+....................    { 
+....................       value=read_adc(); 
+00B5:  BSF    1F.2
+00B6:  BTFSC  1F.2
+00B7:  GOTO   0B6
+00B8:  MOVF   1E,W
+00B9:  MOVWF  22
+....................       sprintf(buf, "%U\n", value); 
+00BA:  CLRF   21
+00BB:  MOVLW  23
+00BC:  MOVWF  20
+00BD:  MOVF   22,W
+00BE:  MOVWF  2B
+00BF:  MOVLW  1B
+00C0:  MOVWF  2C
+00C1:  GOTO   03B
+00C2:  MOVLW  0A
+00C3:  MOVWF  2D
+00C4:  CALL   02E
+....................       puts(buf); 
+00C5:  MOVLW  23
+00C6:  MOVWF  04
+00C7:  BCF    03.7
+00C8:  GOTO   072
+00C9:  MOVLW  0D
+00CA:  BTFSS  0C.4
+00CB:  GOTO   0CA
+00CC:  MOVWF  19
+00CD:  MOVLW  0A
+00CE:  BTFSS  0C.4
+00CF:  GOTO   0CE
+00D0:  MOVWF  19
+....................       delay_ms(500); 
+00D1:  MOVLW  02
+00D2:  MOVWF  2B
+00D3:  MOVLW  FA
+00D4:  MOVWF  2C
+00D5:  CALL   004
+00D6:  DECFSZ 2B,F
+00D7:  GOTO   0D3
+00D8:  GOTO   0B5
+....................    } 
+....................  
+.................... } 
+00D9:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F72   HS NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

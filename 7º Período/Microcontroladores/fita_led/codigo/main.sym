@@ -194,7 +194,7 @@ Project Directory:
     C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\fita_led\codigo\
 
 Project Files:
-    main.c                                                  [02-jun-18 20:45  CRC=EBE64E03]
+    main.c                                                  [04-jun-18 09:44  CRC=D407B346]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-jul-13 14:28  CRC=4E65664C]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h [30-dez-08 09:01  CRC=9F7F640F]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [14-jul-11 10:13  CRC=23EDEC8F]
@@ -203,9 +203,9 @@ Project Files:
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdio.h [31-jul-07 13:24  CRC=4E4534F4]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [08-jun-11 14:39  CRC=0B6669CF]
     16x2_pcf8574.c                                          [02-jun-18 20:39  CRC=142AE7F1]
-    4x4_keyboard.c                                          [02-jun-18 20:40  CRC=60C97F93]
+    4x4_keyboard.c                                          [04-jun-18 07:58  CRC=60C97F93]
 
-Source signature=E3BE78D2
+Source signature=CBDFDE15
 
 Units:
     main (main)

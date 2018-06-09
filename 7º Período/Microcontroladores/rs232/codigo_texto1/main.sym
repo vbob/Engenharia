@@ -1,0 +1,67 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01F.6   C1OUT
+01F.7   C2OUT
+020-021 @sprintf_string
+022     main.i
+023-032 main.buf
+033     @PRINTF_D_574.P1
+033     main.@SCRATCH1
+034     @PRINTF_D_574.P1
+034     main.@SCRATCH2
+035     @PRINTF_D_574.@SCRATCH1
+036     @PRINTF_D_574.@SCRATCH2
+037     @PRINTF_D_574.@SCRATCH3
+038     @PRINTF_D_574.@SCRATCH4
+039     @SPRINTF.P1
+039     @DIV88.P2
+03A     @DIV88.P1
+03B     @DIV88.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  @DIV88
+000019  @SPRINTF
+000026  @PRINTF_D_574
+00007D  main
+00007D  @cinit1
+00008C  @cinit2
+
+Project Directory:
+    C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\rs232\codigo_texto1\
+
+Project Files:
+    main.c                                                  [08-jun-18 10:36  CRC=3CE6DC1B]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F628A.h [03-jul-13 14:28  CRC=FEBF88CA]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h [30-dez-08 09:01  CRC=9F7F640F]
+
+Source signature=7AA52D03
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC16F628A
+    Pointer Size:   16
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX8:       main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA
