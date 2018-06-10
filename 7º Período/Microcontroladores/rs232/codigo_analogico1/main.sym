@@ -10,11 +10,10 @@
 020-021 @sprintf_string
 022     main.value
 023-02A main.buf
-02B     @PRINTF_U_628.P1
-02B     main.@SCRATCH1
+02B     @delay_ms1.P1
+02B     @PRINTF_U_628.P2
 02B     @PSTRINGR_1.@SCRATCH1
 02C     @PRINTF_U_628.P1
-02C     @delay_ms1.P2
 02C     @PSTRINGR_1.@SCRATCH2
 02D     @DIV88.P1
 02D     @SPRINTF.P2
@@ -32,19 +31,19 @@
 
 ROM Allocation:
 000004  @delay_ms1
-000019  @DIV88
-00002E  @SPRINTF
-00003B  @PRINTF_U_628
-000072  @PSTRINGR_1
-00008B  main
-00008B  @cinit1
-00009F  @cinit2
+00001B  @DIV88
+000030  @SPRINTF
+00003D  @PRINTF_U_628
+000074  @PSTRINGR_1
+00008D  main
+00008D  @cinit1
+0000A1  @cinit2
 
 Project Directory:
     C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\rs232\codigo_analogico1\
 
 Project Files:
-    main.c                                                  [08-jun-18 11:23  CRC=50FC79CF]
+    main.c                                                  [10-jun-18 12:35  CRC=50FC79CF]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-jul-13 14:28  CRC=4E65664C]
 
 Source signature=EDC74667

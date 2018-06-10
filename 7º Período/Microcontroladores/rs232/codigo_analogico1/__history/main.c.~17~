@@ -21,8 +21,9 @@ void main()
    while(TRUE)
    {
       value=read_adc();
-      sprintf(buf, "%U", value);
+      sprintf(buf, "%U\n", value);
       puts(buf);
+      delay_ms(500);
    }
 
 }

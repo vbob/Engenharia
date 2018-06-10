@@ -1,13 +1,11 @@
 ÀÄmain
-   ÀÄmain  0/79  Ram=10
+   ÀÄmain  0/69  Ram=9
       ÃÄ@cinit1  (Inline)  Ram=0
-      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@delay_ms1  0/23  Ram=1
       ÃÄ@PRINTF_U_628  0/55  Ram=2
       ³  ÃÄ@DIV88  0/21  Ram=3
       ³  ÃÄ@SPRINTF  0/13  Ram=1
       ³  ÃÄ@DIV88  0/21  Ram=3
       ³  ÃÄ@SPRINTF  0/13  Ram=1
       ³  ÀÄ@SPRINTF  0/13  Ram=1
-      ÃÄ@SPRINTF  0/13  Ram=1
-      ÃÄ@PSTRINGR_1  0/25  Ram=2
-      ÀÄ@delay_ms1  0/21  Ram=1
+      ÀÄ@PSTRINGR_1  0/25  Ram=2
