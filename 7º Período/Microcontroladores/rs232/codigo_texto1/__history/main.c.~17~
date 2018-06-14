@@ -5,16 +5,25 @@
 #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
 
 #use delay(crystal=20000000)
-#use rs232(baud=2400,parity=N,xmit=PIN_B2,rcv=PIN_B1,bits=8,stream=Wireless)
+#use rs232(baud=2400,parity=N,xmit=PIN_B2,rcv=PIN_B1,bits=8,stream=PORT1)
 
 #INT_RDA
 void  RDA_isr(void) 
 {
-   putc(getc());  
+   int i = 20;
+   char buf[16];
+   sprintf(buf, "%d\n\r", i);
+
+   puts(buf);
+   delay_ms(10);
+
 }
 
 void main()
 {
    enable_interrupts(INT_RDA);
    enable_interrupts(GLOBAL);
+   
+   
+
 }

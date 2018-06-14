@@ -1,7 +1,7 @@
-D G "__PCM__" 0 24 ""5.008""
-D G "__DEVICE__" 0 24 "628"
-D G "__DATE__" 0 24 ""08-jun-18""
-D G "__TIME__" 0 24 ""10:36:38"" "Standard Header file for the PIC16F628A device ////////////////"
+D G "__PCM__" 0 27 ""5.008""
+D G "__DEVICE__" 0 27 "628"
+D G "__DATE__" 0 27 ""13-jun-18""
+D G "__TIME__" 0 27 ""09:39:39"" "Standard Header file for the PIC16F628A device ////////////////"
 c L "set_tris_a" 1 5 13 "FUNCTION"
 v L "value" 1 28 "int8" `53 
 f B "set_tris_a" 1 28 "void(int8 value)" `52 
@@ -676,9 +676,8 @@ D G "INT_FAST32_MAX" 2 128 " (2147483647)"
 D G "INT_FAST32_MIN" 2 129 " (-2147483648)"
 D G "UINT_FAST32_MAX" 2 130 " (4294967295)"
 C L "jump_to_irs" 2 2 9 "FUNCTION"
-F G "main" 0 12 "void()" `567 
-V L "i" 0 13 "int8" `568 
-V L "buf" 0 14 "int8[16]" `569 
+F G "RDA_isr" 0 12 "void()" `567 
+F G "MAIN" 0 17 "void()" `568 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

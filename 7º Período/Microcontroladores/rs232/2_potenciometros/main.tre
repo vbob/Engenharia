@@ -1,6 +1,6 @@
 ÀÄmain
-   ÀÄmain  0/69  Ram=3
+   ÀÄmain  0/84  Ram=1
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄ@delay_ms1  0/21  Ram=1
-      ÃÄ@PRINTF_LU_9600_62_63  0/91  Ram=9
+      ÃÄ@PUTCHAR_BIU_1  0/26  Ram=2
       ÀÄ@delay_ms1  0/21  Ram=1

@@ -45,7 +45,7 @@ void setup () {
   // I know that the first port in the serial list on my mac
   // is always my  Arduino, so I open Serial.list()[0].
   // Open whatever port is the one you're using.
-    myPort = new Serial(this, Serial.list()[0], 9600); 
+    myPort = new Serial(this, Serial.list()[2], 9600); 
 
   // don't generate a serialEvent() unless you get a newline character:
     myPort.bufferUntil('\n'); 
@@ -96,16 +96,18 @@ void draw () {
 void serialEvent (Serial myPort) {
   // get the ASCII string:
   String inString = myPort.readStringUntil('\n');
+  println(inString);
 
-  if (inString != null) {
+  /*if (inString != null) {
     // trim off any whitespace:
     inString = trim(inString);
     // convert to an int and map to the screen height:
     inByte = int(inString);
-    
-    inByte = map(inByte, 0, 255, 0, height-100);
     println(inByte);
-  }
+    inByte = map(inByte, 0, 1023, 0, height-100);
+    println(inByte);
+    
+  }*/
 }
 
 

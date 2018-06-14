@@ -10,11 +10,16 @@
 #INT_RDA
 void  RDA_isr(void) 
 {
-   putc(getc());  
+  
+   putc(getc());
+   
 }
 
 void main()
 {
    enable_interrupts(INT_RDA);
    enable_interrupts(GLOBAL);
+   
+   
+
 }

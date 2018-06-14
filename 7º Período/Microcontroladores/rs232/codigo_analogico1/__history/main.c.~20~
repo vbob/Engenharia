@@ -10,8 +10,9 @@
 
 void main()
 {
-   long value;
-      
+   unsigned int value;
+   char buf[10];
+   
    setup_adc_ports(AN0);
    setup_adc(ADC_CLOCK_DIV_32); 
    set_adc_channel(0);
@@ -20,8 +21,8 @@ void main()
    while(TRUE)
    {
       value=read_adc();
-      fprintf(PORT1, "%Lu\n", value);
-      delay_ms(1000);
+      sprintf(buf, "%U", value);
+      puts(buf);
    }
 
 }

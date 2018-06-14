@@ -21,7 +21,7 @@ void main()
    {
       value=read_adc();
       fprintf(PORT1, "%Lu\n", value);
-      delay_ms(1000);
+      delay_ms(5);
    }
 
 }

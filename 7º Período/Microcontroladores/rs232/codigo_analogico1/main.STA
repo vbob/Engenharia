@@ -1,49 +1,46 @@
 
-ROM used:   210/8192 (3%)
-            210/8192 (3%) including unused fragments
+ROM used:   185/8192 (2%)
+            185/8192 (2%) including unused fragments
 
             0.3 Average locations per line
-            23.3 Average locations per statement
+            20.6 Average locations per statement
 
-RAM used:   16/368 (4%) at main() level
-            21/368 (6%) worst case
+RAM used:   8/368 (2%) at main() level
+            16/368 (4%) worst case
 
-Stack used: 2 worst case (2 in main + 0 for interrupts)
+Stack used: 1 worst case (1 in main + 0 for interrupts)
 Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   29     9 100  main.c
+   28     9 100  main.c
   661     0   0  ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
 ----- -----
-  690     9 Total
+  689     9 Total
 
 Page ROM  %  RAM   Vol Diff  Functions:
 ---- --- --- ---   --- ----  ----------
-0     23  11    1             @delay_ms1
-0     69  33    9   242  3.1  main
-0     13   6    1             @SPRINTF
-0     21  10    3             @DIV88
-0     55  26    2             @PRINTF_U_628
-0     25  12    2             @PSTRINGR_1
+0     21  11    1             @delay_ms1
+0     69  37    3   202  2.6  main
+0     91  49    9             @PRINTF_LU_9600_62_63
  Inline         0             @cinit1
 
 Program metrics:
     Functions               1
     Statements              9
     Comments                110
-    Volume (V)              254
-    Difficulty (D)          2.5
-    Effort to implement (E) 638
-    Time to implement (T)   1 minutes
+    Volume (V)              208
+    Difficulty (D)          2.3
+    Effort to implement (E) 474
+    Time to implement (T)   0 minutes
     Est Delivered Bugs (B)  0
     Cyclomatic Complexity   1
-    Maintainability (MI)    81
+    Maintainability (MI)    82
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00003     4  0  
-00004-007FF   206  1838  
+00004-007FF   181  1863  
 00800-00FFF     0  2048  
 01000-017FF     0  2048  
 01800-01FFF     0  2048  

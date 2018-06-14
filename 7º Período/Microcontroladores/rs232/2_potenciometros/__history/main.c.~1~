@@ -1,0 +1,12 @@
+#include <main.h>
+
+void main()
+{
+	setup_adc_ports(AN0_AN1_AN3);
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}
