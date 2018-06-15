@@ -10,10 +10,8 @@
 021-022 main.value
 023     main.bit1
 024     main.bit2
-025     @PUTCHAR_BIU_1.P1
 025     main.@SCRATCH1
 026     @delay_ms1.P1
-026     @PUTCHAR_BIU_1.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -26,19 +24,18 @@
 
 ROM Allocation:
 000004  @delay_ms1
-000019  @PUTCHAR_BIU_1
-000033  main
-000033  @cinit1
-000045  @cinit2
+000019  @cinit1
+000019  main
+00002B  @cinit2
 
 Project Directory:
-    C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\rs232\2_potenciometros\
+    D:\engenharia\7º Período\Microcontroladores\rs232\2_potenciometros\
 
 Project Files:
-    main.c                                                  [13-jun-18 10:10  CRC=BE18A969]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-jul-13 14:28  CRC=4E65664C]
+    main.c                                                  [14-jun-18 15:06  CRC=BE18A969]
+    C:\Program Files (x86)\PICC\Devices\16F877A.h           [12-nov-13 14:35  CRC=81334808]
 
-Source signature=5AE37601
+Source signature=C07F3979
 
 Units:
     main (main)

@@ -1,3 +1,5 @@
-      Memory usage:   ROM=2%      RAM=2% - 3%
-      0 Errors,  0 Warnings.
+>>> Warning 202 "main.c" Line 17(8,12): Variable never used:   bit1
+>>> Warning 202 "main.c" Line 18(8,12): Variable never used:   bit2
+      Memory usage:   ROM=1%      RAM=2% - 3%
+      0 Errors,  2 Warnings.
 Build Successful.
