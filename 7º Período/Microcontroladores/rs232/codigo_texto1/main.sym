@@ -1,9 +1,12 @@
 004-005 @READ_PROGRAM_MEMORY8.P1
-015     CCP_1_LOW
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
-01F.6   C1OUT
-01F.7   C2OUT
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
 020     @INTERRUPT_AREA
 021     @INTERRUPT_AREA
 022     @INTERRUPT_AREA
@@ -11,37 +14,81 @@
 024     @INTERRUPT_AREA
 025     @INTERRUPT_AREA
 026     @INTERRUPT_AREA
-027     @INTERRUPT_AREA
-028     RDA_isr.@SCRATCH1
+027     rs232_errors
+028     character
+029-02A count
+02B     @GETCH_BIU_1.@SCRATCH1
+02B     interrupt_from_rx.@SCRATCH1
+02C     @PUTCHAR_BIU_1.P1
+02C     @GETCH_BIU_1.@SCRATCH2
+02D     @PUTCHAR_BIU_1.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
 079     @SCRATCH
 07A     @SCRATCH
-09B-09C @READ_PROGRAM_MEMORY8.P1
+07F     @INTERRUPT_AREA
+09C.6   C1OUT
+09C.7   C2OUT
+0FF     @INTERRUPT_AREA
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
 
 ROM Allocation:
-000031  RDA_isr
-00003A  MAIN
-00003A  @cinit1
-000047  @cinit2
+000031  @PUTCHAR_BIU_1
+000049  interrupt_from_rx
+000049  @GETCH_BIU_1
+00006B  MAIN
+00006B  @cinit1
+000080  @cinit2
 
 Project Directory:
     C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\rs232\codigo_texto1\
 
 Project Files:
-    main.c                                                  [13-jun-18 09:39  CRC=3CE6DC1B]
-    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F628A.h [03-jul-13 14:28  CRC=FEBF88CA]
+    main.c                                                  [17-jun-18 20:29  CRC=49B360FB]
+    ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-jul-13 14:28  CRC=4E65664C]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdint.h [30-dez-08 09:01  CRC=9F7F640F]
 
-Source signature=7AA52D03
+Source signature=D7178F65
 
 Units:
     main (main)
 
 Compiler Settings:
-    Processor:      PIC16F628A
+    Processor:      PIC16F877A
     Pointer Size:   16
+    ADC Range:      0-255
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32

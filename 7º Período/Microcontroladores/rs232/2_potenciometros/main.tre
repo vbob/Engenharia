@@ -1,6 +1,16 @@
 юдmain
-   юдmain  0/84  Ram=1
+   юдmain  0/111  Ram=0
       цд@cinit1  (Inline)  Ram=0
       цд@delay_ms1  0/21  Ram=1
-      цд@PUTCHAR_BIU_1  0/26  Ram=2
+      цд@PRINTF_LU_620  0/99  Ram=9
+      Ё  юд@PUTCHAR_BIU_1  0/24  Ram=2
+      цд@PSTRINGCN7_620  0/84  Ram=5
+      Ё  цд@PUTCHAR_BIU_1  0/24  Ram=2
+      Ё  юд@PUTCHAR_BIU_1  0/24  Ram=2
+      цд@delay_ms1  0/21  Ram=1
+      цд@delay_ms1  0/21  Ram=1
+      цд@PRINTF_LU_620  0/99  Ram=9
+      Ё  юд*
+      цд@PSTRINGCN7_620  0/84  Ram=5
+      Ё  юд*
       юд@delay_ms1  0/21  Ram=1

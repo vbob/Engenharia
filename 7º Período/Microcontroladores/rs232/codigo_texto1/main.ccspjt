@@ -1,6 +1,6 @@
 [PROJECT]
 Target=main.hex
-Processor_Text=PIC16F628A
+Processor_Text=PIC16F877A
 CCSVerions=5.008
 Compiler=PCM
 CCSVersion=5.008

@@ -8,12 +8,22 @@
 01B     CCP_2
 01C     CCP_2_HIGH
 021-022 main.value
-023     main.bit1
-024     main.bit2
-025     @PUTCHAR_BIU_1.P1
-025     main.@SCRATCH1
-026     @delay_ms1.P1
-026     @PUTCHAR_BIU_1.@SCRATCH1
+023     @delay_ms1.P1
+023     @PSTRINGCN7_620.P2
+023-024 @PRINTF_LU_620.P3
+024     @PSTRINGCN7_620.@SCRATCH1
+025     @PRINTF_LU_620.@SCRATCH1
+025     @PSTRINGCN7_620.@SCRATCH2
+026     @PRINTF_LU_620.@SCRATCH2
+026     @PSTRINGCN7_620.@SCRATCH3
+027     @PRINTF_LU_620.@SCRATCH3
+027     @PSTRINGCN7_620.@SCRATCH4
+028     @PRINTF_LU_620.@SCRATCH4
+029     @PRINTF_LU_620.@SCRATCH5
+02A     @PRINTF_LU_620.@SCRATCH6
+02B     @PRINTF_LU_620.@SCRATCH7
+02C     @PUTCHAR_BIU_1.P1
+02D     @PUTCHAR_BIU_1.@SCRATCH1
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -25,20 +35,24 @@
 10D-10E @READ_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
-000004  @delay_ms1
-000019  @PUTCHAR_BIU_1
-000033  main
-000033  @cinit1
-000045  @cinit2
+000004  @const627.call
+000009  @const632.call
+00000E  @delay_ms1
+000023  @PUTCHAR_BIU_1
+00003B  @PRINTF_LU_620
+00009E  @PSTRINGCN7_620
+0000F2  main
+0000F2  @cinit1
+000104  @cinit2
 
 Project Directory:
     C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\rs232\2_potenciometros\
 
 Project Files:
-    main.c                                                  [13-jun-18 10:10  CRC=BE18A969]
+    main.c                                                  [17-jun-18 20:19  CRC=A8A93E37]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-jul-13 14:28  CRC=4E65664C]
 
-Source signature=5AE37601
+Source signature=45740ACF
 
 Units:
     main (main)

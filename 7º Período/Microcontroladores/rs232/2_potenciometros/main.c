@@ -5,7 +5,7 @@
 #FUSES NOLVP                    //No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O
 
 #use delay(crystal=16000000)
-#use rs232(baud=2400,parity=E,xmit=PIN_C6,rcv=PIN_C7,bits=8,stream=PORT1)
+#use rs232(baud=1200,PARITY=E,UART1,stream=PORT1)
 
 
 void main()
@@ -13,18 +13,20 @@ void main()
    setup_adc_ports(AN0_AN1_AN3);
    setup_adc(ADC_CLOCK_DIV_32);
    
-   long value;
-   int bit1 = 0;
-   int bit2 = 0;
+   unsigned long value = 0;
    
    while(TRUE)
    {
       set_adc_channel(0);
       delay_ms(1);
       value=read_adc();
-      bit1 = value&11110000;
-      bit2 = value<<6;
-      putc(value);
-      delay_ms(1000);
+      fprintf(PORT1, "%Lu A \n\r", value);
+      delay_ms(1);
+
+      set_adc_channel(1);
+      delay_ms(1);
+      value=read_adc();
+      fprintf(PORT1, "%Lu B \n\r", value);
+      delay_ms(1);
    }
 }

@@ -1,4 +1,7 @@
 ÀÄmain
-   ÃÄMAIN  0/20  Ram=0
+   ÃÄMAIN  0/28  Ram=0
    ³  ÀÄ@cinit1  (Inline)  Ram=0
-   ÀÄRDA_isr  0/9  Ram=1
+   ÀÄinterrupt_from_rx  0/34  Ram=1
+      ÃÄ@GETCH_BIU_1  (Inline)  Ram=2
+      ÃÄ@PUTCHAR_BIU_1  0/24  Ram=2
+      ÀÄ@PUTCHAR_BIU_1  0/24  Ram=2
