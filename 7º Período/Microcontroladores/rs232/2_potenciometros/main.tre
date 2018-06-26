@@ -1,4 +1,5 @@
 ÀÄmain
+<<<<<<< HEAD
    ÀÄmain  0/111  Ram=0
       ÃÄ@cinit1  (Inline)  Ram=0
       ÃÄ@delay_ms1  0/21  Ram=1
@@ -13,4 +14,11 @@
       ³  ÀÄ*
       ÃÄ@PSTRINGCN7_620  0/84  Ram=5
       ³  ÀÄ*
+=======
+   ÀÄmain  0/93  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@delay_ms1  0/21  Ram=1
+>>>>>>> 04dffb53f90e0b796bf1103439ba618814b1ef72
       ÀÄ@delay_ms1  0/21  Ram=1

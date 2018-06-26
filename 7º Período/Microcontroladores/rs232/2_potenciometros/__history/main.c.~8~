@@ -22,13 +22,21 @@ void main()
       set_adc_channel(0);
       delay_ms(1);
       value=read_adc();
+<<<<<<< HEAD
       fprintf(PORT1, "%Lu A \n", value);
+=======
+      putc(value);
+>>>>>>> 04dffb53f90e0b796bf1103439ba618814b1ef72
       delay_ms(1000);
       
       set_adc_channel(1);
       delay_ms(1);
       value=read_adc();
+<<<<<<< HEAD
       fprintf(PORT1, "%Lu B \n ", value);
+=======
+      putc(value);
+>>>>>>> 04dffb53f90e0b796bf1103439ba618814b1ef72
       delay_ms(1000);
    }
 }

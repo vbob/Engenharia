@@ -8,6 +8,7 @@
 01B     CCP_2
 01C     CCP_2_HIGH
 021-022 main.value
+<<<<<<< HEAD
 023     @delay_ms1.P1
 023     @PSTRINGCN7_620.P2
 023-024 @PRINTF_LU_620.P3
@@ -24,6 +25,12 @@
 02B     @PRINTF_LU_620.@SCRATCH7
 02C     @PUTCHAR_BIU_1.P1
 02D     @PUTCHAR_BIU_1.@SCRATCH1
+=======
+023     main.bit1
+024     main.bit2
+025     main.@SCRATCH1
+026     @delay_ms1.P1
+>>>>>>> 04dffb53f90e0b796bf1103439ba618814b1ef72
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -35,6 +42,7 @@
 10D-10E @READ_PROGRAM_MEMORY8.P2
 
 ROM Allocation:
+<<<<<<< HEAD
 000004  @const627.call
 000009  @const632.call
 00000E  @delay_ms1
@@ -44,15 +52,28 @@ ROM Allocation:
 0000F2  main
 0000F2  @cinit1
 000104  @cinit2
+=======
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+00002B  @cinit2
+>>>>>>> 04dffb53f90e0b796bf1103439ba618814b1ef72
 
 Project Directory:
-    C:\Users\vbob\Desktop\Engenharia\7º Período\Microcontroladores\rs232\2_potenciometros\
+    D:\engenharia\7º Período\Microcontroladores\rs232\2_potenciometros\
 
 Project Files:
+<<<<<<< HEAD
     main.c                                                  [17-jun-18 20:19  CRC=A8A93E37]
     ..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-jul-13 14:28  CRC=4E65664C]
 
 Source signature=45740ACF
+=======
+    main.c                                                  [14-jun-18 15:06  CRC=BE18A969]
+    C:\Program Files (x86)\PICC\Devices\16F877A.h           [12-nov-13 14:35  CRC=81334808]
+
+Source signature=C07F3979
+>>>>>>> 04dffb53f90e0b796bf1103439ba618814b1ef72
 
 Units:
     main (main)
