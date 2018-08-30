@@ -313,21 +313,24 @@ O problema do Caixeiro-Viajante pode ser modelado por grafos não
 direcionados com pesos, de modo que as cidades correspondam às vertices,
 rotas sejam as arestas, e a distância da rota seja o peso da aresta. A
 resposta ótima começa e termina no mesmo vértice, após todos os vértices
-terem sidos visitados pelo menos (ou somente) uma vez. Um modelo baseado
-em grafos é apresentado na Figura 01.
+terem sidos visitados pelo menos e somente uma vez. Um modelo baseado em
+grafos é apresentado na Figura 01.
 
 \includegraphics{imgs/img1.png}
 
 Figura 01 - Exemplo de Mapa usando Grafos. Fonte: PIWONSKA, 2011
 
-\hypertarget{soluuxe7uxe3o-utilizando-algoritmos-de-busca-nuxe3o-informada-i.e.busca-exaustiva}{%
+\hypertarget{soluuxe7uxe3o-utilizando-algoritmos-de-busca-nuxe3o-informada-i.e.busca-cega}{%
 \subsubsection{Solução utilizando Algoritmos de Busca Não-Informada
 (i.e.~Busca
-Exaustiva)}\label{soluuxe7uxe3o-utilizando-algoritmos-de-busca-nuxe3o-informada-i.e.busca-exaustiva}}
+Cega)}\label{soluuxe7uxe3o-utilizando-algoritmos-de-busca-nuxe3o-informada-i.e.busca-cega}}
 
-\hypertarget{a-descriuxe7uxe3o-do-problema}{%
-\paragraph{a) Descrição do
-Problema}\label{a-descriuxe7uxe3o-do-problema}}
+\hypertarget{a-definiuxe7uxe3o-do-escopo-do-problema}{%
+\paragraph{a) Definição do Escopo do
+Problema}\label{a-definiuxe7uxe3o-do-escopo-do-problema}}
+
+Para que um problema seja resolvido, é necessário definir seguintes
+propriedades
 
 \begin{itemize}
 \tightlist
@@ -346,8 +349,8 @@ Problema}\label{a-descriuxe7uxe3o-do-problema}}
   a mesma de onde o Caixeiro-Viajante partiu.
 \end{itemize}
 
-\hypertarget{b-mapa}{%
-\paragraph{b) Mapa}\label{b-mapa}}
+    \hypertarget{b-estados}{%
+\paragraph{b) Estados}\label{b-estados}}
 
 Será utilizado o mapa apresentado na Figura 01. Para representação
 computacional, será utilizada uma matriz \(10x10\) onde cada elemento
@@ -356,7 +359,7 @@ indicar caminhos inexistentes será utilizado o valor \(-1\), e para
 indicar a cidade atual será utilizado o valor \(0\).
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor} }]:} \PY{n}{dist\PYZus{}matrix} \PY{o}{=} \PY{p}{[}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{dist\PYZus{}matrix} \PY{o}{=} \PY{p}{[}
             \PY{p}{[} \PY{l+m+mi}{0}\PY{p}{,}  \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{13}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{14}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}  \PY{l+m+mi}{8}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{c+c1}{\PYZsh{} Cidade 1}
             \PY{p}{[} \PY{l+m+mi}{8}\PY{p}{,}  \PY{l+m+mi}{0}\PY{p}{,}  \PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{11}\PY{p}{]}\PY{p}{,} \PY{c+c1}{\PYZsh{} Cidade 2}
             \PY{p}{[}\PY{l+m+mi}{13}\PY{p}{,}  \PY{l+m+mi}{9}\PY{p}{,}  \PY{l+m+mi}{0}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{13}\PY{p}{,} \PY{l+m+mi}{15}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{c+c1}{\PYZsh{} Cidade 3}
@@ -367,8 +370,177 @@ indicar a cidade atual será utilizado o valor \(0\).
             \PY{p}{[} \PY{l+m+mi}{8}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{18}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}  \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,}  \PY{l+m+mi}{8}\PY{p}{]}\PY{p}{,} \PY{c+c1}{\PYZsh{} Cidade 8}
             \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{21}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,}  \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{]}\PY{p}{,} \PY{c+c1}{\PYZsh{} Cidade 9}
             \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{11}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,}  \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{,}  \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{]} \PY{c+c1}{\PYZsh{} Cidade 10}
+        
+        \PY{n}{list\PYZus{}of\PYZus{}possible\PYZus{}states} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{dist\PYZus{}matrix}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+        
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Lista de Estados Possíveis: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{list\PYZus{}of\PYZus{}possible\PYZus{}states}\PY{p}{)}
 \end{Verbatim}
 
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Lista de Estados Possíveis: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+
+    \end{Verbatim}
+
+    O estado inicial poderá ser qualquer cidade entre 1 e 10
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{initial\PYZus{}state} \PY{o}{=} \PY{l+m+mi}{1}
+        
+        \PY{k}{if} \PY{n}{initial\PYZus{}state} \PY{o}{\PYZlt{}} \PY{l+m+mi}{1} \PY{o+ow}{or} \PY{n}{initial\PYZus{}state} \PY{o}{\PYZgt{}} \PY{n+nb}{len}\PY{p}{(}\PY{n}{dist\PYZus{}matrix}\PY{p}{)}\PY{p}{:}
+            \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ERRO: Estado Inicial Inválido}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{k}{else}\PY{p}{:}
+            \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Estado Inicial: Cidade }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{initial\PYZus{}state}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Estado Inicial: Cidade 1
+
+    \end{Verbatim}
+
+    \hypertarget{c-estruturas-de-dados-e-processamento}{%
+\paragraph{c) Estruturas de Dados e
+Processamento}\label{c-estruturas-de-dados-e-processamento}}
+
+O primeiro passo para se elaborar uma solução utilizando Busca
+Não-Informada é criar um modelo de estrutura de dados para manter o
+controle da árvore de busca que será construída.
+
+\hypertarget{c.1-nuxf3s}{%
+\subparagraph{c.1) Nós}\label{c.1-nuxf3s}}
+
+O Modelo de Nó descrito no livro \emph{Artificial Intelligente: A Modern
+Approach}, faz uso de três atributos: - Estado: O estado no espaço de
+estados correspondente ao nó - Pai: O nó da árvore que gerou esse nó -
+Ação: A ação que foi aplicada para gerar esse nó - Custo do Caminho: O
+custo do caminho inicial até este nó
+
+Para descrever um nó, será criada uma classe com todas essas
+características.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{class} \PY{n+nc}{Node}\PY{p}{:}
+            \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{} Classe para representação de Nós \PYZdq{}\PYZdq{}\PYZdq{}}
+            
+            \PY{k}{def} \PY{n+nf}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{state}\PY{p}{,} \PY{n}{parent}\PY{p}{,} \PY{n}{action}\PY{p}{,} \PY{n}{cost}\PY{p}{)}\PY{p}{:}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{state} \PY{o}{=} \PY{n}{state}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{parent} \PY{o}{=} \PY{n}{parent}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{action} \PY{o}{=} \PY{n}{action}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{cost} \PY{o}{=} \PY{n}{cost}
+\end{Verbatim}
+
+
+    Dada a estrutura de um Nó, é fácil criar um método que retorne os
+componentes para um Nó-Filho. O método \emph{child}\_\emph{node} que
+recebe um Nó-Pai, uma ação (que é um inteiro, indicando a cidade de
+destino) e o custo da ação atual, para então retornar o Nó-Filho
+resultante.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k}{def} \PY{n+nf}{child\PYZus{}node}\PY{p}{(}\PY{n}{parent}\PY{p}{,} \PY{n}{action}\PY{p}{,} \PY{n}{now\PYZus{}cost}\PY{p}{)}\PY{p}{:}
+            \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{} Método que retorna um Nó\PYZhy{}Filho à partir de um Nó\PYZhy{}Pai\PYZdq{}\PYZdq{}\PYZdq{}}
+            
+            \PY{k}{return} \PY{n}{Node}\PY{p}{(}\PY{n}{parent}\PY{o}{.}\PY{n}{state}\PY{p}{,} \PY{n}{parent}\PY{p}{,} \PY{n}{action}\PY{p}{,} \PY{n}{parent}\PY{o}{.}\PY{n}{cost} \PY{o}{+} \PY{n}{now\PYZus{}cost}\PY{p}{)} 
+\end{Verbatim}
+
+
+    \hypertarget{c.2-o-problema}{%
+\subparagraph{c.2) O problema}\label{c.2-o-problema}}
+
+São necessárias algumas variáveis de controle, além de métodos
+específicos ao problema. Para isso, será criada uma classe chamada
+\emph{TravellingSalesman} que abstrairá essas estruturas, permitindo que
+o Algoritmo de Busca seja genérico, e não específico ao problema: -
+Fila: A sequência de ações realizadas, inicialmente vazia. - Estado: O
+estado atual. - Teste de Objetivo: Verifica se o objetivo foi cumprido.
+- Ações Possíveis: Retorna uma lista com ações possíveis dado o estado
+atual.
+
+\textbf{Atenção}: Por não ser uma busca otimizada, não será verificado
+se todas as cidades foram visitadas SOMENTE uma vez.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} Deque =\PYZgt{} Double\PYZhy{}Ended Queue }
+        \PY{c+c1}{\PYZsh{} Pode ser utilizada tanto como FIFO quanto como LIFO}
+        \PY{k+kn}{from} \PY{n+nn}{collections} \PY{k}{import} \PY{n}{deque}
+        
+        \PY{k}{class} \PY{n+nc}{TravellingSalesman}\PY{p}{:}
+            \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{} Classe para organização de dados do problema \PYZdq{}\PYZdq{}\PYZdq{}}
+            
+            \PY{k}{def} \PY{n+nf}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{seq} \PY{o}{=} \PY{n}{deque}\PY{p}{(}\PY{p}{)}
+                \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{state} \PY{o}{=} \PY{n}{initial\PYZus{}state}
+            
+            \PY{k}{def} \PY{n+nf}{check\PYZus{}goal}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{} Método que retorna verdadeiro caso o objetivo tenha sido alcançado \PYZdq{}\PYZdq{}\PYZdq{}}
+                
+                \PY{k}{return} \PY{n+nb}{all}\PY{p}{(}\PY{n}{elem} \PY{o+ow}{in} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{seq} \PY{k}{for} \PY{n}{elem} \PY{o+ow}{in} \PY{n}{list\PYZus{}of\PYZus{}possible\PYZus{}states}\PY{p}{)} 
+                        \PY{o+ow}{and} \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{state} \PY{o}{==} \PY{n}{initial\PYZus{}state}
+            
+            \PY{k}{def} \PY{n+nf}{possible\PYZus{}states}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{)}\PY{p}{:}
+                \PY{l+s+sd}{\PYZdq{}\PYZdq{}\PYZdq{} Método que retorna lista de cidades que podem ser acessadas }
+        \PY{l+s+sd}{        à partir da cidade atual \PYZdq{}\PYZdq{}\PYZdq{}}
+                
+                \PY{c+c1}{\PYZsh{} Retorna os índices dos estados cujo peso (distância) }
+                \PY{c+c1}{\PYZsh{} é maior que 0 (ou seja, o caminho existe e não é ele mesmo)}
+                \PY{k}{return} \PY{p}{[}\PY{n}{state}\PY{o}{+}\PY{l+m+mi}{1} \PY{k}{for} \PY{n}{state}\PY{p}{,} \PY{n}{distance} \PY{o+ow}{in} 
+                        \PY{n+nb}{filter}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZgt{}} \PY{l+m+mi}{0}\PY{p}{,} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{dist\PYZus{}matrix}\PY{p}{[}\PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{state}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{p}{)}\PY{p}{]}
+\end{Verbatim}
+
+
+    Forçando elementos na fila para testar se a implementação está correta:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{salesman} \PY{o}{=} \PY{n}{TravellingSalesman}\PY{p}{(}\PY{p}{)}
+        
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Estado Atual: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{state}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Lista de Ações: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{seq}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Estados Possíveis: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{possible\PYZus{}states}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Objetivo atingido? }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{  }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{check\PYZus{}goal}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[...] Inseridos movimentos sequenciais até a cidade 10 }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{salesman}\PY{o}{.}\PY{n}{state} \PY{o}{=} \PY{l+m+mi}{10}
+        \PY{n}{salesman}\PY{o}{.}\PY{n}{seq} \PY{o}{=} \PY{n}{deque}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{]}\PY{p}{)}
+        
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Estado Atual: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{state}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Lista de Ações: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{seq}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Estados Possíveis: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{possible\PYZus{}states}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Objetivo atingido? }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{  }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{check\PYZus{}goal}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{[...] Inseridos movimentos de retorno até a cidade 1 }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{salesman}\PY{o}{.}\PY{n}{state} \PY{o}{=} \PY{l+m+mi}{1}
+        \PY{n}{salesman}\PY{o}{.}\PY{n}{seq} \PY{o}{=} \PY{n}{deque}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+        
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Estado Atual: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{state}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Lista de Ações: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{seq}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Estados Possíveis: }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{possible\PYZus{}states}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Objetivo atingido? }\PY{l+s+si}{\PYZpc{}s}\PY{l+s+s1}{  }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}} \PY{o}{\PYZpc{}} \PY{n}{salesman}\PY{o}{.}\PY{n}{check\PYZus{}goal}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Estado Atual: 1 
+Lista de Ações: deque([])
+Estados Possíveis: [2, 3, 6, 8] 
+Objetivo atingido? False  
+
+[{\ldots}] Inseridos movimentos sequenciais até a cidade 10 
+
+Estado Atual: 10 
+Lista de Ações: deque([2, 3, 4, 5, 6, 7, 8, 9, 10])
+Estados Possíveis: [2, 8, 9] 
+Objetivo atingido? False  
+
+[{\ldots}] Inseridos movimentos de retorno até a cidade 1 
+
+Estado Atual: 1 
+Lista de Ações: deque([2, 3, 4, 5, 6, 7, 8, 9, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1])
+Estados Possíveis: [2, 3, 6, 8] 
+Objetivo atingido? True  
+
+
+    \end{Verbatim}
 
 
     % Add a bibliography block to the postdoc
