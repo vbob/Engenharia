@@ -1,35 +1,23 @@
-\documentclass[tikz, paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+    \usepackage{geometry}
+    \geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+    }
 
     \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
     \usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
-    \usepackage[english]{babel} % English language/hyphenation
+    \usepackage[brazil]{babel} % English language/hyphenation
     \usepackage{amsmath,amsfonts,amsthm} % Math packages
-
+    \usepackage{enumerate}
     \usepackage{tikz}
-    \usepackage{verbatim}
-    \usetikzlibrary{graphdrawing}
     \usetikzlibrary{graphs}
-    \usegdlibrary{trees}
-    
-    \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-    
+
     \usepackage{sectsty} % Allows customizing section commands
     \allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
-    
-    \usepackage{fancyhdr} % Custom headers and footers
-    \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
-    \fancyhead{} % No page header - if you want one, create it in the same way as the footers below
-    \fancyfoot[L]{} % Empty left footer
-    \fancyfoot[C]{} % Empty center footer
-    \fancyfoot[R]{\thepage} % Page numbering for right footer
-    \renewcommand{\headrulewidth}{0pt} % Remove header underlines
-    \renewcommand{\footrulewidth}{0pt} % Remove footer underlines
-    \setlength{\headheight}{13.6pt} % Customize the height of the header
-    
-    \numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
-    \numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
-    \numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
-    
+
     \setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
 
     %----------------------------------------------------------------------------------------
@@ -60,7 +48,7 @@
     %----------------------------------------------------------------------------------------
     
     \section{Nomeie os algoritmos de buscas que resultam de:}
-    \begin{enumerate}
+    \begin{enumerate}[(a)]
         \item Busca de Feixe Local, com k = 1 
         \par R: 
 
@@ -71,20 +59,48 @@
         \par R:
     \end{enumerate}
 
-     %----------------------------------------------------------------------------------------
-    %	Exercício 1
+    %----------------------------------------------------------------------------------------
+    %	Exercício 2
     %----------------------------------------------------------------------------------------
     
     \section{Considerando a árvore abaixo, pede-se a ordem com que os nós são visitados usando-se os seguintes algoritmos de busca:}
-    \begin{enumerate}
-        \item Busca de Feixe Local, com k = 1 
+    \input{ex2_graph1}
+
+    \begin{enumerate}[(a)]
+        \item Breadth-First Search
         \par R: 
 
-        \item Busca de Feixe Local, com um estado inicial e sem limite de estados retidos
+        \item Depth-First Search
         \par R:
 
-        \item Busca de Têmpera Simulada, com temperatura T = $\infty$ todo o tempo
+        \item Depth-First Iterative-Deepening Search
         \par R:
     \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 3
+    %----------------------------------------------------------------------------------------
     
+    \section{Desenhe a árvore de busca completa (do Estado $S$ ao $G$) para o grafo abaixo. Os números ao lado dos nós representam as distâncias estimadas do Estado Inicial ($S$) para o Estado Final ($G$). Mostre como o procedimento de buscas procede na árvore quando usando:}
+    \input{ex3_graph1}
+
+    \begin{enumerate}[(a)]
+        \item DFS - Busca em Profundidade
+        \par R: 
+
+        \item BFS - Busca em Largura
+        \par R:
+
+        \item HC - Subida de Encosta
+        \par R:
+
+        \item BS - Feixe-Local com $k=2$
+        \par R:
+
+        \item GBFS - Busca Gulosa
+        \par R:
+
+    \end{enumerate}
+
+
     \end{document}
