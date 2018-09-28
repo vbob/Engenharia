@@ -1,6 +1,6 @@
-PWD c:/Dev/engenharia/8º Período/Inteligência Artificial/lista_i
+PWD d:/engenharia/8º Período/Inteligência Artificial/lista_i
 INPUT C:/Users/vbob/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
-INPUT c:/Dev/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex
+INPUT d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex
 OUTPUT lista_i.log
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrartcl.cls
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrartcl.cls
@@ -182,6 +182,12 @@ INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendla
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/sectsty/sectsty.sty
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/sectsty/sectsty.sty
 INPUT lista_i.aux
@@ -347,10 +353,31 @@ INPUT ex4_graph1.tex
 INPUT ex4_graph1.tex
 INPUT ex4_graph2.tex
 INPUT ex4_graph2.tex
+INPUT ex5_graph1.tex
+INPUT ex5_graph1.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8t.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futb8t.vf
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8r.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt-bold.tfm
+INPUT ex5_graph2.tex
+INPUT ex5_graph2.tex
+INPUT ex5_graph3.tex
+INPUT ex5_graph3.tex
+INPUT ex5_graph4.tex
+INPUT ex5_graph4.tex
+INPUT ex5_graph5.tex
+INPUT ex5_graph5.tex
+INPUT ex5_graph4.tex
+INPUT ex5_graph4.tex
+INPUT ex6_graph1.tex
+INPUT ex6_graph1.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futmi.vf
 INPUT lista_i.aux
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ml.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb

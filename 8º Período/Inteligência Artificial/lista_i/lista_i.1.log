@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.25)  28 SEP 2018 09:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.25)  28 SEP 2018 08:52
 entering extended mode
-**"d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex"
-("d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex"
+**"d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.1.tex"
+("d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.1.tex"
 LaTeX2e <2018-04-01> patch level 5
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrartc
@@ -891,70 +891,56 @@ File: tikzlibrarygraphs.code.tex 2015/06/05 v3.0.1a (rcs-revision 1.44)
 \tikz@lib@auto@number=\count128
 \tikz@qnode@count=\count129
 )
-("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
-\tikz\libraries\tikzlibrarymatrix.code.tex"
-File: tikzlibrarymatrix.code.tex 2013/07/12 v3.0.1a (rcs-revision 1.4)
-)
-("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
-\tikz\libraries\tikzlibrarybackgrounds.code.tex"
-File: tikzlibrarybackgrounds.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.3)
-\pgf@layerbox@background=\box41
-\pgf@layerboxsaved@background=\box42
-)
-("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
-\tikz\libraries\tikzlibrarypositioning.code.tex"
-File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
-)
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\sectsty\sectsty.sty
 "
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
-) (lista_i.aux)
-\openout1 = `lista_i.aux'.
+) (lista_i.1.aux)
+\openout1 = `lista_i.1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 45.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 43.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 43.
 
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 45.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 43.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 43.
 
  ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd
 "
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 45.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 43.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 43.
 
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 45.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 43.
  ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 45.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 43.
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
@@ -999,7 +985,7 @@ i"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count130
 \scratchdimen=\dimen169
-\scratchbox=\box43
+\scratchbox=\box41
 \nofMPsegments=\count131
 \nofMParguments=\count132
 \everyMPshowfont=\toks42
@@ -1067,12 +1053,12 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 48.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 46.
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 48
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 46
 .
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd
@@ -1080,39 +1066,39 @@ LaTeX Font Info:    Try loading font information for FML+futmi on input line 48
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 48.
+(Font)              scaled to size 13.24796pt on input line 46.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 48.
+(Font)              scaled to size 9.19998pt on input line 46.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 48.
+(Font)              scaled to size 7.35999pt on input line 46.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 48.
+(Font)              scaled to size 13.24796pt on input line 46.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 48.
+(Font)              scaled to size 9.19998pt on input line 46.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 48.
-LaTeX Font Info:    Try loading font information for U+msa on input line 48.
+(Font)              scaled to size 7.35999pt on input line 46.
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
  ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 48.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
  ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 55.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 61.
+(Font)              scaled to size 10.07397pt on input line 59.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 61.
+(Font)              scaled to size 7.63599pt on input line 59.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 61.
+(Font)              scaled to size 5.51999pt on input line 59.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 61.
+(Font)              scaled to size 10.07397pt on input line 59.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 61.
+(Font)              scaled to size 7.63599pt on input line 59.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 61.
+(Font)              scaled to size 5.51999pt on input line 59.
  (ex2_graph1.tex) (ex3_graph1.tex) [1
 
 
@@ -1120,36 +1106,31 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 tex) (ex3_graph3.tex) (ex3_graph4.tex)
 [2] (ex3_graph4.tex) (ex3_graph5.tex) [3] (ex3_graph4.tex) (ex4_graph1.tex)
 [4] (ex4_graph2.tex)
-Overfull \hbox (8.38618pt too wide) in paragraph at lines 172--173
+Overfull \hbox (8.38618pt too wide) in paragraph at lines 170--171
 []\T1/futs/b/n/10.95 Compare os re-que-ri-men-tos de tempo e es-pa�o dos al-go-
 rim-tos heu-r�s-ti-cos A*, HC (Hill Clim-bing/Subida
  []
 
-(ex5_graph1.tex
-LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 9.
-) [5] (ex5_graph2.tex) (ex5_graph3.tex) [6] (ex5_graph4.tex)
-(ex5_graph5.tex) [7] (ex5_graph4.tex) (ex6_graph1.tex) [8] [9] (lista_i.aux) ) 
+(ex4_graph1.tex) [5] [6] (lista_i.1.aux) ) 
 Here is how much of TeX's memory you used:
- 19006 strings out of 492973
- 381834 string characters out of 3127135
- 554610 words of memory out of 3000000
- 22433 multiletter control sequences out of 15000+200000
- 98506 words of font info for 106 fonts, out of 3000000 for 9000
+ 18304 strings out of 492973
+ 366305 string characters out of 3127135
+ 550017 words of memory out of 3000000
+ 21760 multiletter control sequences out of 15000+200000
+ 93976 words of font info for 103 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,18n,86p,9173b,1715s stack positions out of 5000i,500n,10000p,200000b,50000s
-{
-C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:
-/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourie
-r-mex.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/f
-ourier/fourier-ml.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/fourier/fourier-ms.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/vbob/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/vbob/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on lista_i.pdf (9 pages, 99712 bytes).
+ 64i,18n,65p,9175b,1711s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/vbob/AppData/Local/Programs
+/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/vbob/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb><C:/Users/vbob/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/vbob
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/User
+s/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C
+:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a
+.pfb>
+Output written on lista_i.1.pdf (6 pages, 89140 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

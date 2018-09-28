@@ -15,8 +15,6 @@
     \usepackage{enumerate}
     \usepackage{tikz}
     \usetikzlibrary{graphs}
-    \usetikzlibrary{matrix,backgrounds}
-    \usetikzlibrary{positioning}
 
     \usepackage{sectsty} % Allows customizing section commands
     \allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
@@ -162,15 +160,15 @@
 
         \item \textbf{Descreva um algoritmo BFS, e encontre a viagem mais curta da cidade A para a cidade A que visite todas as cidades}
         \par A execução do algoritmo BFS explora a árvore completa, como descrita na questão (b).
-        \par A viagem mais curta encontrada é \{A, B, E, D, C, A\}, que levaria 10 horas para se percorrida.
+        \par A viagem mais curta enconrada é \{A, B, E, D, C, A\}, que levaria 10 horas para se percorrida.
         \vspace{0.2cm}
 
         \item \textbf{Compare os requerimentos de tempo e espaço dos algoritmos de busca-cega DFS, BFS e UCS para este problema}
-        \par TO-DO
+        \par 
         \vspace{0.2cm}
 
         \item \textbf{Compare os requerimentos de tempo e espaço dos algorimtos heurísticos A*, HC (Hill Climbing/Subida de Encosta) e SA (Simulated Annealing/Têmpera Simulada) para este problema}
-        \par TO-DO
+        \par 
         \vspace{0.2cm}
 
 
@@ -181,50 +179,28 @@
     %----------------------------------------------------------------------------------------
     
     \section{Considere o problema do Quebra-Cabeça de 3 Peças, que é uma simplificação do Quebra-Cabeça de 8 Peças. Nessa simplificação, há 3 peças e um espaço vazio, conforme mostrado abaixo. }
-    \input{ex5_graph1}
+    \input{ex4_graph1}
 
-    \par{Há quatro operações possíveis para a peça branca/vazia: acima, abaixo, esquerda ou direita. Dados os Estados Inicial e Objetivo, mostre como o caminho para o objetivo pode ser encontrado usando:}
-    \pagebreak
+    \par{Há quatro operações possíveis para a peça branca/vazia: acima, abaixo, esquerda ou direita. Dados os Estados Inicial e Objetivo, mostre como o caminho para o objetivo pode ser encotnrado, usando:}
+
     \begin{enumerate}[(a)]
         \item \textbf{BFS - Busca em Largura}
-        \par \input{ex5_graph2}
-        \vspace{0.2cm}
-
-        \item \textbf{DFS - Busca em Profundidade}
-        \par \input{ex5_graph3}
-        \vspace{0.2cm}
-
-        \pagebreak
-        \item \textbf{GBFS - Busca Gulosa}
-        \par \input{ex5_graph4}
-        \vspace{0.2cm}
-
-        \item \textbf{A*}
-        \par \input{ex5_graph5}
-        \vspace{0.2cm}
-
-        \pagebreak
-        \item \textbf{HC - Subida de Encosta}
-        \par \input{ex5_graph4}
-        \vspace{0.2cm}
-
-    \end{enumerate}
-
-    %----------------------------------------------------------------------------------------
-    %	Exercício 6
-    %----------------------------------------------------------------------------------------
-    
-    \section{Tendo-se o Estado Inicial abaixo para o Problema das 4 Rainhas, considere a Busca de Subida de Encosta (HC), usando como heurística o número de conflitos diretos ou indiretos entre as rainhas, para encontrar um Estado Válido (sem conflitos).}
-    \input{ex6_graph1}
-
-    \par{Note que o valor da heurística de um Estado é o número de pares distintos de rainhas que podem se atacar mutuamente. Os sucessores de um estados são todos os estados possíveis gerados pelo movimento de uma única rainha par aoutra posição na mesma coluna. A busca HC escolhe, em cada passo, o sucessor com menor número de conflitos.}
-    \pagebreak
-    \begin{enumerate}[(a)]
-        \item \textbf{Esboce a Árvore de Estados que Busca HC, usando a heurística de mínimo conflito, expolora deste Estado Inicial. Os sucressores de cada Estado são aqueles estados que têm menos conflitos.}
         \par 
         \vspace{0.2cm}
 
         \item \textbf{DFS - Busca em Profundidade}
+        \par 
+        \vspace{0.2cm}
+
+        \item \textbf{GBFS - Busca Gulosa}
+        \par 
+        \vspace{0.2cm}
+
+        \item \textbf{A*}
+        \par 
+        \vspace{0.2cm}
+
+        \item \textbf{HC - Subida de Encosta}
         \par 
         \vspace{0.2cm}
 
