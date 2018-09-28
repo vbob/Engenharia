@@ -1,0 +1,32 @@
+\par Em caso de haver várias posições com o mesmo número de conflitos, será escolhida a que está mais acima e mais à direita.
+\par \begin{tikzpicture}[every matrix/.append style={matrix of math nodes, every node/.append style={draw,minimum size=3ex,anchor=center}}] 
+    \matrix(m1) {4&\Delta&\Delta&4\\
+                \Delta&5&4&\Delta\\
+                3&3&3&3\\
+                2&3&3&2\\};
+
+    \matrix [right=of m1] (m2) {4&\Delta&\Delta&4\\
+                                     \Delta&3&3&4\\
+                                     2&1&2&3\\
+                                     2&1&3&\Delta\\};
+    
+    \matrix [right=of m2] (m3) {2&2&\Delta&3\\
+                                     \Delta&3&3&3\\
+                                     2&\Delta&3&2\\
+                                     2&1&4&\Delta\\};
+                
+    \matrix [right=of m3] (m4) {3&2&\Delta&1\\
+                                     \Delta&3&2&2\\
+                                     3&1&3&0\\
+                                     3&\Delta&4&\Delta\\};
+
+    \matrix [right=of m4] (m5) {1&3&\Delta&1\\
+                                     \Delta&2&2&3\\
+                                     2&2&2&\Delta\\
+                                     1&\Delta&3&1\\};
+
+    \draw (m1) edge[->, draw=black!30!green, thick] (m2);
+    \draw (m2) edge[->, draw=black!30!green, thick] (m3);
+    \draw (m3) edge[->, draw=black!30!green, thick] (m4);
+    \draw (m4) edge[->, draw=black!30!green, thick] (m5);
+\end{tikzpicture}

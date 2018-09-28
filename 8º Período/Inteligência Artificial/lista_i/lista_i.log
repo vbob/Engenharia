@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.25)  28 SEP 2018 09:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.25)  28 SEP 2018 15:47
 entering extended mode
 **"d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex"
 ("d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex"
@@ -1129,25 +1129,25 @@ rim-tos heu-r�s-ti-cos A*, HC (Hill Clim-bing/Subida
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
 (Font)              Font shape `T1/futs/b/n' tried instead on input line 9.
 ) [5] (ex5_graph2.tex) (ex5_graph3.tex) [6] (ex5_graph4.tex)
-(ex5_graph5.tex) [7] (ex5_graph4.tex) (ex6_graph1.tex) [8] [9] (lista_i.aux) ) 
+(ex5_graph5.tex) [7] (ex5_graph4.tex) (ex6_graph1.tex) [8] (ex6_graph2.tex)
+[9] (lista_i.aux) ) 
 Here is how much of TeX's memory you used:
- 19006 strings out of 492973
- 381834 string characters out of 3127135
+ 19506 strings out of 492973
+ 391707 string characters out of 3127135
  554610 words of memory out of 3000000
- 22433 multiletter control sequences out of 15000+200000
+ 22930 multiletter control sequences out of 15000+200000
  98506 words of font info for 106 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,18n,86p,9173b,1715s stack positions out of 5000i,500n,10000p,200000b,50000s
-{
-C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:
-/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourie
-r-mex.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/f
-ourier/fourier-ml.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/fourier/fourier-ms.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/vbob/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/vbob/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
-Output written on lista_i.pdf (9 pages, 99712 bytes).
+{C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/d
+vips/base/8r.enc}<C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/fourier/fourier-mex.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/fourier/fourier-ml.pfb><C:/Users/vbob/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/vbob/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/vbob/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/vbo
+b/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on lista_i.pdf (9 pages, 103143 bytes).
 PDF statistics:
  60 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

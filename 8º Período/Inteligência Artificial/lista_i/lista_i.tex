@@ -216,16 +216,16 @@
     
     \section{Tendo-se o Estado Inicial abaixo para o Problema das 4 Rainhas, considere a Busca de Subida de Encosta (HC), usando como heurística o número de conflitos diretos ou indiretos entre as rainhas, para encontrar um Estado Válido (sem conflitos).}
     \input{ex6_graph1}
-
+    \vspace{0.8cm}
     \par{Note que o valor da heurística de um Estado é o número de pares distintos de rainhas que podem se atacar mutuamente. Os sucessores de um estados são todos os estados possíveis gerados pelo movimento de uma única rainha par aoutra posição na mesma coluna. A busca HC escolhe, em cada passo, o sucessor com menor número de conflitos.}
     \pagebreak
     \begin{enumerate}[(a)]
         \item \textbf{Esboce a Árvore de Estados que Busca HC, usando a heurística de mínimo conflito, expolora deste Estado Inicial. Os sucressores de cada Estado são aqueles estados que têm menos conflitos.}
-        \par 
+        \par \input{ex6_graph2}
         \vspace{0.2cm}
 
-        \item \textbf{DFS - Busca em Profundidade}
-        \par 
+        \item \textbf{Todos os nós folhas da árvore do item (a) foram gerados nas soluções encontradas para o Problema das 4 Rainhas? Se não, como fazer para que todas as folhas da árvore representem uma solução?}
+        \par Não, a Busca por Subida de Encosta não avalia todos os nós folhas. Para que todas as folhas representem soluções, é necessário que a árvore seja completamente explorada, e nenhum dos algoritmos estudados garante explorar completamente a árvore.
         \vspace{0.2cm}
 
     \end{enumerate}

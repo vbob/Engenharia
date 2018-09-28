@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1538142694 "d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex" "lista_i.pdf" "lista_i" 1538142699
+["pdflatex"] 1538164063 "d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex" "lista_i.pdf" "lista_i" 1538164069
   "C:/Users/vbob/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt" 1537907275 4160649 9f182ccb37aacaa80397564eda6063e3 ""
   "C:/Users/vbob/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map" 1538137512 85380 485e3c65a693138bc7007518c44354d4 ""
   "C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -176,7 +176,7 @@
   "C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/enumerate.sty" 1525888914 3465 3f63ff30365d38132fb55859c9cabd4d ""
   "C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xcolor/xcolor.sty" 1463135581 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xstring/xstring.sty" 1381656702 144 0ca8d67b000b795a4d9ec000e0fd09c7 ""
-  "d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex" 1538142692 10129 c76a033d0f0807861d90f18611bf1575 ""
+  "d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex" 1538164052 10589 35f81cecc976f40a6bbd6d74bcb4d633 ""
   "ex2_graph1.tex" 1538137446 799 5d64799e9039352df6cbabb4b1da47d7 ""
   "ex3_graph1.tex" 1537993043 834 29f8dcc5d29504ff44e9506066327926 ""
   "ex3_graph2.tex" 1538137446 1411 2d205046a7c66238940d94a117971555 ""
@@ -191,8 +191,9 @@
   "ex5_graph4.tex" 1538142023 912 897c2ab8871e061d7a423d5857a710be ""
   "ex5_graph5.tex" 1538142015 984 b09a6bc2d27aa3aad0a0bbb5b1e19aff ""
   "ex6_graph1.tex" 1538142606 451 e8f0502aff914e91c85f93c4b9aa214c ""
-  "lista_i.aux" 1538142699 1789 1f92a1e773b17436870c0eb5bb3bf6b4 ""
-  "lista_i.tex" 1538142692 10129 c76a033d0f0807861d90f18611bf1575 ""
+  "ex6_graph2.tex" 1538163990 1526 18471918563628eb2e0eca55e5c3238b ""
+  "lista_i.aux" 1538164068 1789 1f92a1e773b17436870c0eb5bb3bf6b4 ""
+  "lista_i.tex" 1538164052 10589 35f81cecc976f40a6bbd6d74bcb4d633 ""
   (generated)
   "lista_i.pdf"
   "lista_i.log"
