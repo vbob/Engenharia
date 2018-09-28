@@ -1,6 +1,6 @@
-PWD d:/engenharia/8º Período/Inteligência Artificial/lista_i
+PWD c:/Dev/engenharia/8º Período/Inteligência Artificial/lista_i
 INPUT C:/Users/vbob/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
-INPUT d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex
+INPUT c:/Dev/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex
 OUTPUT lista_i.log
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrartcl.cls
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/koma-script/scrartcl.cls
@@ -71,6 +71,12 @@ INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/amsfont
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amscls/amsthm.sty
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/amscls/amsthm.sty
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/systeme/systeme.sty
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/systeme/systeme.sty
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xstring/xstring.sty
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/xstring/xstring.sty
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/xstring/xstring.tex
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/generic/systeme/systeme.tex
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/enumerate.sty
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/tools/enumerate.sty
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/tex/latex/pgf/frontendlayer/tikz.sty
@@ -254,6 +260,7 @@ INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/amsfonts/
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecss1440.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecsx1440.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futrc8t.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8t.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futmii.tfm
@@ -298,9 +305,22 @@ INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/fu
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futrc8t.vf
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8r.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futb8t.vf
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futb8r.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt-bold.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futsy.vf
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-ms.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-mcl.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8t.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecss1200.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecsx1200.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futrc8t.tfm
+INPUT ex3_graph2.tex
+INPUT ex3_graph2.tex
+INPUT ex3_graph3.tex
+INPUT ex3_graph3.tex
+INPUT ex3_graph4.tex
+INPUT ex3_graph4.tex
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futmii.vf
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-mlit.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-ml.tfm
@@ -308,14 +328,33 @@ INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/f
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futr8t.vf
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8r.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futrc8t.vf
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT ex3_graph4.tex
+INPUT ex3_graph4.tex
+INPUT ex3_graph5.tex
+INPUT ex3_graph5.tex
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/vf/public/fourier/futmii.vf
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-mlit.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/fourier-ml.tfm
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/tfm/public/fourier/futri8r.tfm
+INPUT ex3_graph4.tex
+INPUT ex3_graph4.tex
+INPUT ex4_graph1.tex
+INPUT ex4_graph1.tex
+INPUT ex4_graph2.tex
+INPUT ex4_graph2.tex
 INPUT lista_i.aux
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-mex.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourier/fourier-ms.pfb
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb
+INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb
 INPUT C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb

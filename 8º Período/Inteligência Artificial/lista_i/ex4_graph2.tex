@@ -1,0 +1,109 @@
+\hfil
+\resizebox{\linewidth}{!}{\begin{tikzpicture}[
+    every node/.style = {shape=circle, draw, align=center}
+    ]
+    \node {A}
+    child { node {B} 
+        child { node {E}
+            child { node {D} 
+                child { node {C} 
+                    child { node[draw=black!30!green, thick] {A} edge from parent node[draw=none, left] {1} }
+                    edge from parent node[draw=none, left] {3} 
+                }
+                edge from parent node[draw=none, left] {1} 
+            }
+            child { node {C} 
+                child { node {D} edge from parent node[draw=none, right] {3} }
+                edge from parent node[draw=none, right] {2} 
+            }
+            edge from parent node[draw=none, above left] {2} 
+        }
+        child [missing]
+        child { node {D} 
+            child { node {E} 
+                child { node {C} 
+                    child { node[draw=black!30!green, thick] {A} edge from parent node[draw=none, left] {1} }
+                    edge from parent node[draw=none, left] {2} 
+                }
+                edge from parent node[draw=none, left] {1} 
+            }
+            child { node {C} 
+                child { node {E} 
+                    child { node[draw=black!30!green, thick] {A} edge from parent node[draw=none, right] {3} }
+                    edge from parent node[draw=none, right] {2} 
+                }
+                edge from parent node[draw=none, right] {3} 
+            }    
+        edge from parent node[draw=none, above right] {5} 
+        }
+        edge from parent node[draw=none, above left] {3} 
+    } 
+    child [missing]
+    child [missing]
+    child [missing]
+    child { node {E} 
+        child { node {B} 
+            child { node {D} 
+                child { node {C} 
+                    child { node[draw=black!30!green, thick] {A} edge from parent node[draw=none, left] {1} }
+                    edge from parent node[draw=none, left] {3} 
+                }
+                edge from parent node[draw=none, left] {1} 
+            }
+            edge from parent node[draw=none, above left] {2} 
+        }
+        child { node {D} 
+            child { node {B} edge from parent node[draw=none, right] {5} }
+            edge from parent node[draw=none, right] {1} 
+        }
+        child { node {C} 
+            child { node {D} 
+                child { node {B} 
+                    child { node[draw=black!30!green, thick] {A} edge from parent node[draw=none, right] {4} }
+                    edge from parent node[draw=none, right] {5} 
+                }
+                edge from parent node[draw=none, right] {3} 
+            }
+            edge from parent node[draw=none, above right] {2} 
+        }
+        edge from parent node[draw=none, right] {3}  
+    }
+    child [missing]
+    child [missing]
+    child [missing]
+    child { node {C} 
+        child { node {E} 
+            child { node {B} 
+                child { node {D} edge from parent node[draw=none, left] {5} }
+                edge from parent node[draw=none, left] {2} 
+            }
+            child { node {D} 
+                child { node {B} 
+                    child { node[draw=black!30!green, thick] {A} edge from parent node[draw=none, right] {4} }
+                    edge from parent node[draw=none, right] {5} 
+                }
+                edge from parent node[draw=none, right] {1} 
+            }
+        edge from parent node[draw=none, above left] {2} 
+        }
+        child [missing]
+        child { node {D} 
+            child { node {B} 
+                child { node {E} 
+                    child { node[draw=black!30!green, thick] {A} edge from parent node[draw=none, left] {3} }
+                    edge from parent node[draw=none, left] {2} 
+                }
+                edge from parent node[draw=none, left] {5} 
+            }
+            child { node {E} 
+                child { node {B} 
+                    child { node[draw=black!30!green, thick] {A} edge from parent node[draw=none, right] {4} }
+                    edge from parent node[draw=none, right] {2} 
+                }
+                edge from parent node[draw=none, right] {1} 
+            }    
+            edge from parent node[draw=none, above right] {3} 
+        }
+        edge from parent node[draw=none, above right] {1} 
+    };
+\end{tikzpicture}}

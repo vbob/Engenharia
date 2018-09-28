@@ -1,7 +1,8 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.25)  26 SEP 2018 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.27)  27 SEP 2018 14:07
 entering extended mode
-**"d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex"
-("d:/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex"
+**"c:/Dev/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex"
+
+("c:/Dev/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex"
 LaTeX2e <2018-04-01> patch level 5
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\koma-script\scrartc
@@ -519,10 +520,30 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@postskip=\skip61
 \thm@headsep=\skip62
 \dth@everypar=\toks26
-) ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\enumerate.s
+) ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\systeme\systeme.s
 ty"
+("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xstring\xstring.sty
+"
+("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\xstring\xstring.t
+ex"
+\@xs@message=\write3
+\integerpart=\count106
+\decimalpart=\count107
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\systeme\systeme.t
+ex"
+\SYS@systemecode=\toks27
+\SYS@systempreamble=\toks28
+\SYSeqnum=\count108
+)
+Package: systeme 2018/01/01 v0.31 Mise en forme de systemes d'equations (CT)
+)
+("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\enumerate.sty
+"
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks27
+\@enLab=\toks29
 )
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pgf\frontendlayer\t
 ikz.sty"
@@ -532,7 +553,7 @@ sty"
 s.sty"
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 util-common.tex"
-\pgfutil@everybye=\toks28
+\pgfutil@everybye=\toks30
 \pgfutil@tempdima=\dimen121
 \pgfutil@tempdimb=\dimen122
 
@@ -585,12 +606,12 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 keys.code.tex"
-\pgfkeys@pathtoks=\toks29
-\pgfkeys@temptoks=\toks30
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\utilities\pgf
 keysfiltered.code.tex"
-\pgfkeys@tmptoks=\toks31
+\pgfkeys@tmptoks=\toks33
 ))
 \pgf@x=\dimen125
 \pgf@y=\dimen126
@@ -600,15 +621,15 @@ keysfiltered.code.tex"
 \pgf@yb=\dimen130
 \pgf@xc=\dimen131
 \pgf@yc=\dimen132
-\w@pgf@writea=\write3
+\w@pgf@writea=\write4
 \r@pgf@reada=\read1
-\c@pgf@counta=\count106
-\c@pgf@countb=\count107
-\c@pgf@countc=\count108
-\c@pgf@countd=\count109
-\t@pgf@toka=\toks32
-\t@pgf@tokb=\toks33
-\t@pgf@tokc=\toks34
+\c@pgf@counta=\count109
+\c@pgf@countb=\count110
+\c@pgf@countc=\count111
+\c@pgf@countd=\count112
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gf.cfg"
@@ -627,8 +648,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count110
-\pgfsyssoftpath@bigbuffer@items=\count111
+\pgfsyssoftpath@smallbuffer@items=\count113
+\pgfsyssoftpath@bigbuffer@items=\count114
 )
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\systemlayer\p
 gfsysprotocol.code.tex"
@@ -665,11 +686,11 @@ til.code.tex")
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathp
 arser.code.tex"
 \pgfmath@dimen=\dimen133
-\pgfmath@count=\count112
+\pgfmath@count=\count115
 \pgfmath@box=\box31
-\pgfmath@toks=\toks35
-\pgfmath@stack@operand=\toks36
-\pgfmath@stack@operation=\toks37
+\pgfmath@toks=\toks37
+\pgfmath@stack@operand=\toks38
+\pgfmath@stack@operation=\toks39
 )
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
 unctions.code.tex"
@@ -691,7 +712,7 @@ unctions.misc.code.tex")
 unctions.integerarithmetics.code.tex")))
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\math\pgfmathf
 loat.code.tex"
-\c@pgfmathroundto@lastzeros=\count113
+\c@pgfmathroundto@lastzeros=\count116
 ))
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcorepoints.code.tex"
@@ -729,7 +750,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box32
 \pgf@hbox=\box33
 \pgf@layerbox@main=\box34
-\pgf@picture@serial@count=\count114
+\pgf@picture@serial@count=\count117
 )
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcoregraphicstate.code.tex"
@@ -764,7 +785,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 fcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen157
-\pgf@sys@shading@range@num=\count115
+\pgf@sys@shading@range@num=\count118
 )
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\basiclayer\pg
 fcoreimage.code.tex"
@@ -824,8 +845,8 @@ Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 code.tex")
 \pgffor@iter=\dimen160
 \pgffor@skip=\dimen161
-\pgffor@stack=\toks38
-\pgffor@toks=\toks39
+\pgffor@stack=\toks40
+\pgffor@toks=\toks41
 ))
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
 \tikz\tikz.code.tex"
@@ -834,7 +855,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\libraries\pgf
 libraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count116
+\pgf@plot@mark@count=\count119
 \pgfplotmarksize=\dimen162
 )
 \tikz@lastx=\dimen163
@@ -847,19 +868,19 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box38
 \tikz@tempbox=\box39
 \tikz@tempbox@bg=\box40
-\tikztreelevel=\count117
-\tikznumberofchildren=\count118
-\tikznumberofcurrentchild=\count119
-\tikz@fig@count=\count120
+\tikztreelevel=\count120
+\tikznumberofchildren=\count121
+\tikznumberofcurrentchild=\count122
+\tikz@fig@count=\count123
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\modules\pgfmo
 dulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count121
-\pgfmatrixcurrentcolumn=\count122
-\pgf@matrix@numberofcolumns=\count123
+\pgfmatrixcurrentrow=\count124
+\pgfmatrixcurrentcolumn=\count125
+\pgf@matrix@numberofcolumns=\count126
 )
-\tikz@expandcount=\count124
+\tikz@expandcount=\count127
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
 \tikz\libraries\tikzlibrarytopaths.code.tex"
@@ -868,8 +889,8 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\generic\pgf\frontendlayer
 \tikz\libraries\graphs\tikzlibrarygraphs.code.tex"
 File: tikzlibrarygraphs.code.tex 2015/06/05 v3.0.1a (rcs-revision 1.44)
-\tikz@lib@auto@number=\count125
-\tikz@qnode@count=\count126
+\tikz@lib@auto@number=\count128
+\tikz@qnode@count=\count129
 )
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\sectsty\sectsty.sty
 "
@@ -878,49 +899,49 @@ les
 ) (lista_i.aux)
 \openout1 = `lista_i.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 42.
-LaTeX Font Info:    Try loading font information for FML+futm on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 43.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 43.
 
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutm.fd"
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 42.
-LaTeX Font Info:    Try loading font information for FMS+futm on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 43.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 43.
 
  ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmsfutm.fd
 "
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 42.
-LaTeX Font Info:    Try loading font information for FMX+futm on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 43.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 43.
 
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmxfutm.fd"
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 43.
  ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Try loading font information for T1+futs on input line 42.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 43.
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\t1futs.fd"
 File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
@@ -963,17 +984,17 @@ ABD: EveryShipout initializing macros
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mki
 i"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
+\scratchcounter=\count130
 \scratchdimen=\dimen169
 \scratchbox=\box41
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count130
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count133
 \MPscratchDim=\dimen170
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
-\everyMPtoPDFconversion=\toks41
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks43
 )
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-b
 ase.sty"
@@ -1033,12 +1054,12 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 45.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 46.
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for FML+futmi on input line 45
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 46
 .
 
 ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fourier\fmlfutmi.fd
@@ -1046,58 +1067,70 @@ LaTeX Font Info:    Try loading font information for FML+futmi on input line 45
 File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
 )
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 45.
+(Font)              scaled to size 13.24796pt on input line 46.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 45.
+(Font)              scaled to size 9.19998pt on input line 46.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 45.
+(Font)              scaled to size 7.35999pt on input line 46.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 45.
+(Font)              scaled to size 13.24796pt on input line 46.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 9.19998pt on input line 45.
+(Font)              scaled to size 9.19998pt on input line 46.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.35999pt on input line 45.
-LaTeX Font Info:    Try loading font information for U+msa on input line 45.
+(Font)              scaled to size 7.35999pt on input line 46.
+LaTeX Font Info:    Try loading font information for U+msa on input line 46.
  ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 45.
+LaTeX Font Info:    Try loading font information for U+msb on input line 46.
  ("C:\Users\vbob\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 58.
+(Font)              scaled to size 10.07397pt on input line 59.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 58.
+(Font)              scaled to size 7.63599pt on input line 59.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 58.
+(Font)              scaled to size 5.51999pt on input line 59.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 58.
+(Font)              scaled to size 10.07397pt on input line 59.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 58.
+(Font)              scaled to size 7.63599pt on input line 59.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 58.
+(Font)              scaled to size 5.51999pt on input line 59.
  (ex2_graph1.tex) (ex3_graph1.tex) [1
 
 
-{C:/Users/vbob/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2] (lista_i
-.aux) ) 
+{C:/Users/vbob/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (ex3_graph2.
+tex) (ex3_graph3.tex) (ex3_graph4.tex)
+[2] (ex3_graph4.tex) (ex3_graph5.tex) [3] (ex3_graph4.tex) (ex4_graph1.tex)
+[4] (ex4_graph2.tex)
+Overfull \hbox (8.38618pt too wide) in paragraph at lines 170--171
+[]\T1/futs/b/n/10.95 Compare os re-que-ri-men-tos de tempo e es-pa�o dos al-go-
+rim-tos heu-r�s-ti-cos A*, HC (Hill Clim-bing/Subida
+ []
+
+[5] (lista_i.aux) ) 
 Here is how much of TeX's memory you used:
- 17220 strings out of 492973
- 344088 string characters out of 3127135
- 488639 words of memory out of 3000000
- 20722 multiletter control sequences out of 15000+200000
- 76330 words of font info for 92 fonts, out of 3000000 for 9000
+ 18302 strings out of 492973
+ 366265 string characters out of 3127135
+ 550017 words of memory out of 3000000
+ 21760 multiletter control sequences out of 15000+200000
+ 93976 words of font info for 103 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,13n,60p,9173b,1120s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r
-.enc}<C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/fourie
-r/fourier-ms.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/a
-dobe/utopia/putr8a.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/adobe/utopia/putri8a.pfb>
-Output written on lista_i.pdf (2 pages, 40941 bytes).
+ 64i,18n,65p,9177b,1711s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/d
+vips/base/8r.enc}<C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/fourier/fourier-mex.pfb><C:/Users/vbob/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/fourier/fourier-ms.pfb><C:/Users/vbob/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Users/vbob/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Users/vbob/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb>
+Output written on lista_i.pdf (5 pages, 86379 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
+ 42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
