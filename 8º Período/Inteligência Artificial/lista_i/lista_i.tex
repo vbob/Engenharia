@@ -16,7 +16,8 @@
     \usepackage{tikz}
     \usetikzlibrary{graphs}
     \usetikzlibrary{matrix,backgrounds}
-    \usetikzlibrary{positioning}
+    \usetikzlibrary{fit, positioning}
+    \usetikzlibrary{quotes}
 
     \usepackage{sectsty} % Allows customizing section commands
     \allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
@@ -166,11 +167,37 @@
         \vspace{0.2cm}
 
         \item \textbf{Compare os requerimentos de tempo e espaço dos algoritmos de busca-cega DFS, BFS e UCS para este problema}
-        \par TO-DO
+        \par Fator de Ramificação da Árvore $b= 2$,\\  Profundidade da Árvore $d = 5$, \\ Nº de Nós do Grafo $V = 5$, \\ Nº de Arestas do Grafo $E = 8$. 
+        \par \begin{table}[h!]
+            \begin{center}
+              \caption{Comparação entre os Algoritmos de Busca-Cega.}
+              \label{tab:table1}
+              \begin{tabular}{r|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+                \textbf{Algoritmo} & \textbf{Complexidade de Processamento} & \textbf{Complexidade de Espaço}\\
+                \hline
+                \textbf{DFS} & $O(b^d) \Rightarrow O(32)$ & $O(bd) \Rightarrow O(10)$ \\
+                \textbf{BFS} & $O(b^d) \Rightarrow O(32)$ & $O(b^d) \Rightarrow O(32)$ \\
+                \textbf{UCS} & $O(|E| + |V| log |V|) \Rightarrow O(11.5)$ & $O(|V|^2) \Rightarrow O(25)$\\
+              \end{tabular}
+            \end{center}
+          \end{table}
         \vspace{0.2cm}
 
         \item \textbf{Compare os requerimentos de tempo e espaço dos algorimtos heurísticos A*, HC (Hill Climbing/Subida de Encosta) e SA (Simulated Annealing/Têmpera Simulada) para este problema}
-        \par TO-DO
+        \par Fator de Ramificação da Árvore $b= 2$,\\  Profundidade da Árvore $d = 5$.
+        \par \begin{table}[h!]
+            \begin{center}
+              \caption{Comparação entre os Algoritmos de Busca Heurística.}
+              \label{tab:table1}
+              \begin{tabular}{r|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+                \textbf{Algoritmo} & \textbf{Complexidade de Processamento} & \textbf{Complexidade de Espaço}\\
+                \hline
+                \textbf{A*} & $O(b^d) \Rightarrow O(32)$ & $O(b^d) \Rightarrow O(32)$ \\
+                \textbf{HC} & $O(\infty)$ & $O(b) \Rightarrow O(2)$ \\
+                \textbf{SA} & $O((b^2 + b) log b) \Rightarrow O(1.8)$ & $O(b) \Rightarrow O(2)$\\
+              \end{tabular}
+            \end{center}
+          \end{table}
         \vspace{0.2cm}
 
 
@@ -184,26 +211,25 @@
     \input{ex5_graph1}
 
     \par{Há quatro operações possíveis para a peça branca/vazia: acima, abaixo, esquerda ou direita. Dados os Estados Inicial e Objetivo, mostre como o caminho para o objetivo pode ser encontrado usando:}
-    \pagebreak
+
     \begin{enumerate}[(a)]
         \item \textbf{BFS - Busca em Largura}
         \par \input{ex5_graph2}
         \vspace{0.2cm}
-
+        \pagebreak
         \item \textbf{DFS - Busca em Profundidade}
         \par \input{ex5_graph3}
         \vspace{0.2cm}
 
-        \pagebreak
+        
         \item \textbf{GBFS - Busca Gulosa}
         \par \input{ex5_graph4}
         \vspace{0.2cm}
-
+        \pagebreak
         \item \textbf{A*}
         \par \input{ex5_graph5}
         \vspace{0.2cm}
 
-        \pagebreak
         \item \textbf{HC - Subida de Encosta}
         \par \input{ex5_graph4}
         \vspace{0.2cm}
@@ -218,7 +244,7 @@
     \input{ex6_graph1}
     \vspace{0.8cm}
     \par{Note que o valor da heurística de um Estado é o número de pares distintos de rainhas que podem se atacar mutuamente. Os sucessores de um estados são todos os estados possíveis gerados pelo movimento de uma única rainha par aoutra posição na mesma coluna. A busca HC escolhe, em cada passo, o sucessor com menor número de conflitos.}
-    \pagebreak
+
     \begin{enumerate}[(a)]
         \item \textbf{Esboce a Árvore de Estados que Busca HC, usando a heurística de mínimo conflito, expolora deste Estado Inicial. Os sucressores de cada Estado são aqueles estados que têm menos conflitos.}
         \par \input{ex6_graph2}
@@ -229,5 +255,27 @@
         \vspace{0.2cm}
 
     \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 7
+    %----------------------------------------------------------------------------------------
+    
+    \section{Considere o Quebra-Cabeça formado por 5 células, conforme mostra a figura abaixo. As duas primeiras células contêm peças na cor preta, as duas próximas na cor branca, e a última célula está vazia.}
+    \input{ex7_graph1}
+   
+    \par{Neste Quebra-Cabeça, uma peça pode ser movida para uma célula vazia (custo de uma unidade) ou a peça pode pular sobre no máximo duas células para uma peça vazia (custo igual ao número de células puladas). O objetivo do Quebra-Cabeça é colocar as duas peças pretas à direita das peças brancas, e a peça vazia pode ficar em qualquer posição. Pede-se:}
+
+    \begin{enumerate}[(a)]
+        \pagebreak
+        \item \textbf{Resolva o Quebra-Cabeça com Algoritmo A*, adotando a seguinte heurística: $h(s)$ é a soma do número de peças brancas à direita da primeira peça preta e o número de peças brancas à direita da segunda peça branca. Por exemplo, o Estado Inicial da Figura acima possui $h(s) = 4$}
+        \par \input{ex7_graph2}
+        \vspace{0.2cm}
+
+        \item \textbf{Mostre que $h(s)$ é admissível, ou seja, $h(s) \leq h*(s)$}
+        \par 
+        \vspace{0.2cm}
+
+    \end{enumerate}
+
 
     \end{document}
