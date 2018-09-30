@@ -1,0 +1,19 @@
+\par \hfil \begin{tikzpicture}
+    \matrix(m)[
+      matrix of math nodes,
+      every node/.append style={draw,minimum size=5ex,anchor=center},
+    ]{
+      2 & 3 \\
+      1 & \, \\
+    };
+    \node[above,font=\large\bfseries] at (current bounding box.north) {Estado Inicial};
+\end{tikzpicture} \begin{tikzpicture}
+    \matrix(m)[
+      matrix of math nodes,
+      every node/.append style={draw,minimum size=5ex,anchor=center},
+    ]{
+      1 & 2 \\
+      3 & \, \\
+    };
+    \node[above,font=\large\bfseries] at (current bounding box.north) {Objetivo};
+\end{tikzpicture}

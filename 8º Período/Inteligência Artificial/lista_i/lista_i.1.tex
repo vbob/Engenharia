@@ -1,0 +1,209 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+    \usepackage{geometry}
+    \geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+    }
+
+    \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+    \usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+    \usepackage[brazil]{babel} % English language/hyphenation
+    \usepackage{amsmath,amsfonts,amsthm} % Math packages
+    \usepackage{systeme}
+    \usepackage{enumerate}
+    \usepackage{tikz}
+    \usetikzlibrary{graphs}
+
+    \usepackage{sectsty} % Allows customizing section commands
+    \allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
+
+    \setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+    %----------------------------------------------------------------------------------------
+    %	TITLE SECTION
+    %----------------------------------------------------------------------------------------
+    
+    \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+    
+    \title{	
+    \normalfont \normalsize 
+    \textsc{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso} \\ [25pt] % Your university, school and/or department name(s)
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge Inteligência Artificial \\ % The assignment title
+    \huge Lista II - Solução por Meio de Buscas
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+    }
+    
+    \author{Vitor Bruno de Oliveira Barth} % Your name
+    
+    \date{\normalsize\today} % Today's date or a custom date
+    
+    \begin{document}
+    
+    \maketitle
+    
+    %----------------------------------------------------------------------------------------
+    %	Exercício 1
+    %----------------------------------------------------------------------------------------
+    
+    \section{Nomeie os algoritmos de buscas que resultam de:}
+    \begin{enumerate}[(a)]
+        \item \textbf{Busca de Feixe Local, com k = 1}
+        \par Hill Climbing
+
+        \item \textbf{Busca de Feixe Local, com um estado inicial e sem limite de estados retidos}
+        \par Breadth-First Search, mas de forma que cada camada seria expandida em uma única iteração
+
+        \item \textbf{Busca de Têmpera Simulada, com temperatura T = $\infty$ todo o tempo}
+        \par Random Search
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 2
+    %----------------------------------------------------------------------------------------
+    
+    \section{Considerando a árvore abaixo, pede-se a ordem com que os nós são visitados usando-se os seguintes algoritmos de busca:}
+    \input{ex2_graph1}
+
+    \begin{enumerate}[(a)]
+        \item \textbf{Breadth-First Search}
+        \par 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+
+        \item \textbf{Depth-First Search}
+        \par 1, 2, 5, 11, 12, 6, 13, 3, 7, 8, 4, 9, 14, 15, 10, 16, 17
+
+        \item \textbf{Depth-First Iterative-Deepening Search}
+        \par Caso a profundidade-limite seja maior que três, a execução será idêntica à Depht-First Search 
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 3
+    %----------------------------------------------------------------------------------------
+    
+    \section{Desenhe a árvore de busca completa (do Estado $S$ ao $G$) para o grafo abaixo. Os números ao lado dos nós representam as distâncias estimadas do Estado Inicial ($S$) para o Estado Final ($G$). Mostre como o procedimento de buscas procede na árvore quando usando:}
+    \input{ex3_graph1}
+
+    \subsection{Árvore de Busca}
+    \input{ex3_graph2}
+
+    \subsection{Execução dos Algoritmos de Busca}
+    \par Vermelho $\rightarrow$ Nós já explorados; 
+    \par Verde $\rightarrow$ Solução.
+
+    \begin{enumerate}[(a)]
+        \item \textbf{DFS - Busca em Profundidade}
+        \par \input{ex3_graph3}
+        \vspace{0.2cm}
+
+        \item \textbf{BFS - Busca em Largura}
+        \par \input{ex3_graph4}
+        \vspace{0.2cm}
+
+        \item \textbf{HC - Subida de Encosta}
+        \par \input{ex3_graph4}
+        \vspace{0.2cm}
+
+        \item \textbf{BS - Feixe-Local com $k=2$}
+        \par \input{ex3_graph5}
+        \vspace{0.2cm}
+
+        \pagebreak
+        \item \textbf{GBFS - Busca Gulosa}
+        \par \input{ex3_graph4}
+        \vspace{0.2cm}
+
+
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 4
+    %----------------------------------------------------------------------------------------
+    
+    \section{Considere o roteiro das cidades A, B, C, D e E:}
+    \input{ex4_graph1}
+
+    \par{Cada cidade está conectada a outra cidade por meio de uma estrada, e o tempo de viagem entre as cidades está indicado pelo número mostrado em cada caminho. Suponha que você está na cidade A e quer planejar uma viagem passando por cada cidade uma única vez. Por exemplo, a viagem pelo caminho ABDCEA é uma possível solução que demandaria 17 horas para ser realizada. A sua tarefa é escolher um caminho que minimize o tempo de viagem. Desta forma, pede-se:}
+
+    \begin{enumerate}[(a)]
+        \item \textbf{Formule o Espaço de Estados para o problema}
+        \par $S: \{A, B, C, D, E\}$
+        \vspace{0.2cm}
+
+        \par $A: \{A, B, C, D, E\}$
+        \vspace{0.2cm}
+
+        \par $Action(s): \begin{cases} 
+            s=A \rightarrow \{{B, E, C}\}   \\
+            s=B \rightarrow \{{A, E, D}\}   \\
+            s=C \rightarrow \{{A, E, D}\}   \\
+            s=D \rightarrow \{{B, E, C}\}   \\
+            s=E \rightarrow \{{A, B, D, C}\}
+            \end{cases}$
+        \vspace{0.2cm}
+
+        \par $Cost(s, a): cost\_matrix[s,a]$  ||  $cost\_matrix=
+        \begin{bmatrix}
+             0 &  4 &  1 & -1 & 3 \\
+             4 &  0 & -1 &  5 & 2 \\
+             1 & -1 &  0 &  3 & 2 \\
+            -1 &  5 &  3 &  0 & 1 \\
+             3 &  2 &  2 &  1 & 0 \\
+        \end{bmatrix}$
+        \vspace{0.2cm}
+
+        \pagebreak
+        \item \textbf{Esboce o diagrama do Espaço de Estados completo, descrevendo as ações}
+        \par \input{ex4_graph2}
+        \vspace{0.2cm}
+
+        \item \textbf{Descreva um algoritmo BFS, e encontre a viagem mais curta da cidade A para a cidade A que visite todas as cidades}
+        \par A execução do algoritmo BFS explora a árvore completa, como descrita na questão (b).
+        \par A viagem mais curta enconrada é \{A, B, E, D, C, A\}, que levaria 10 horas para se percorrida.
+        \vspace{0.2cm}
+
+        \item \textbf{Compare os requerimentos de tempo e espaço dos algoritmos de busca-cega DFS, BFS e UCS para este problema}
+        \par 
+        \vspace{0.2cm}
+
+        \item \textbf{Compare os requerimentos de tempo e espaço dos algorimtos heurísticos A*, HC (Hill Climbing/Subida de Encosta) e SA (Simulated Annealing/Têmpera Simulada) para este problema}
+        \par 
+        \vspace{0.2cm}
+
+
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 5
+    %----------------------------------------------------------------------------------------
+    
+    \section{Considere o problema do Quebra-Cabeça de 3 Peças, que é uma simplificação do Quebra-Cabeça de 8 Peças. Nessa simplificação, há 3 peças e um espaço vazio, conforme mostrado abaixo. }
+    \input{ex4_graph1}
+
+    \par{Há quatro operações possíveis para a peça branca/vazia: acima, abaixo, esquerda ou direita. Dados os Estados Inicial e Objetivo, mostre como o caminho para o objetivo pode ser encotnrado, usando:}
+
+    \begin{enumerate}[(a)]
+        \item \textbf{BFS - Busca em Largura}
+        \par 
+        \vspace{0.2cm}
+
+        \item \textbf{DFS - Busca em Profundidade}
+        \par 
+        \vspace{0.2cm}
+
+        \item \textbf{GBFS - Busca Gulosa}
+        \par 
+        \vspace{0.2cm}
+
+        \item \textbf{A*}
+        \par 
+        \vspace{0.2cm}
+
+        \item \textbf{HC - Subida de Encosta}
+        \par 
+        \vspace{0.2cm}
+
+    \end{enumerate}
+
+    \end{document}

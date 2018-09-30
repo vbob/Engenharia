@@ -1,0 +1,19 @@
+\par Usando a Heurística de Manhattan
+\par \hfil \begin{tikzpicture}[every matrix/.append style={matrix of math nodes, every node/.append style={draw,minimum size=3ex,anchor=center}}] 
+    \matrix[label=above left:{\small 4}] (m1) {2&3\\1&\,\\};
+    \matrix [label=above left:{\small 3}, below left=of m1] (m2) {2&\,\\1&3\\};
+    \matrix [label=above right:{\small 4}, below right=of m1] (m3) {2&3\\\,&1\\};
+
+    \matrix [label=above left:{\small 2}, below=of m2] (m4) {\,&2\\1&3\\};
+    
+
+    \matrix [label=above left:{\small 1}, below=of m4] (m6) {1&2\\\,&3\\};
+
+    \matrix [label=above left:{\small 0}, below=of m6] (m8) {1&2\\3&\,\\};
+    
+
+    \draw (m1) edge[draw=black!30!green, thick] (m2) edge (m3);
+    \draw (m2) edge[draw=black!30!green, thick]  (m4);
+    \draw (m4) edge[draw=black!30!green, thick]  (m6);
+    \draw (m6) edge[draw=black!30!green, thick]  (m8);
+\end{tikzpicture}

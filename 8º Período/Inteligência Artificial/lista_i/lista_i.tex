@@ -1,0 +1,281 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+    \usepackage{geometry}
+    \geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+    }
+
+    \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+    \usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+    \usepackage[brazil]{babel} % English language/hyphenation
+    \usepackage{amsmath,amsfonts,amsthm} % Math packages
+    \usepackage{systeme}
+    \usepackage{enumerate}
+    \usepackage{tikz}
+    \usetikzlibrary{graphs}
+    \usetikzlibrary{matrix,backgrounds}
+    \usetikzlibrary{fit, positioning}
+    \usetikzlibrary{quotes}
+
+    \usepackage{sectsty} % Allows customizing section commands
+    \allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
+
+    \setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+    %----------------------------------------------------------------------------------------
+    %	TITLE SECTION
+    %----------------------------------------------------------------------------------------
+    
+    \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+    
+    \title{	
+    \normalfont \normalsize 
+    \textsc{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso} \\ [25pt] % Your university, school and/or department name(s)
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge Inteligência Artificial \\ % The assignment title
+    \huge Lista II - Solução por Meio de Buscas
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+    }
+    
+    \author{Vitor Bruno de Oliveira Barth} % Your name
+    
+    \date{\normalsize\today} % Today's date or a custom date
+    
+    \begin{document}
+    
+    \maketitle
+    
+    %----------------------------------------------------------------------------------------
+    %	Exercício 1
+    %----------------------------------------------------------------------------------------
+    
+    \section{Nomeie os algoritmos de buscas que resultam de:}
+    \begin{enumerate}[(a)]
+        \item \textbf{Busca de Feixe Local, com k = 1}
+        \par Hill Climbing
+
+        \item \textbf{Busca de Feixe Local, com um estado inicial e sem limite de estados retidos}
+        \par Breadth-First Search, mas de forma que cada camada seria expandida em uma única iteração
+
+        \item \textbf{Busca de Têmpera Simulada, com temperatura T = $\infty$ todo o tempo}
+        \par Random Search
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 2
+    %----------------------------------------------------------------------------------------
+    
+    \section{Considerando a árvore abaixo, pede-se a ordem com que os nós são visitados usando-se os seguintes algoritmos de busca:}
+    \input{ex2_graph1}
+
+    \begin{enumerate}[(a)]
+        \item \textbf{Breadth-First Search}
+        \par 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
+
+        \item \textbf{Depth-First Search}
+        \par 1, 2, 5, 11, 12, 6, 13, 3, 7, 8, 4, 9, 14, 15, 10, 16, 17
+
+        \item \textbf{Depth-First Iterative-Deepening Search}
+        \par Caso a profundidade-limite seja maior que três, a execução será idêntica à Depht-First Search 
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 3
+    %----------------------------------------------------------------------------------------
+    
+    \section{Desenhe a árvore de busca completa (do Estado $S$ ao $G$) para o grafo abaixo. Os números ao lado dos nós representam as distâncias estimadas do Estado Inicial ($S$) para o Estado Final ($G$). Mostre como o procedimento de buscas procede na árvore quando usando:}
+    \input{ex3_graph1}
+
+    \subsection{Árvore de Busca}
+    \input{ex3_graph2}
+
+    \subsection{Execução dos Algoritmos de Busca}
+    \par Vermelho $\rightarrow$ Nós já explorados; 
+    \par Verde $\rightarrow$ Solução.
+
+    \begin{enumerate}[(a)]
+        \item \textbf{DFS - Busca em Profundidade}
+        \par \input{ex3_graph3}
+        \vspace{0.2cm}
+
+        \item \textbf{BFS - Busca em Largura}
+        \par \input{ex3_graph4}
+        \vspace{0.2cm}
+
+        \item \textbf{HC - Subida de Encosta}
+        \par \input{ex3_graph4}
+        \vspace{0.2cm}
+
+        \item \textbf{BS - Feixe-Local com $k=2$}
+        \par \input{ex3_graph5}
+        \vspace{0.2cm}
+
+        \pagebreak
+        \item \textbf{GBFS - Busca Gulosa}
+        \par \input{ex3_graph4}
+        \vspace{0.2cm}
+
+
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 4
+    %----------------------------------------------------------------------------------------
+    
+    \section{Considere o roteiro das cidades A, B, C, D e E:}
+    \input{ex4_graph1}
+
+    \par{Cada cidade está conectada a outra cidade por meio de uma estrada, e o tempo de viagem entre as cidades está indicado pelo número mostrado em cada caminho. Suponha que você está na cidade A e quer planejar uma viagem passando por cada cidade uma única vez. Por exemplo, a viagem pelo caminho ABDCEA é uma possível solução que demandaria 17 horas para ser realizada. A sua tarefa é escolher um caminho que minimize o tempo de viagem. Desta forma, pede-se:}
+
+    \begin{enumerate}[(a)]
+        \item \textbf{Formule o Espaço de Estados para o problema}
+        \par $S: \{A, B, C, D, E\}$
+        \vspace{0.2cm}
+
+        \par $A: \{A, B, C, D, E\}$
+        \vspace{0.2cm}
+
+        \par $Action(s): \begin{cases} 
+            s=A \rightarrow \{{B, E, C}\}   \\
+            s=B \rightarrow \{{A, E, D}\}   \\
+            s=C \rightarrow \{{A, E, D}\}   \\
+            s=D \rightarrow \{{B, E, C}\}   \\
+            s=E \rightarrow \{{A, B, D, C}\}
+            \end{cases}$
+        \vspace{0.2cm}
+
+        \par $Cost(s, a): cost\_matrix[s,a]$  ||  $cost\_matrix=
+        \begin{bmatrix}
+             0 &  4 &  1 & -1 & 3 \\
+             4 &  0 & -1 &  5 & 2 \\
+             1 & -1 &  0 &  3 & 2 \\
+            -1 &  5 &  3 &  0 & 1 \\
+             3 &  2 &  2 &  1 & 0 \\
+        \end{bmatrix}$
+        \vspace{0.2cm}
+
+        \pagebreak
+        \item \textbf{Esboce o diagrama do Espaço de Estados completo, descrevendo as ações}
+        \par \input{ex4_graph2}
+        \vspace{0.2cm}
+
+        \item \textbf{Descreva um algoritmo BFS, e encontre a viagem mais curta da cidade A para a cidade A que visite todas as cidades}
+        \par A execução do algoritmo BFS explora a árvore completa, como descrita na questão (b).
+        \par A viagem mais curta encontrada é \{A, B, E, D, C, A\}, que levaria 10 horas para se percorrida.
+        \vspace{0.2cm}
+
+        \item \textbf{Compare os requerimentos de tempo e espaço dos algoritmos de busca-cega DFS, BFS e UCS para este problema}
+        \par Fator de Ramificação da Árvore $b= 2$,\\  Profundidade da Árvore $d = 5$, \\ Nº de Nós do Grafo $V = 5$, \\ Nº de Arestas do Grafo $E = 8$. 
+        \par \begin{table}[h!]
+            \begin{center}
+              \caption{Comparação entre os Algoritmos de Busca-Cega.}
+              \label{tab:table1}
+              \begin{tabular}{r|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+                \textbf{Algoritmo} & \textbf{Complexidade de Processamento} & \textbf{Complexidade de Espaço}\\
+                \hline
+                \textbf{DFS} & $O(b^d) \Rightarrow O(32)$ & $O(bd) \Rightarrow O(10)$ \\
+                \textbf{BFS} & $O(b^d) \Rightarrow O(32)$ & $O(b^d) \Rightarrow O(32)$ \\
+                \textbf{UCS} & $O(|E| + |V| log |V|) \Rightarrow O(11.5)$ & $O(|V|^2) \Rightarrow O(25)$\\
+              \end{tabular}
+            \end{center}
+          \end{table}
+        \vspace{0.2cm}
+
+        \item \textbf{Compare os requerimentos de tempo e espaço dos algorimtos heurísticos A*, HC (Hill Climbing/Subida de Encosta) e SA (Simulated Annealing/Têmpera Simulada) para este problema}
+        \par Fator de Ramificação da Árvore $b= 2$,\\  Profundidade da Árvore $d = 5$.
+        \par \begin{table}[h!]
+            \begin{center}
+              \caption{Comparação entre os Algoritmos de Busca Heurística.}
+              \label{tab:table1}
+              \begin{tabular}{r|c|c} % <-- Alignments: 1st column left, 2nd middle and 3rd right, with vertical lines in between
+                \textbf{Algoritmo} & \textbf{Complexidade de Processamento} & \textbf{Complexidade de Espaço}\\
+                \hline
+                \textbf{A*} & $O(b^d) \Rightarrow O(32)$ & $O(b^d) \Rightarrow O(32)$ \\
+                \textbf{HC} & $O(\infty)$ & $O(b) \Rightarrow O(2)$ \\
+                \textbf{SA} & $O((b^2 + b) log b) \Rightarrow O(1.8)$ & $O(b) \Rightarrow O(2)$\\
+              \end{tabular}
+            \end{center}
+          \end{table}
+        \vspace{0.2cm}
+
+
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 5
+    %----------------------------------------------------------------------------------------
+    
+    \section{Considere o problema do Quebra-Cabeça de 3 Peças, que é uma simplificação do Quebra-Cabeça de 8 Peças. Nessa simplificação, há 3 peças e um espaço vazio, conforme mostrado abaixo. }
+    \input{ex5_graph1}
+
+    \par{Há quatro operações possíveis para a peça branca/vazia: acima, abaixo, esquerda ou direita. Dados os Estados Inicial e Objetivo, mostre como o caminho para o objetivo pode ser encontrado usando:}
+
+    \begin{enumerate}[(a)]
+        \item \textbf{BFS - Busca em Largura}
+        \par \input{ex5_graph2}
+        \vspace{0.2cm}
+        \pagebreak
+        \item \textbf{DFS - Busca em Profundidade}
+        \par \input{ex5_graph3}
+        \vspace{0.2cm}
+
+        
+        \item \textbf{GBFS - Busca Gulosa}
+        \par \input{ex5_graph4}
+        \vspace{0.2cm}
+        \pagebreak
+        \item \textbf{A*}
+        \par \input{ex5_graph5}
+        \vspace{0.2cm}
+
+        \item \textbf{HC - Subida de Encosta}
+        \par \input{ex5_graph4}
+        \vspace{0.2cm}
+
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 6
+    %----------------------------------------------------------------------------------------
+    
+    \section{Tendo-se o Estado Inicial abaixo para o Problema das 4 Rainhas, considere a Busca de Subida de Encosta (HC), usando como heurística o número de conflitos diretos ou indiretos entre as rainhas, para encontrar um Estado Válido (sem conflitos).}
+    \input{ex6_graph1}
+    \vspace{0.8cm}
+    \par{Note que o valor da heurística de um Estado é o número de pares distintos de rainhas que podem se atacar mutuamente. Os sucessores de um estados são todos os estados possíveis gerados pelo movimento de uma única rainha par aoutra posição na mesma coluna. A busca HC escolhe, em cada passo, o sucessor com menor número de conflitos.}
+
+    \begin{enumerate}[(a)]
+        \item \textbf{Esboce a Árvore de Estados que Busca HC, usando a heurística de mínimo conflito, expolora deste Estado Inicial. Os sucressores de cada Estado são aqueles estados que têm menos conflitos.}
+        \par \input{ex6_graph2}
+        \vspace{0.2cm}
+
+        \item \textbf{Todos os nós folhas da árvore do item (a) foram gerados nas soluções encontradas para o Problema das 4 Rainhas? Se não, como fazer para que todas as folhas da árvore representem uma solução?}
+        \par Não, a Busca por Subida de Encosta não avalia todos os nós folhas. Para que todas as folhas representem soluções, é necessário que a árvore seja completamente explorada, e nenhum dos algoritmos estudados garante explorar completamente a árvore.
+        \vspace{0.2cm}
+
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 7
+    %----------------------------------------------------------------------------------------
+    
+    \section{Considere o Quebra-Cabeça formado por 5 células, conforme mostra a figura abaixo. As duas primeiras células contêm peças na cor preta, as duas próximas na cor branca, e a última célula está vazia.}
+    \input{ex7_graph1}
+   
+    \par{Neste Quebra-Cabeça, uma peça pode ser movida para uma célula vazia (custo de uma unidade) ou a peça pode pular sobre no máximo duas células para uma peça vazia (custo igual ao número de células puladas). O objetivo do Quebra-Cabeça é colocar as duas peças pretas à direita das peças brancas, e a peça vazia pode ficar em qualquer posição. Pede-se:}
+
+    \begin{enumerate}[(a)]
+        \pagebreak
+        \item \textbf{Resolva o Quebra-Cabeça com Algoritmo A*, adotando a seguinte heurística: $h(s)$ é a soma do número de peças brancas à direita da primeira peça preta e o número de peças brancas à direita da segunda peça branca. Por exemplo, o Estado Inicial da Figura acima possui $h(s) = 4$}
+        \par \input{ex7_graph2}
+        \vspace{0.2cm}
+
+        \item \textbf{Mostre que $h(s)$ é admissível, ou seja, $h(s) \leq h*(s)$}
+        \par 
+        \vspace{0.2cm}
+
+    \end{enumerate}
+
+
+    \end{document}

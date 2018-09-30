@@ -1,0 +1,12 @@
+\par \hfil \begin{tikzpicture}
+    \matrix(m)[
+      matrix of math nodes,
+      every node/.append style={draw,minimum size=5ex,anchor=center},
+    ]{
+      4      & \Delta &  \Delta & 4      \\
+      \Delta & 5      &  4      & \Delta \\
+      3      & 3      &  3      & 3      \\
+      2      & 3      &  3      & 2      \\
+    };
+    \node[above,font=\large\bfseries] at (current bounding box.north) {Estado Inicial};
+\end{tikzpicture}

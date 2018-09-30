@@ -1,0 +1,37 @@
+\hfil
+\begin{tikzpicture}[
+    every node/.style = {shape=circle, draw, align=center}
+    ]
+    \node {1}
+    child { node {2} 
+        child { node {5} 
+            child { node {11} }
+            child { node {12} }
+        }
+        child [missing]
+        child { node {6} 
+            child { node {13} }
+        }
+    }
+    child [missing]
+    child [missing]
+    child {node {3} 
+        child { node {7} }
+        child { node {8} }
+    }
+    child [missing]
+    child [missing]
+    child {node {4} 
+        child { node {9} 
+            child { node {14} }
+            child { node {15} }
+        }
+        child [missing]
+        child { node {10} 
+            child { node {16} }
+            child { node {17} }
+        }
+    };
+  \end{tikzpicture}
+
+  
