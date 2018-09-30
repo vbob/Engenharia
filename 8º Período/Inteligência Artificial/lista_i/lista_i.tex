@@ -272,7 +272,31 @@
         \vspace{0.2cm}
 
         \item \textbf{Mostre que $h(s)$ é admissível, ou seja, $h(s) \leq h*(s)$}
-        \par 
+        \par A heurística nunca é maior que o custo do caminho. No primeiro passo, que é o mais distante, a heurística é 4. O custo do Estado Inicial ao Objetivo é 14.
+        \vspace{0.2cm}
+
+    \end{enumerate}
+
+    %----------------------------------------------------------------------------------------
+    %	Exercício 8
+    %----------------------------------------------------------------------------------------
+    
+    \section{A busca de solução de um caminho de um ponto a outro em um labirinto, como mostrado na figura abaixo, pode ser representado por uma árvore de busca.}
+    \input{ex8_graph1}
+    \par Então, usando os algoritmos de busca DFS, BFS e A*, um de cada vez, encontre o caminho entre a entrada e a saída no labirinto da figura abaixo. Adote uma heurística para o algoritmo A*. Compare o resultado obtido por cada algoritmo em termos de número de estados visitados e tempo de execução.
+
+    \begin{enumerate}[(a)]
+        \item \textbf{DFS}
+        \par \input{ex8_graph2}
+        \vspace{0.2cm}
+        \pagebreak
+        \item \textbf{BFS}
+        \par \input{ex8_graph3}
+        \vspace{0.2cm}
+        \pagebreak
+        \item \textbf{A*}
+        \par Heurística: Distância direita até Y, ignorando barreiras.
+        \par \input{ex8_graph4}
         \vspace{0.2cm}
 
     \end{enumerate}
