@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1538333667 "/home/vbobarth/Development/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex" "lista_i.pdf" "lista_i" 1538333675
-  "/home/vbobarth/Development/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex" 1538333531 14809 8fef3100529bc2780314101f4679e468 ""
+["pdflatex"] 1538335641 "/home/vbobarth/Development/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex" "lista_i.pdf" "lista_i" 1538335650
+  "/home/vbobarth/Development/engenharia/8º Período/Inteligência Artificial/lista_i/lista_i.tex" 1538334257 14893 80294cee3be490ad9ff2d269cfff9f4e ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1536122179 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1536122179 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1095.tfm" 1536122179 3584 929cdff2b7a8c11bd4d49fd68cb0ae70 ""
@@ -204,10 +204,10 @@
   "ex8_graph1.tex" 1538331244 2276 e6ff62f291a8489f4948a30b2cdf4e9d ""
   "ex8_graph2.tex" 1538332105 1490 91c9d9747031eba84ad7c65d000ae7ae ""
   "ex8_graph3.tex" 1538332946 1534 dd5750ad122263b083d3a1a1d31e0929 ""
-  "ex8_graph4.tex" 1538333667 1566 85ee94e1a8254610c928c45024f38afc ""
-  "lista_i.aux" 1538333675 2714 bbbe81abdeb3f9701e85cae10c07606b ""
-  "lista_i.tex" 1538333531 14809 8fef3100529bc2780314101f4679e468 ""
+  "ex8_graph4.tex" 1538335641 2612 9751dcbdbd849d0aab97383d9f526982 ""
+  "lista_i.aux" 1538335649 2714 bbbe81abdeb3f9701e85cae10c07606b ""
+  "lista_i.tex" 1538334257 14893 80294cee3be490ad9ff2d269cfff9f4e ""
   (generated)
+  "lista_i.log"
   "lista_i.pdf"
   "lista_i.aux"
-  "lista_i.log"

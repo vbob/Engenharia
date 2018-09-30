@@ -3,20 +3,24 @@
     \begin{tikzpicture}[
     every node/.style = {shape=circle, draw, align=center}
     ]
-    \node[label=above left:{\small 9.21}] {A} child { node {B} 
-            child { node {C} 
-                child { node {E} 
-                child { node {G} 
-                    child { node {H} }
-                }
-                child { node {F} 
-                    child { node {I} 
+    \node[label=above left:{\small 8.60}] {A} child { node[label=above left:{\small 10.21}]  {B} 
+            child { node[label=above left:{\small 10.81}]  {C} 
+                child { node[label=above left:{\small 11.40}] {E} 
+                child { node[label=above left:{\small 15.06}] {G} 
+                    child { node {H}  } 
+                    edge from parent node[draw=none, above] {2} 
+                } 
+                child[missing]
+                child { node[label=left:{\small 11.21}]  {F} 
+                    child { node[label=left:{\small 14.32}] {I} 
                         child { node {J} 
                             child { node {K} }
-                        }
+                        } edge from parent node[draw=none, left] {2}
                     }
+                    edge from parent node[draw=none, left] {1} 
                 }
-                child { node {N} 
+                child[missing]
+                child { node[label=right:{\small 12}]  {N} 
                     child { node {Q} 
                         child { node {R} 
                             child { node {S} 
@@ -34,13 +38,22 @@
                             }
                         }
                     }
+                    edge from parent node[draw=none, right] {2} 
                 }
-                child { node {L} 
-                    child { node {M} }
+                child[missing]
+                child { node[label=above right:{\small 11.83}]  {L} 
+                    child { 
+                        node[label=right:{\small 12}] {M} 
+                        edge from parent node[draw=none, right] {1}
+                    }
+                    edge from parent node[draw=none, above] {1} 
                 }
+                edge from parent node[draw=none, right] {2} 
             }
-        }
-        child { node {D} }
+            edge from parent node[draw=none, left] {2} 
+            } 
+            child { node[label=above right:{\small 11.21}]  {D} edge from parent node[draw=none, right] {3} 
+        } edge from parent node[draw=none, right] {1} 
     };
 \end{tikzpicture}
 %}

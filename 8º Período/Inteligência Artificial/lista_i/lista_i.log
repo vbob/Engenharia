@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.25)  30 SEP 2018 14:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.25)  30 SEP 2018 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1053,20 +1053,20 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 20331 strings out of 492642
- 401488 string characters out of 6135566
+ 20332 strings out of 492642
+ 401508 string characters out of 6135566
  626047 words of memory out of 5000000
- 23743 multiletter control sequences out of 15000+600000
+ 23744 multiletter control sequences out of 15000+600000
  100356 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,33n,86p,9197b,3765s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 77i,33n,86p,9197b,3765s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/fourier/fourier-mex.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/fourier/fourier-ml.pfb></usr/share/texmf-dist/fonts/type1/public/fourier/fou
 rier-ms.pfb></usr/share/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/sh
 are/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texmf-dist/fonts
 /type1/adobe/utopia/putri8a.pfb>
-Output written on lista_i.pdf (13 pages, 120670 bytes).
+Output written on lista_i.pdf (13 pages, 121625 bytes).
 PDF statistics:
  75 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
