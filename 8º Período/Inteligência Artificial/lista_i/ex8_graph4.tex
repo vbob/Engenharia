@@ -7,37 +7,42 @@
             child { node[label=above left:{\small 10.81}]  {C} 
                 child { node[label=above left:{\small 11.40}] {E} 
                 child { node[label=above left:{\small 15.06}] {G} 
-                    child { node {H}  } 
+                    child { node[label=left:{\small 17}] {H} edge from parent node[draw=none, left] {3}  } 
                     edge from parent node[draw=none, above] {2} 
                 } 
                 child[missing]
                 child { node[label=left:{\small 11.21}]  {F} 
                     child { node[label=left:{\small 14.32}] {I} 
-                        child { node {J} 
-                            child { node {K} }
+                        child { node[label=left:{\small 14.38}]  {J} 
+                            child {  node[label=left:{\small 15}]  {K} edge from parent node[draw=none, left] {1}  }
+                            edge from parent node[draw=none, left] {1} 
                         } edge from parent node[draw=none, left] {2}
                     }
                     edge from parent node[draw=none, left] {1} 
                 }
                 child[missing]
                 child { node[label=right:{\small 12}]  {N} 
-                    child { node {Q} 
-                        child { node {R} 
-                            child { node {S} 
-                                child { node {T} 
-                                    child { node {U} 
-                                        child { node {V} 
-                                            child { node {W} 
-                                                child { node {X} 
-                                                    child { node {Y} }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    child { node[label=left:{\small 15.70}] {Q} 
+                        child { node[label=left:{\small 16.32}] {R} 
+                            child { node[label=left:{\small 16.38}] {S} 
+                                child { node[label=left:{\small 16}] {T} 
+                                    child { node[label=left:{\small 16}] {U} 
+                                        child { node[label=left:{\small 17.47}] {V} 
+                                            child { node[label=left:{\small 17.60}] {W} 
+                                                child { node[label=left:{\small 18}] {X} 
+                                                    child { node[label=left:{\small 18}] {Y} edge from parent node[draw=none, left] {2} }
+                                                    edge from parent node[draw=none, left] {1}
+                                                } edge from parent node[draw=none, left] {1}
+                                            } edge from parent node[draw=none, left] {1}
+                                        } edge from parent node[draw=none, left] {1}
+                                    } edge from parent node[draw=none, left] {1}
+                                } edge from parent node[draw=none, left] {1}
+                            } edge from parent node[draw=none, left] {1}
+                        } edge from parent node[draw=none, left] {2} 
+                    } 
+                    child { node[label=above right:{\small 15}] {O} 
+                        child { node[label=right:{\small 12}] {P}  edge from parent node[draw=none, right] {1}  } 
+                        edge from parent node[draw=none, right] {3} }
                     edge from parent node[draw=none, right] {2} 
                 }
                 child[missing]

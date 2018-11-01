@@ -7,15 +7,20 @@
             child { node {C} 
                 child { node {E} 
                 child { node {G} 
-                    child { node {H} }
-                }
-                child { node {F} 
+                    child { node {H} edge from parent node[draw=none, left] {3}  } 
+                    edge from parent node[draw=none, above] {2} 
+                } 
+                child[missing]
+                child { node  {F} 
                     child { node {I} 
-                        child { node {J} 
-                            child { node {K} }
-                        }
+                        child { node  {J} 
+                            child {  node {K} edge from parent node[draw=none, left] {1}  }
+                            edge from parent node[draw=none, left] {1} 
+                        } edge from parent node[draw=none, left] {2}
                     }
+                    edge from parent node[draw=none, left] {1} 
                 }
+                child[missing]
                 child { node {N} 
                     child { node {Q} 
                         child { node {R} 
@@ -25,20 +30,28 @@
                                         child { node {V} 
                                             child { node {W} 
                                                 child { node {X} 
-                                                    child { node {Y} }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                                                    child { node {Y} edge from parent node[draw=none, left] {2} }
+                                                    edge from parent node[draw=none, left] {1}
+                                                } edge from parent node[draw=none, left] {1}
+                                            } edge from parent node[draw=none, left] {1}
+                                        } edge from parent node[draw=none, left] {1}
+                                    } edge from parent node[draw=none, left] {1}
+                                } edge from parent node[draw=none, left] {1}
+                            } edge from parent node[draw=none, left] {1}
+                        } edge from parent node[draw=none, left] {2} 
+                    } 
+                    child { node {O} 
+                        edge from parent node[draw=none, right] {3} }
+                    edge from parent node[draw=none, right] {2} 
                 }
-                child { node {L} }
-                }
+                child[missing]
+                child { node {L} edge from parent node[draw=none, above] {1}    }
+                edge from parent node[draw=none, right] {2} 
             }
-            child { node {D} }
+            edge from parent node[draw=none, left] {2} 
+            } 
+            child { node {D} edge from parent node[draw=none, right] {3} 
+        } edge from parent node[draw=none, right] {1} 
     };
 \end{tikzpicture}
 %}
