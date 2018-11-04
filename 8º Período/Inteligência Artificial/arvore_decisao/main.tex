@@ -1,0 +1,77 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+    \usepackage{geometry}
+    \geometry{
+    a4paper,
+    total={170mm,257mm},
+    left=20mm,
+    top=20mm,
+    }
+
+    \usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+    \usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+    \usepackage[brazil]{babel} % English language/hyphenation
+	\usepackage{amsmath,amsfonts,amsthm} % Math packages
+	\usepackage{multirow}
+    \usepackage{systeme}
+    \usepackage{enumerate}
+    \usepackage{tikz}
+	\usetikzlibrary{graphs}
+	
+	\usepackage{trimclip}
+	\usepackage{adjustbox}
+	\usepackage{graphicx}
+
+    \usepackage{sectsty} % Allows customizing section commands
+    \allsectionsfont{\normalfont\scshape} % Make all sections centered, the default font and small caps
+
+    \setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+    %----------------------------------------------------------------------------------------
+    %	TITLE SECTION
+    %----------------------------------------------------------------------------------------
+    
+    \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+    
+    \title{	
+    \normalfont \normalsize 
+    \textsc{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso} \\ [25pt] % Your university, school and/or department name(s)
+    \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+    \huge Inteligência Artificial \\ % The assignment title
+    \huge Árvore de Decisão
+    \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+    }
+    
+    \author{Vitor Bruno de Oliveira Barth} % Your name
+    
+    \date{\normalsize\today} % Today's date or a custom date
+    
+    \begin{document}
+    
+    \maketitle
+    
+    %----------------------------------------------------------------------------------------
+    %	Exercício 1
+    %----------------------------------------------------------------------------------------
+    
+	\section{Monte a Árvore de Decisão dada a base de dados abaixo:}
+
+	\input{tabela1}
+
+	\begin{enumerate}[(a)]
+        \item \textbf{Escolha do Primeiro Nó}
+		\par \input{no1}
+		\vskip 0.3in
+		\item \textbf{Escolha do Segundo Nó}
+		\par \input{no2}
+		\vskip 0.3in
+		\item \textbf{Escolha do Terceiro Nó}
+		\par \input{no3}
+		\vskip 0.3in
+		\item \textbf{Escolha do Quarto Nó}
+        \par \input{no4}
+    \end{enumerate}
+
+
+
+
+    \end{document}

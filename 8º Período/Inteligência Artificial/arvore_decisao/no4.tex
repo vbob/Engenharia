@@ -1,0 +1,56 @@
+
+\par $S_{cheio_{fome_{tai}}} = [1,1]$
+
+\vskip 0.1in
+\par $S_{alternativa^+} = [1,1]$
+\par $Ganho(S_{cheio_{fome_{tai}}}, S_{alternativa}) = 0$
+
+\vskip 0.1in
+\par $S_{bar^-} = [1,1]$
+\par $Ganho(S_{cheio_{fome_{tai}}}, S_{bar}) = 0$
+
+\vskip 0.1in
+\par $S_{fimSemana^+} = [1,0]$  \qquad $S_{fimSemana^-} = [0,1]$
+\par $Ganho(S_{cheio_{fome_{tai}}}, S_{fimSemana}) = 1$
+
+\vskip 0.1in
+\par $S_{preco^{S}} = [1,1]$
+\par $Ganho(S_{cheio_{fome_{tai}}}, S_{preco}) = 0$
+
+\vskip 0.1in
+\par $S_{chuva^{+}} = [1,0]$  \qquad $S_{chuva^{-}} = [0,1]$
+\par $Ganho(S_{cheio_{fome_{tai}}}, S_{chuva}) = 1$
+
+\vskip 0.1in
+\par $S_{reserva^{-}} = [1,1]$
+\par $Ganho(S_{cheio_{fome_{tai}}}, S_{reserva}) = 0$
+
+\vskip 0.1in
+\par $S_{tespera^{10-30}} = [1,0]$ \qquad $S_{tespera^{30-60}} = [0,1]$ 
+\par $Ganho(S_{cheio_{fome_{tai}}}, S_{tespera}) = 1$
+
+\vskip 0.25in
+\hfil
+\begin{tikzpicture}[sibling distance=10em,
+    every node/.style = {shape=rectangle, 
+      draw, align=center,
+      top color=green!20, bottom color=green!20}]]
+    \node {Observa Quantidade \\ de Clientes}
+        child { node {Ninguém} child { node {NÃO ESPERA}  } }
+        child { node {Alguns} child { node {ESPERA}  } }
+        child { node {Cheio} child { 
+            node {Está com fome?} 
+            child { node {Sim} child { node {Qual o Tipo?} 
+                 child { node {Tailandês} 
+                    child { node {Está Chovendo?}  
+                        child { node {Sim}  child { node {ESPERA}  } }
+                        child { node {Não}  child { node {NÃO ESPERA}  } }
+                    }  
+                 }   
+                 child { node {Italiano}  child { node {NÃO ESPERA}  }  } 
+                 child { node {Hamburguer} child { node {ESPERA}  } } 
+            }   }
+            child { node {Não} child { node {NÃO ESPERA}  }  }
+            }
+        };
+  \end{tikzpicture}

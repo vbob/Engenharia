@@ -1,0 +1,372 @@
+PWD d:/engenharia/8º Período/Inteligência Artificial/arvore_decisao
+INPUT C:/Users/Vitor Barth/AppData/Local/MiKTeX/2.9/miktex/data/le/pdftex/pdflatex.fmt
+INPUT d:/engenharia/8º Período/Inteligência Artificial/arvore_decisao/main.tex
+OUTPUT main.log
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrartcl.cls
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrartcl.cls
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrkbase.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrkbase.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrbase.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrbase.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/keyval.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrlfile.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrlfile.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/tocbasic.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/tocbasic.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrsize11pt.clo
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/scrsize11pt.clo
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/cm/cmr10.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/typearea.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/koma-script/typearea.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifpdf.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifvtex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/ifxetex/ifxetex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/geometry/geometry.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1095.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fourier.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fourier.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/fontenc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/textcomp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/textcomp.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.dfu
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1enc.dfu
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fourier-orns.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fourier-orns.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/switch.def
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/arabi/bblopts.cfg
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/arabi/bblopts.cfg
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/babel-portuges/portuges.ldf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/babel-portuges/portuges.ldf
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/babel.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/babel/txtbabel.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsmath.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amstext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsgen.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsbsy.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsmath/amsopn.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amscls/amsthm.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amscls/amsthm.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/multirow/multirow.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/multirow/multirow.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/systeme/systeme.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/systeme/systeme.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/xstring/xstring.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/xstring/xstring.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/xstring/xstring.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/systeme/systeme.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/enumerate.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/tools/enumerate.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/frontendlayer/tikz.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/basiclayer/pgf.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/basiclayer/pgf.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/utilities/pgfrcs.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfutil-common.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfutil-common-lists.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfutil-latex.def
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/ms/everyshi.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/ms/everyshi.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfrcs.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/basiclayer/pgfcore.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphicx.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/graphics.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics/trig.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/graphics.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-def/pdftex.def
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/systemlayer/pgfsys.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsys.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgf.cfg
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/xcolor/xcolor.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/xcolor/xcolor.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/graphics-cfg/color.cfg
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcore.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmath.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathcalc.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathutil.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathparser.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.random.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.round.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmathfloat.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/utilities/pgffor.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/utilities/pgffor.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/utilities/pgfkeys.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgfkeys.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/math/pgfmath.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/pgf/math/pgfmath.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmath.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmath.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/utilities/pgffor.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/math/pgfmath.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/generic/pgf/frontendlayer/tikz/libraries/graphs/tikzlibrarygraphs.code.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/adjustbox/trimclip.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/adjustbox/trimclip.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/collectbox/collectbox.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/collectbox/collectbox.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/adjustbox/adjcalc.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/adjustbox/adjcalc.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/xkeyval/xkeyval.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/xkeyval/xkeyval.tex
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/xkeyval/xkvutils.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/adjustbox/tc-pdftex.def
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/adjustbox/tc-pdftex.def
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/adjustbox/adjustbox.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/adjustbox/adjustbox.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/ifoddpage/ifoddpage.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/ifoddpage/ifoddpage.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/ifoddpage/ifoddpage.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/varwidth/varwidth.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/varwidth/varwidth.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/varwidth/varwidth.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/sectsty/sectsty.sty
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/sectsty/sectsty.sty
+INPUT main.aux
+INPUT main.aux
+OUTPUT main.aux
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fmlfutm.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fmlfutm.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fmsfutm.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fmsfutm.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fmxfutm.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fmxfutm.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmr.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmr.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/t1futs.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/t1futs.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8t.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/context/base/supp-pdf.mkii
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/context/base/supp-pdf.mkii
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/epstopdf-base.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/infwarerr.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/grfext.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ltxcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/oberdiek/kvoptions.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvsetkeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/kvsetkeys.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/etexcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/ifluatex.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/generic/oberdiek/pdftexcmds.sty
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1cmss.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/base/t1cmss.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecss1095.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecsx1095.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecsx2074.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8t.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futrc8t.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8t.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8t.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8t.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fmlfutmi.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/fourier/fmlfutmi.fd
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmii.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmii.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmii.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futsy.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futsy.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futsy.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mex.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mex.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mex.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmi.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmi.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmi.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-bb.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-bb.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-bb.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
+INPUT C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecss1440.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecsx1440.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futrc8t.tfm
+INPUT tabela1.tex
+INPUT tabela1.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8t.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8t.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmii.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmii.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmii.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futsy.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futsy.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futsy.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mex.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mex.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mex.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmi.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmi.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futmi.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-bb.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-bb.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-bb.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT C:/Program Files/MiKTeX 2.9/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futb8t.tfm
+INPUT no1.tex
+INPUT no1.tex
+OUTPUT main.pdf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futrc8t.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/Vitor Barth/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futr8t.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futr8t.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futr8t.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futrc8t.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futmii.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mlit.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-ml.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futri8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futr8t.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futb8t.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futb8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-alt-bold.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futsy.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-ms.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mcl.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futmii.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mlit.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-ml.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futri8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futsy.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-ms.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mcl.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futr8r.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futmii.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-mlit.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-ml.tfm
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/futri8r.tfm
+INPUT no2.tex
+INPUT no2.tex
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/vf/public/fourier/futr8t.vf
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/tfm/public/fourier/fourier-alt.tfm
+INPUT no3.tex
+INPUT no3.tex
+INPUT no4.tex
+INPUT no4.tex
+INPUT main.aux
+INPUT C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/fourier/fourier-ms.pfb
+INPUT C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/fourier/fourier-ms.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb
+INPUT C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putri8a.pfb
