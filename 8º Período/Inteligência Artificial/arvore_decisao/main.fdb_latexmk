@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1541359311 "d:/engenharia/8º Período/Inteligência Artificial/arvore_decisao/main.tex" "main.pdf" "main" 1541359313
+["pdflatex"] 1541515714 "d:/engenharia/8º Período/Inteligência Artificial/arvore_decisao/main.tex" "main.pdf" "main" 1541515717
   "C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc" 1458477487 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecrm1095.tfm" 993065724 3172 eb6efaa83c6c52473a1c403f376eab0f ""
   "C:/Program Files/MiKTeX 2.9/fonts/tfm/jknappen/ec/ecss1095.tfm" 993065834 3188 1aa640cd974697c5d1d4a3c92172a829 ""
@@ -179,15 +179,18 @@
   "C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/varwidth/varwidth.sty" 1238473140 10894 d359a13923460b2a73d4312d613554c8 ""
   "C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/xcolor/xcolor.sty" 1463139181 57049 34128738f682d033422ca125f82e5d62 ""
   "C:/Users/Vitor Barth/AppData/Roaming/MiKTeX/2.9/tex/latex/xstring/xstring.sty" 1381660302 144 0ca8d67b000b795a4d9ec000e0fd09c7 ""
-  "d:/engenharia/8º Período/Inteligência Artificial/arvore_decisao/main.tex" 1541358893 2559 d6490b918d8fc7d0c027a99fd7c29058 ""
-  "main.aux" 1541359313 262 e5d7fc33a28db3477ba32f54fbb76525 ""
-  "main.tex" 1541358893 2559 d6490b918d8fc7d0c027a99fd7c29058 ""
-  "no1.tex" 1541356931 1817 d58f13b1ab25ee93aed51400051ec459 ""
-  "no2.tex" 1541358824 1820 ba8bc066553472947dcc94a05e4d5a69 ""
-  "no3.tex" 1541358889 1904 905fe1a9104f425eb7bfb42aecb10590 ""
-  "no4.tex" 1541359310 1935 5baae91232c98f7de570837ec0397875 ""
+  "d:/engenharia/8º Período/Inteligência Artificial/arvore_decisao/main.tex" 1541510077 2613 0d70038e02f62ad9969e231f8635c966 ""
+  "main.aux" 1541515717 262 e5d7fc33a28db3477ba32f54fbb76525 ""
+  "main.tex" 1541510077 2613 0d70038e02f62ad9969e231f8635c966 ""
+  "no1.tex" 1541514277 5185 de80147039b92f4b90410f5d34f1bb40 ""
+  "no2.tex" 1541515624 4178 9a05f4c3d229ed9b30b2900f67504f8c ""
+  "no3.tex" 1541515605 4088 ebe92cc0ac1aef4b2503b1eb53dd296a ""
+  "no4.tex" 1541515713 3191 577cbb4d8dfc876d4dea3328b5dcb63c ""
   "tabela1.tex" 1541350683 6529 22394075c117b9e47fd0456fb75ed151 ""
+  "tabela2.tex" 1541510205 3828 7ea37ba53894b7cc6509431e699f7ba8 ""
+  "tabela3.tex" 1541510227 2929 25cdb951e83ac6ebde31aca3672cabf7 ""
+  "tabela4.tex" 1541510279 2034 96320c7fb38e2458fb708a8e41c27e71 ""
   (generated)
-  "main.pdf"
   "main.aux"
   "main.log"
+  "main.pdf"

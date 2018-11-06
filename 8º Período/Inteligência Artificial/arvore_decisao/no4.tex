@@ -1,33 +1,43 @@
 
 \par $S_{cheio_{fome_{tai}}} = [1,1]$
 
-\vskip 0.1in
-\par $S_{alternativa^+} = [1,1]$
-\par $Ganho(S_{cheio_{fome_{tai}}}, S_{alternativa}) = 0$
+\vskip 0.31in
+\par $S_{alternativa^{+}} = [1,1]$
+\par $H(S_{alternativa^{+}}) = -\frac{1}{2} \log_2 \frac{1}{2}- \frac{1}{2} \log_2 \frac{1}{2} = 1.000$
+\par $Ganho(S, S_{alternativa}) = 1.000-\frac{2}{2} * 1.000 = 0.000$
 
-\vskip 0.1in
-\par $S_{bar^-} = [1,1]$
-\par $Ganho(S_{cheio_{fome_{tai}}}, S_{bar}) = 0$
+\vskip 0.3in
+\par $S_{bar^{+}} = [1,1]$
+\par $H(S_{bar^{+}}) = -\frac{1}{2} \log_2 \frac{1}{2}- \frac{1}{2} \log_2 \frac{1}{2} = 1.000$
+\par $Ganho(S, S_{bar}) = 1.000-\frac{2}{2} * 1.000 = 0.000$
 
-\vskip 0.1in
-\par $S_{fimSemana^+} = [1,0]$  \qquad $S_{fimSemana^-} = [0,1]$
-\par $Ganho(S_{cheio_{fome_{tai}}}, S_{fimSemana}) = 1$
+\vskip 0.3in
+\par $S_{fimSemana^{+}} = [1,0]$ \qquad $S_{fimSemana^-} = [0,1]$
+\par $H(S_{fimSemana^{+}}) = -\frac{1}{1} \log_2 \frac{1}{1}- \frac{0}{1} \log_2 \frac{0}{1} = 0.000$
+\par $H(S_{fimSemana^-}) = -\frac{0}{1} \log_2 \frac{0}{1}- \frac{1}{1} \log_2 \frac{1}{1} = 0.000$
+\par $Ganho(S, S_{fimSemana}) = 1.000-\frac{1}{2} * 0.000-\frac{1}{2} * 0.000 = 1.000$
 
-\vskip 0.1in
-\par $S_{preco^{S}} = [1,1]$
-\par $Ganho(S_{cheio_{fome_{tai}}}, S_{preco}) = 0$
+\vskip 0.3in
+\par $S_{preço^{\$}} = [1,1]$
+\par $H(S_{preço^{\$}}) = -\frac{1}{2} \log_2 \frac{1}{2}- \frac{1}{2} \log_2 \frac{1}{2} = 1.000$
+\par $Ganho(S, S_{preço}) = 1.000-\frac{2}{2} * 1.000 = 0.000$
 
-\vskip 0.1in
-\par $S_{chuva^{+}} = [1,0]$  \qquad $S_{chuva^{-}} = [0,1]$
-\par $Ganho(S_{cheio_{fome_{tai}}}, S_{chuva}) = 1$
+\vskip 0.3in
+\par $S_{chuva^+} = [1,0]$ \qquad $S_{chuva^-} = [0,1]$
+\par $H(S_{chuva^+}) = -\frac{1}{1} \log_2 \frac{1}{1}- \frac{0}{1} \log_2 \frac{0}{1} = 0.000$
+\par $H(S_{chuva^-}) = -\frac{0}{1} \log_2 \frac{0}{1}- \frac{1}{1} \log_2 \frac{1}{1} = 0.000$
+\par $Ganho(S, S_{chuva}) = 1.000-\frac{1}{2} * 0.000-\frac{1}{2} * 0.000 = 1.000$
 
-\vskip 0.1in
-\par $S_{reserva^{-}} = [1,1]$
-\par $Ganho(S_{cheio_{fome_{tai}}}, S_{reserva}) = 0$
+\vskip 0.3in
+\par $S_{reserva^+} = [1,1]$
+\par $H(S_{reserva^+}) = -\frac{1}{2} \log_2 \frac{1}{2}- \frac{1}{2} \log_2 \frac{1}{2} = 1.000$
+\par $Ganho(S, S_{reserva}) = 1.000-\frac{2}{2} * 1.000 = 0.000$
 
-\vskip 0.1in
-\par $S_{tespera^{10-30}} = [1,0]$ \qquad $S_{tespera^{30-60}} = [0,1]$ 
-\par $Ganho(S_{cheio_{fome_{tai}}}, S_{tespera}) = 1$
+\vskip 0.3in
+\par $S_{tempoEspera^{10-30}} = [1,0]$ \qquad $S_{tempoEspera^{30-60}} = [0,1]$
+\par $H(S_{tempoEspera^{10-30}}) = -\frac{1}{1} \log_2 \frac{1}{1}- \frac{0}{1} \log_2 \frac{0}{1} = 0.000$
+\par $H(S_{tempoEspera^{30-60}}) = -\frac{0}{1} \log_2 \frac{0}{1}- \frac{1}{1} \log_2 \frac{1}{1} = 0.000$
+\par $Ganho(S, S_{tempoEspera}) = 1.000-\frac{1}{2} * 0.000-\frac{1}{2} * 0.000 = 1.000$
 
 \vskip 0.25in
 \hfil
@@ -38,6 +48,7 @@
     \node {Observa Quantidade \\ de Clientes}
         child { node {Ninguém} child { node {NÃO ESPERA}  } }
         child { node {Alguns} child { node {ESPERA}  } }
+        child [missing]
         child { node {Cheio} child { 
             node {Está com fome?} 
             child { node {Sim} child { node {Qual o Tipo?} 
@@ -47,9 +58,11 @@
                         child { node {Não}  child { node {NÃO ESPERA}  } }
                     }  
                  }   
+                 child [missing]
                  child { node {Italiano}  child { node {NÃO ESPERA}  }  } 
                  child { node {Hamburguer} child { node {ESPERA}  } } 
             }   }
+            child [missing]
             child { node {Não} child { node {NÃO ESPERA}  }  }
             }
         };
