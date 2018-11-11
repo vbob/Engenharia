@@ -67,7 +67,7 @@ typedef union {
         BYTE    :1;
         BYTE RP0:1; // Indicador de Seletor de Banco (0 se selecionado Banco 0, 1 se selecionado Banco 1)
         BYTE  TO:1; // Bit de Timeout (se ocorreu timeout com watchdog, define como 0) 
-        BYTE  PD:1; // Bit de Besligamento (instrução SLEEP define como 0)
+        BYTE  PD:1; // Bit de Desligamento (instrução SLEEP define como 0)
         BYTE   Z:1; // Bit de Zero (definido em 1 se o resultado da última operação lógico-aritmética for zero)
         BYTE  DC:1; // Vai-Um Digital (definido em 1 se houver Vai-Um no 4º Bit)
         BYTE   C:1; // Vai-Um/Overflow (definido em 1 se houver overflow)
@@ -241,6 +241,25 @@ extern volatile __TRISB_bits_t __at(TRISB_addr) TRISB_bits;
 #define TRIS_B6  TRISB_bits.TRISB6
 #define TRIS_B7  TRISB_bits.TRISB7
 
+#define PSA_TMR0_2    0x00 
+#define PSA_TMR0_4    0x01
+#define PSA_TMR0_8    0x02
+#define PSA_TMR0_16   0x03
+#define PSA_TMR0_32   0x04
+#define PSA_TMR0_64   0x05
+#define PSA_TMR0_128  0x06
+#define PSA_TMR0_256  0x07
+
+#define PSA_WDT_1    0x00
+#define PSA_WDT_2    0x01
+#define PSA_WDT_4    0x02
+#define PSA_WDT_8    0x03
+#define PSA_WDT_16   0x04
+#define PSA_WDT_32   0x05
+#define PSA_WDT_64   0x06
+#define PSA_WDT_128  0x07
+
+
 /* Métodos de Escrita e Leitura */
 
 extern void set_tris(int tris, int value) {
@@ -251,12 +270,12 @@ extern int read_tris(int tris) {
     return tris;
 }
 
-extern int write_port_bits(int port, int port_bits) {
-    port = port_bits;
+extern void write_port_tris(int tris, int port_bits) {
+    tris = port_bits;
 }
 
-extern int read_port_tris(int port) {
-    return port;
+extern int read_port_tris(int tris) {
+    return tris;
 }
 
 extern void set_pin(int pin, int value) {
@@ -267,5 +286,54 @@ extern int read_pin(int pin) {
     return pin;
 }
 
+extern void enable_global_int() {
+    INTCON_bits.GIE = 0x1;
+}
+
+extern void disable_global_int() {
+    INTCON_bits.GIE = 0x0;
+}
+
+extern void enable_ext_int() {
+    INTCON_bits.INTE = 0x1;
+}
+
+extern void disable_ext_int() {
+    INTCON_bits.INTE = 0x0;
+}
+
+extern void clear_ext_int() {
+    INTCON_bits.INTF = 0x0;
+}
+
+extern void enable_rb_int() {
+    INTCON_bits.RBIE = 0x1;
+}
+
+extern void disable_rb_int() {
+    INTCON_bits.RBIE = 0x0;
+}
+
+extern void clear_rb_int() {
+    INTCON_bits.RBIF = 0x0;
+}
+
+extern void enable_tmr0_int() {
+    INTCON_bits.T0IE = 0x1;
+}
+
+extern void disable_tmr0_int() {
+    INTCON_bits.T0IE = 0x0;
+}
+
+extern void clear_tmr0_int() {
+    INTCON_bits.T0IF = 0x0;
+}
+
+extern void set_prescaler(int scale) {
+    OPTION_REG_bits.PS2 = scale >> 2 && 0x1;
+    OPTION_REG_bits.PS1 = scale >> 1 && 0x1;
+    OPTION_REG_bits.PS0 = scale && 0x1;
+}
 
 #endif
