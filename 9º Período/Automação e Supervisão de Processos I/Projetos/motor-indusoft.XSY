@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VariablesExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro M V5.0 - 100504A" dateTime="date_and_time#2019-3-13-11:39:11" content="Variable source file" DTDVersion="41"></fileHeader>
+	<contentHeader name="Project" version="0.0.000"></contentHeader>
+	<dataBlock>
+		<variables name="B1" typeName="EBOOL" topologicalAddress="%I0.1.1"></variables>
+		<variables name="K1" typeName="EBOOL" topologicalAddress="%Q0.2.0"></variables>
+		<variables name="B0" typeName="EBOOL" topologicalAddress="%I0.1.0"></variables>
+		<variables name="RT1" typeName="EBOOL" topologicalAddress="%I0.1.2"></variables>
+		<variables name="FBI_0" typeName="TON"></variables>
+		<variables name="T1" typeName="TON"></variables>
+		<variables name="T2" typeName="TON"></variables>
+		<variables name="K2" typeName="EBOOL" topologicalAddress="%Q0.2.1"></variables>
+		<variables name="T3" typeName="TON"></variables>
+		<variables name="K3" typeName="EBOOL" topologicalAddress="%Q0.2.2"></variables>
+		<variables name="B1sup" typeName="EBOOL" topologicalAddress="%M1"></variables>
+		<variables name="B0sup" typeName="EBOOL" topologicalAddress="%M0"></variables>
+		<variables name="K1sup" typeName="EBOOL" topologicalAddress="%M20"></variables>
+		<variables name="K2sup" typeName="EBOOL" topologicalAddress="%M21"></variables>
+		<variables name="K3sup" typeName="EBOOL" topologicalAddress="%M22"></variables>
+	</dataBlock>
+</VariablesExchangeFile>

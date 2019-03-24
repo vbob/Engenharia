@@ -1,0 +1,40 @@
+[Exception] CacheFile Load [13/03/2019 11:44:13]
+    System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'Y:\9º Período\Automação e Supervisão de Processos I\Projetos\Turma 2019_1\Database\DEVTagIntegrationCache.xmlti'.
+Nome do arquivo: 'Y:\9º Período\Automação e Supervisão de Processos I\Projetos\Turma 2019_1\Database\DEVTagIntegrationCache.xmlti'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   em TagSourceLibrary.CacheFile.()
+[Message] File Y:\9º Período\Automação e Supervisão de Processos I\Projetos\motor-indusoft.XSY read. [13/03/2019 11:44:14]
+[Message] File Y:\9º Período\Automação e Supervisão de Processos I\Projetos\motor-indusoft.XSY read. [20/03/2019 09:05:00]
+[Exception] AddImportedTag [20/03/2019 10:22:18]
+    System.ArgumentException: Já foi adicionado um item com a mesma chave.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   em ..AddImportedTag(String , String , String , Int32 , Int32 , String , String )
+[Exception] AddImportedTag [20/03/2019 10:22:22]
+    System.ArgumentException: Já foi adicionado um item com a mesma chave.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   em ..AddImportedTag(String , String , String , Int32 , Int32 , String , String )
+[Exception] AddImportedTag [20/03/2019 10:36:23]
+    System.ArgumentException: Já foi adicionado um item com a mesma chave.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   em ..AddImportedTag(String , String , String , Int32 , Int32 , String , String )
+[Exception] AddImportedTag [20/03/2019 10:43:28]
+    System.ArgumentException: Já foi adicionado um item com a mesma chave.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   em ..AddImportedTag(String , String , String , Int32 , Int32 , String , String )
+[Message] File C:\Users\UnityPro\Documents\all.XSY read. [20/03/2019 11:42:34]
+[Exception] AddImportedTag [20/03/2019 11:50:56]
+    System.ArgumentException: Já foi adicionado um item com a mesma chave.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   em ..AddImportedTag(String , String , String , Int32 , Int32 , String , String )
+[Exception] AddImportedTag [20/03/2019 11:53:48]
+    System.ArgumentException: Já foi adicionado um item com a mesma chave.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   em ..AddImportedTag(String , String , String , Int32 , Int32 , String , String )

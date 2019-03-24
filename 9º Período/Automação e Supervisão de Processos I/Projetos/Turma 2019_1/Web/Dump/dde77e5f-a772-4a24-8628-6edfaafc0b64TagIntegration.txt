@@ -1,0 +1,13 @@
+[Exception] RemoveSource [20/03/2019 10:02:58]
+    System.Collections.Generic.KeyNotFoundException: A chave fornecida não estava presente no dicionário.
+   em System.ThrowHelper.ThrowKeyNotFoundException()
+   em System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   em ..RemoveSource(String )
+[Exception] CacheFile Load [20/03/2019 10:03:46]
+    System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'Y:\9º Período\Automação e Supervisão de Processos I\Projetos\Turma 2019_1\Database\DEVTagIntegrationCache.xmlti'.
+Nome do arquivo: 'Y:\9º Período\Automação e Supervisão de Processos I\Projetos\Turma 2019_1\Database\DEVTagIntegrationCache.xmlti'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   em TagSourceLibrary.CacheFile.()
+[Message] File C:\Users\UnityPro\Documents\all.XSY read. [20/03/2019 10:03:46]

@@ -1,0 +1,26 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:nil todo:t |:t
+#+TITLE: Relatório SNMP Tester
+#+DATE: <2019-03-10 dom>
+#+AUTHOR: Vitor Bruno de Oliveira Barth
+#+EMAIL: vbob@vbob.com.br
+#+LANGUAGE: pt-br
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 26.1 (Org mode 9.1.9)
+
+* Introduction
+
+  \paragraph{}
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem
+  nisi, tincidunt tempus sem nec, elementum feugiat ipsum. Nulla in
+  diam libero. Nunc tristique ex a nibh egestas sollicitudin.
+
+  \paragraph{}
+  Mauris efficitur vitae ex id egestas. Vestibulum ligula felis,
+  pulvinar a posuere id, luctus vitae leo. Sed ac imperdiet orci, non
+  elementum leo. Nullam molestie congue placerat. Phasellus tempor et
+  libero maximus commodo.

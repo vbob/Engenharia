@@ -1,0 +1,17 @@
+Digitais:
+
+%I0.1.0
+
+0 -> Posição do CLP na Rede
+1 -> Cartão
+0 -> Posição do Bit no Cartão
+
+Se for saída é Q:
+
+%Q0.2.0
+
+Analógicas:
+
+%IW0.3.0
+
+%QW0.4.0

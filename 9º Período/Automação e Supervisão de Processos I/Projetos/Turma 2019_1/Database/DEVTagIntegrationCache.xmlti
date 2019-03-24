@@ -1,0 +1,243 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:CacheFile id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<_tags href="#ref-3"/>
+<_hashTable href="#ref-4"/>
+</a1:CacheFile>
+<SOAP-ENC:Array id="ref-3" SOAP-ENC:arrayType="a2:Tag[22]" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<item href="#ref-5"/>
+<item href="#ref-6"/>
+<item href="#ref-7"/>
+<item href="#ref-8"/>
+<item href="#ref-9"/>
+<item href="#ref-10"/>
+<item href="#ref-11"/>
+<item href="#ref-12"/>
+<item href="#ref-13"/>
+<item href="#ref-14"/>
+<item href="#ref-15"/>
+<item href="#ref-16"/>
+<item href="#ref-17"/>
+<item href="#ref-18"/>
+<item href="#ref-19"/>
+<item href="#ref-20"/>
+<item href="#ref-21"/>
+<item href="#ref-22"/>
+<item href="#ref-23"/>
+<item href="#ref-24"/>
+<item href="#ref-25"/>
+<item href="#ref-26"/>
+</SOAP-ENC:Array>
+<a3:Hashtable id="ref-4" xmlns:a3="http://schemas.microsoft.com/clr/ns/System.Collections">
+<LoadFactor>0.72</LoadFactor>
+<Version>0</Version>
+<Comparer xsi:null="1"/>
+<HashCodeProvider xsi:null="1"/>
+<HashSize>11</HashSize>
+<Keys href="#ref-27"/>
+<Values href="#ref-28"/>
+</a3:Hashtable>
+<a2:Tag id="ref-5" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-29">B1</SourceName>
+<BrowseName href="#ref-29"/>
+<TargetName href="#ref-29"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-30">SOURCE://DEV/B1/1/0/ReadWrite/Auto/B1</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-6" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-31">K1</SourceName>
+<BrowseName href="#ref-31"/>
+<TargetName href="#ref-31"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-32">SOURCE://DEV/K1/1/0/ReadWrite/Auto/K1</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-7" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-33">B0</SourceName>
+<BrowseName href="#ref-33"/>
+<TargetName href="#ref-33"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-34">SOURCE://DEV/B0/1/0/ReadWrite/Auto/B0</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-8" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-35">RT1</SourceName>
+<BrowseName href="#ref-35"/>
+<TargetName href="#ref-35"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-36">SOURCE://DEV/RT1/1/0/ReadWrite/Auto/RT1</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-9" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-37">K2</SourceName>
+<BrowseName href="#ref-37"/>
+<TargetName href="#ref-37"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-38">SOURCE://DEV/K2/1/0/ReadWrite/Auto/K2</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-10" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-39">K3</SourceName>
+<BrowseName href="#ref-39"/>
+<TargetName href="#ref-39"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-40">SOURCE://DEV/K3/1/0/ReadWrite/Auto/K3</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-11" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-41">B1sup</SourceName>
+<BrowseName href="#ref-41"/>
+<TargetName href="#ref-41"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-42">SOURCE://DEV/B1sup/1/0/ReadWrite/Auto/B1sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-12" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-43">B0sup</SourceName>
+<BrowseName href="#ref-43"/>
+<TargetName href="#ref-43"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-44">SOURCE://DEV/B0sup/1/0/ReadWrite/Auto/B0sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-13" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-45">K1sup</SourceName>
+<BrowseName href="#ref-45"/>
+<TargetName href="#ref-45"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-46">SOURCE://DEV/K1sup/1/0/ReadWrite/Auto/K1sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-14" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-47">K2sup</SourceName>
+<BrowseName href="#ref-47"/>
+<TargetName href="#ref-47"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-48">SOURCE://DEV/K2sup/1/0/ReadWrite/Auto/K2sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-15" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-49">K3sup</SourceName>
+<BrowseName href="#ref-49"/>
+<TargetName href="#ref-49"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-50">SOURCE://DEV/K3sup/1/0/ReadWrite/Auto/K3sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-16" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-51">B2</SourceName>
+<BrowseName href="#ref-51"/>
+<TargetName href="#ref-51"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-52">SOURCE://DEV/B2/1/0/ReadWrite/Auto/B2</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-17" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-53">B2sup</SourceName>
+<BrowseName href="#ref-53"/>
+<TargetName href="#ref-53"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-54">SOURCE://DEV/B2sup/1/0/ReadWrite/Auto/B2sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-18" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-55">K4</SourceName>
+<BrowseName href="#ref-55"/>
+<TargetName href="#ref-55"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-56">SOURCE://DEV/K4/1/0/ReadWrite/Auto/K4</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-19" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-57">K4sup</SourceName>
+<BrowseName href="#ref-57"/>
+<TargetName href="#ref-57"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-58">SOURCE://DEV/K4sup/1/0/ReadWrite/Auto/K4sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-20" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-59">B02</SourceName>
+<BrowseName href="#ref-59"/>
+<TargetName href="#ref-59"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-60">SOURCE://DEV/B02/1/0/ReadWrite/Auto/B02</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-21" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-61">B02sup</SourceName>
+<BrowseName href="#ref-61"/>
+<TargetName href="#ref-61"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-62">SOURCE://DEV/B02sup/1/0/ReadWrite/Auto/B02sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-22" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-63">K6</SourceName>
+<BrowseName href="#ref-63"/>
+<TargetName href="#ref-63"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-64">SOURCE://DEV/K6/1/0/ReadWrite/Auto/K6</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-23" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-65">K6sup</SourceName>
+<BrowseName href="#ref-65"/>
+<TargetName href="#ref-65"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-66">SOURCE://DEV/K6sup/1/0/ReadWrite/Auto/K6sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-24" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-67">K5</SourceName>
+<BrowseName href="#ref-67"/>
+<TargetName href="#ref-67"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-68">SOURCE://DEV/K5/1/0/ReadWrite/Auto/K5</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-25" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-69">K5sup</SourceName>
+<BrowseName href="#ref-69"/>
+<TargetName href="#ref-69"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-70">SOURCE://DEV/K5sup/1/0/ReadWrite/Auto/K5sup</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<a2:Tag id="ref-26" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/TagSourceLibrary.Data/TagSourceLibrary%2C%20Version%3D1.0.0.0%2C%20Culture%3Dneutral%2C%20PublicKeyToken%3Dnull">
+<SourceName id="ref-71">motor</SourceName>
+<BrowseName href="#ref-71"/>
+<TargetName href="#ref-71"/>
+<Type>Boolean</Type>
+<Size>0</Size>
+<CommUrl id="ref-72">SOURCE://DEV/motor/1/0/ReadWrite/Auto/motor</CommUrl>
+<StructureName xsi:null="1"/>
+</a2:Tag>
+<SOAP-ENC:Array id="ref-27" SOAP-ENC:arrayType="xsd:anyType[0]">
+</SOAP-ENC:Array>
+<SOAP-ENC:Array id="ref-28" SOAP-ENC:arrayType="xsd:anyType[0]">
+</SOAP-ENC:Array>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

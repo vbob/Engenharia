@@ -1,0 +1,44 @@
+% Created 2019-03-10 dom 16:26
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Vitor Bruno de Oliveira Barth}
+\date{\textit{<2019-03-10 dom>}}
+\title{Relatório SNMP Tester}
+\hypersetup{
+ pdfauthor={Vitor Bruno de Oliveira Barth},
+ pdftitle={Relatório SNMP Tester},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdflang={Portuguese}}
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\label{sec:org9d6bac9}
+
+\paragraph{}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem
+nisi, tincidunt tempus sem nec, elementum feugiat ipsum. Nulla in
+diam libero. Nunc tristique ex a nibh egestas sollicitudin.
+
+\paragraph{}
+Mauris efficitur vitae ex id egestas. Vestibulum ligula felis,
+pulvinar a posuere id, luctus vitae leo. Sed ac imperdiet orci, non
+elementum leo. Nullam molestie congue placerat. Phasellus tempor et
+libero maximus commodo.
+\end{document}

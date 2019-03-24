@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{REDES II: Instalação do SNMP Tester} % Title of the assignment
+
+\author{Vitor Bruno de Oliveira Barth\\ \texttt{vbob@vbob.com.br}} % Author name and email address
+
+\date{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Introdução} % Unnumbered section
+
+Foi desenvolvido o \textit{software} SNMP Tester. Este é baseado em Node.js com interface construída em Pug.js e Bootstrap.
+
+\bigskip
+\bigskip
+\bigskip
+
+\begin{figure}[!htb]
+    \center{\includegraphics[width=\textwidth]
+    {print.jpeg}}
+    \caption{\label{fig:my-label} Tela do SNMP Tester}
+\end{figure}
+
+
+\pagebreak
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section{Funcionalidades} % Numbered section
+
+\par \par O SNMP Tester é capaz de realizar buscas SNMP de forma dinâmica, possuindo diversas configurações e um \textit{parser} personalizado.
+
+\par É possível definir os seguintes parâmetros:
+
+\begin{itemize}
+	\item Endereço: URL ou Endereço IP do agente desejado
+	\item Porta: Porta de Escuta do agente SNMP
+	\item Comunidade: Comunidade SNMP
+        \item Versão: Versão do SNMP (1 ou 2c)
+        \item Método: SNMPGET para buscas de somente uma OID ou SNMPBULKWALK para explorar a árvore de MIBs
+        \item Parâmetros adicionais: Operadores que podem ser concatenados ao final do comando SNMP
+\end{itemize}
+
+\par Ao final da requisição, as informações enviadas pelo agente são analisadas e exibidas em forma de tabela para facilitar a visualização e busca pelo usuário.
+
+%----------------------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section{Instalação}
+
+O SNMP Tester foi testado somente em ambientes Linux, podendo também ser compatível com outros Sistemas Operacionais.
+
+\subsection{Pré-requisitos}
+
+O \textit{parser} do SNMP Tester é construído sobre os executáveis do pacote \textit{net-snmp}. Por esta razão, é necessário que estes estejam instalados e incluídos na \$PATH.
+
+Também é necessária a instalação do \textit{Node.js} em versão 8 ou superior.
+
+\subsection{Download}
+
+A versão mais atualizada está disponível no repositório http://github.com/vbob/snmpTester
+
+\subsection{Instalação das Dependências}
+
+Após realizar o \textit{download} do repositório e acessar o diretório criado, deve-se instalar as dependências com \textit{Node Package Manager} (npm).
+
+% Command-line "screenshot"
+\begin{commandline}
+	\begin{verbatim}
+		$ npm install
+	\end{verbatim}
+\end{commandline}
+
+\subsection{Compilação}
+
+\par Por ser construído em \textit{TypeScript}, é necessário que o código seja compilado. Para isso, executa-se o comando:
+
+\begin{commandline}
+\begin{verbatim}
+$ npm run build
+\end{verbatim}
+\end{commandline}
+
+%----------------------------------------------------------------------------------------
+
+\section{Utilização}
+
+Após instalado, será possível iniciar o servidor através do comando
+
+\begin{commandline}
+\begin{verbatim}
+$ npm start
+\end{verbatim}
+\end{commandline}
+
+O servidor estará disponível para acesso no endereço http://127.0.0.1:8080
+
+
+
+\end{document}

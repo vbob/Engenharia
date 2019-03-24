@@ -1,0 +1,195 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{REDES II: Configuração de Traps SNMP} % Title of the assignment
+
+\author{Vitor Bruno de Oliveira Barth\\ \texttt{vbob@vbob.com.br}} % Author name and email address
+
+\date{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Introdução} % Unnumbered section
+
+Traps SNMP são amplamente utilizadas para o Gerenciamento de Redes. Elas permitem que o Agente comunique ao Gerente atividades indevidas, falhas ou quaisquer outras ocorrências que devam ser analisdas.
+
+Neste trabalho, é apresentada a forma de configuração de duas traps:
+
+\begin{enumerate}
+\item Mudança de estado de uma interface de rede para \textit{down}.
+\item Acesso indevido via SSH
+\end{enumerate}
+
+Ao ser recebida pelo gerente, cada uma dessas traps executará um \textit{script}, que servirá para avisar ao usuário do comportamento detectado.
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section{Configuração das Traps} % Numbered section
+
+\par Para a configuração das Traps, são utilizadas duas MIBs padrão do pacote \textit{net-snmp}:
+
+\begin{enumerate}
+\item \textbf{IF-MIB::linkDown} para indicar que falha em uma conexão de rede
+\item \textbf{SNMPv2-MIB::authenticationFailure} para indicar falha na conexão via SSH
+\end{enumerate}
+
+Estas MIBs foram projetdas justamente para este propósito, e por esta razão é desnecessária a criação de MIBs adicionais.
+
+\subsection{Configuração dos Gatilhos}
+
+\par Ao ser recebida, cada trap deverá executar um \textit{script shell} que realizará ações para avisar ao usuário sobre a chamada da \textit{trap}.
+
+\par A definição de tais gatilhos é realizada no arquivo \textit{/etc/snmp/snmptrapd.conf}. O arquivo editado é apresentado abaixo:
+
+\begin{program}
+\begin{myverb}
+disableAuthorization yes
+authCommunity log,execute,net public
+outputOption n
+
+traphandle IF-MIB::linkDown /usr/local/etc/snmptrap/linkDown.sh
+traphandle SNMPv2-MIB::authenticationFailure /usr/local/etc/snmptrap/authenticationFailure.sh 
+\end{myverb}
+\caption{/etc/snmp/snmptrapd.conf}
+\end{program}
+
+\par O comando \textit{disableAuthorization} indica que não é necessária autorização para que uma \textit{trap} seja processada.
+\par O comando \textit{authCommunity log,execute,net public} permite à comunidade \textit{public} seja utilizada para o envio de \textit{traps}.
+\par O comando \textit{outputOption n} indica que as OIDs serão armazenadas de forma numérica.
+
+\pagebreak
+
+\par Após ser editado, o \textit{daemon} deve ser reiniciado, através do comando
+
+\begin{commandline}
+\begin{verbatim}
+# systemctl restart snmptrapd
+\end{verbatim}
+\end{commandline}
+
+\par Deste modo, o servidor estará ouvindo às \textit{traps} e configurado para executar os \textit{scripts} desejados.
+
+%----------------------------------------------------------------------------------------------------
+%	PROBLEM 2
+%----------------------------------------------------------------------------------------
+
+\section{\textit{Scripts}}
+
+Com os \textit{scripts} definidos no arquivo \textit{/etc/snmp/snmptrapd.conf}, estes devem ser construídos para que sejam executadas ações para avisar o usuário das ocorrências.
+
+\par No caso da \textit{trap} \textbf{IF-MIB::linkDown} será enviado um e-mail ao administrador da rede.
+\par Ao ser recebida a \textit{trap} \textbf{SMPv2-MIB::authenticationFailure}, esta ocorrência será salva em um arquivo, onde estarão as últimas 10 tentativas mal sucedidas de \textit{login}.
+
+\subsection{IF-MIB::linkDown}
+
+\par Para se enviar um e-mail utilizando \textit{Linux} pode ser utilizado o pacote \textit{sendmail}. O \textit{script} completo está apresentado abaixo.
+
+\begin{program}
+\begin{lstlisting}[language=bash]
+#!/bin/bash
+
+email=sysadmin@enterprise.com
+file=/usr/local/etc/snmptrap/email.txt
+
+sendmail $email < $file
+\end{lstlisting}
+\caption{/usr/local/etc/snmptrap/linkDown.sh}
+\end{program}
+
+\par Onde \textit{email.txt} é o corpo da mensagem que se deseja ter enviada.
+
+\subsection{SNMPv2-MIB::authenticationFailure}
+
+Para se armazenar em arquivo as últimas 10 tentativas de \textit{login} realizadas por SSH, deve-se obter algumas informações contidas na mensagem enviada pela \textit{trap}. Para isso, será feita a leitura de comandos e analisados usando o comando \textit{grep}
+
+\begin{program}
+  \begin{lstlisting}[language=bash]
+file=/home/user/loginAttempts.txt
+while read param
+do
+  echo -e "$param "
+    if $param | grep -q "STRING"; then
+      param = ${param#*'"'}; param=${param%'"'*}
+      echo $param >> $file
+      echo $(tail -10 $file) > $file
+    fi
+exit 0
+\end{lstlisting}
+\caption{/usr/local/etc/snmptrap/authenticationFailure.sh}
+\end{program}
+
+\section{Geração das Traps no Agente}
+
+\par Agora que as \textit{traps} estão configuradas no Gerente, podemos configurar o agente para que as envie automáticamente.
+
+\subsection{IF-MIB::linkDown}
+
+\par Em computadores \textit{Linux} que utilizam o \textit{daemon NetworkManager} para gerenciar as interface de rede, já existe uma infraestrutura pronta para executar comandos no caso de mudanças no estado da conexão: o \textit{dispatcher.d}.
+
+\par Todos os arquivos colocados na pasta \textit{/etc/NetworkManager/dispatcher.d} são executados sempre que há uma mudança em alguma interface de rede.
+\par Para isso, foi criado o arquivo \textit{/etc/NetworkManager/dispatcher.d/99-snmptrap.sh}, que será a fonte da \textit{trap}.
+
+\begin{program}
+\begin{lstlisting}[language=bash]
+interface=$1
+event=$2
+address=127.0.0.1
+MIB=IF-MIB::linkDown
+OID=linkDown
+
+if [[ ( "$interface" == "enp2s0" && "$event" != "up" ) ]]
+then
+   snmptrap -v 2c -c public $address "" $MIB $OID s $interface
+fi
+exit 0
+
+\end{lstlisting}
+\caption{/etc/NetworkManager/dispatcher.d/99-snmptrap.sh}
+\end{program}
+
+\subsection{SNMPv2-MIB::authenticationFailure}
+\par O serviço de autenticação do \textit{Linux} é chamado de PAM. Este serviço possui uma pasta de configurações, \textit{/etc/pam.d}, onde estão definidos os diferentes formatos de autenticação. Dentre eles, está o \texit{/etc/pam.d/sshd}, que permite as autenticações via SSH.
+
+\par Para que seja executado um \textit{script} ao se executar autenticação via SSH, esse arquivo deve ser alterado, adicionando-se as seguintes linhas:
+
+\begin{program}
+\begin{myverb}
+auth    [success=2 default=ignore]    pam_unix.so nullok_secure
+auth    optional                      pam_exec.so /usr/local/etc/snmptrap/sshFailure.sh
+\end{myverb}
+\caption{/etc/pam.d/sshd}
+\end{program}
+
+\begin{program}
+  \begin{lstlisting}[language=bash]
+address=127.0.0.1
+MIB=SNMPv2-MIB::authenticationFailure
+OID=authenticationFailure
+data=(date '+%Y-%m-%d %H:%M:%S')/$PAM_USER/$PAM_RHOST/InvalidPass
+ 
+snmptrap -v 2c -c public $address "" $MIB $OID s $data
+\end{lstlisting}
+\caption{/etc/NetworkManager/dispatcher.d/99-snmptrap.sh}
+\end{program}
+
+\end{document}
