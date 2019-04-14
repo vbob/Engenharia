@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{adjustbox}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{REDES II: Análise de Pacotes 802.11} % Title of the assignment
+
+\author{Vitor Bruno de Oliveira Barth\\ \texttt{vbob@vbob.com.br}} % Author name and email address
+
+\date{Instituto Federal de Educação, Ciência e Tecnologia de Mato Grosso --- \today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+\section*{1. Captura de Informações}
+
+\par Foram coletados 45.557 pacotes durante um intervalo de 181.2 segundos. Foram analisadas informações somente do Canal 6.
+
+\section*{2. Pontos de Acesso Encontrados}
+
+\begin{tabular}{l*{2}{c}r}
+  SSID               & MAC                 \\
+  \hline
+  2103               & 00:37:b7:3d:46:b0   \\
+  Bia                & 00:37:b7:44:c2:87	 \\
+  Maysa 2.4          & 10:62:d0:c6:d4:33   \\
+  NET                & 10:62:d0:c7:3d:56   \\
+  Net-Virtua-0277    & 14:b7:f8:e0:87:72   \\
+  NET\_CLARO\_WIFI   & 16:b7:f8:e0:88:73   \\
+  NET\_CLARO\_WIFI   & 5e:e3:0e:21:9e:4f   \\
+  Juliana            & 18:b4:43:86:a2:58   \\
+  TP-Link\_Extender   & 50:c7:bf:fc:d6:eb   \\
+  Damiance           & 5c:e3:0e:01:9e:4f	 \\
+  vBob-vBob\_2.4     & b0:4e:26:2a:c4:7e   \\
+  NET\_2G41F8D7      & bc:2e:48:22:42:1a	 \\
+  ACPMA              & e8:20:e2:14:89:8c   \\
+  NET\_2G36DDEB      & e8:20:e2:36:dd:f0	 \\
+\end{tabular}
+
+\section*{3. Análise de Quadros}
+
+\begin{table}[ht]
+\centering
+\begin{adjustbox}{width=1\textwidth}
+\small
+\begin{tabular}{rrrrrrr}
+  SSID               & Beacon (0x08)  & Probe (0x04)  &  Authenticate (0x0b)  &  Associate (0x00) &  Deauthenticate (0x0c) &  Desassociate (0x0a) \\
+  \hline
+  2103               & 15             & 6             &  0                    &  0                &  0                     &  0                   \\
+  Bia                & 1542           & 0             &  1                    &  0                &  0                     &  0                   \\
+  Maysa 2.4          & 2              & 0             &  0                    &  0                &  0                     &  0                   \\
+  Net-Virtua-0277    & 87             & 0             &  0                    &  0                &  0                     &  0                   \\
+  NET\_CLARO\_WIFI   & 27             & 0             &  0                    &  0                &  0                     &  0                   \\
+  NET\_CLARO\_WIFI   & 7              & 0             &  0                    &  0                &  0                     &  0                   \\
+  Juliana            & 106            & 0             &  0                    &  0                &  0                     &  0                   \\
+  TP-Link\_Extender   & 5              & 0             &  0                    &  0                &  0                     &  0                   \\
+  Damiance           & 65             & 0             &  0                    &  0                &  0                     &  0                   \\           
+  vBob-vBob-2.4GHz   & 281            & 47            &  0                    &  0                &  0                     &  0                   \\
+  NET\_2G41F8D7      & 1915           & 3             &  0                    &  0                &  0                     &  0                   \\
+  ACPMA              & 45             & 0             &  0                    &  0                &  0                     &  0                   \\
+  NET\_2G41F8D7      & 102            & 0             &  0                    &  0                &  1                     &  1                   \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\end{table} 
+
+\section*{4. Análise de Erros}
+
+\par Foram coletados 4.382 pacotes danificados no intervalo de coleta.
+
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\end{document}
