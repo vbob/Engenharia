@@ -1,0 +1,31 @@
+[Exception] CacheFile Load [03/04/2019 09:26:20]
+    System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'Z:\9º Período\Automação e Supervisão de Processos I\Indusoft\prova\Database\CLPTagIntegrationCache.xmlti'.
+Nome do arquivo: 'Z:\9º Período\Automação e Supervisão de Processos I\Indusoft\prova\Database\CLPTagIntegrationCache.xmlti'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   em TagSourceLibrary.CacheFile.()
+[Message] File Z:\9º Período\Automação e Supervisão de Processos I\Indusoft\variaveis_prova.XSY read. [03/04/2019 09:26:20]
+[Exception] RemoveSource [03/04/2019 09:32:42]
+    System.Collections.Generic.KeyNotFoundException: A chave fornecida não estava presente no dicionário.
+   em System.ThrowHelper.ThrowKeyNotFoundException()
+   em System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   em ..RemoveSource(String )
+[Exception] CacheFile Load [03/04/2019 09:32:55]
+    System.IO.FileNotFoundException: Não foi possível localizar o arquivo 'Z:\9º Período\Automação e Supervisão de Processos I\Indusoft\prova\Database\CLPTagIntegrationCache.xmlti'.
+Nome do arquivo: 'Z:\9º Período\Automação e Supervisão de Processos I\Indusoft\prova\Database\CLPTagIntegrationCache.xmlti'
+   em System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   em System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)
+   em System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   em TagSourceLibrary.CacheFile.()
+[Message] File Z:\9º Período\Automação e Supervisão de Processos I\Indusoft\variaveis_prova.XSY read. [03/04/2019 09:32:55]
+[Exception] AddImportedTag [03/04/2019 10:05:45]
+    System.ArgumentException: Já foi adicionado um item com a mesma chave.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   em ..AddImportedTag(String , String , String , Int32 , Int32 , String , String )
+[Exception] AddImportedTag [03/04/2019 10:12:18]
+    System.ArgumentException: Já foi adicionado um item com a mesma chave.
+   em System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   em System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   em ..AddImportedTag(String , String , String , Int32 , Int32 , String , String )

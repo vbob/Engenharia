@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VariablesExchangeFile>
+	<fileHeader company="Schneider Automation" product="Unity Pro M V5.0 - 100504A" dateTime="date_and_time#2019-4-3-9:32:3" content="Variable source file" DTDVersion="41"></fileHeader>
+	<contentHeader name="Project" version="0.0.5" dateTime="date_and_time#2019-4-3-9:28:31"></contentHeader>
+	<dataBlock>
+		<variables name="B0" typeName="EBOOL" topologicalAddress="%I0.1.0"></variables>
+		<variables name="B0sup" typeName="EBOOL" topologicalAddress="%M0"></variables>
+		<variables name="Ca" typeName="EBOOL" topologicalAddress="%Q0.2.0"></variables>
+		<variables name="CaSup" typeName="EBOOL" topologicalAddress="%M10"></variables>
+		<variables name="B1" typeName="EBOOL" topologicalAddress="%I0.1.1"></variables>
+		<variables name="B1sup" typeName="EBOOL" topologicalAddress="%M1"></variables>
+		<variables name="RT2" typeName="EBOOL" topologicalAddress="%I0.1.3"></variables>
+		<variables name="RT2sup" typeName="EBOOL" topologicalAddress="%M21"></variables>
+		<variables name="RT1" typeName="EBOOL" topologicalAddress="%I0.1.2"></variables>
+		<variables name="RT3" typeName="EBOOL" topologicalAddress="%I0.1.4"></variables>
+		<variables name="RT3sup" typeName="EBOOL" topologicalAddress="%M22"></variables>
+		<variables name="T2" typeName="BOOL"></variables>
+		<variables name="RT2val" typeName="BOOL"></variables>
+		<variables name="RT3val" typeName="BOOL"></variables>
+		<variables name="TermSup" typeName="EBOOL" topologicalAddress="%M12"></variables>
+		<variables name="RT1sup" typeName="EBOOL" topologicalAddress="%M20"></variables>
+		<variables name="RT1val" typeName="BOOL"></variables>
+		<variables name="Press" typeName="EBOOL" topologicalAddress="%I0.1.5"></variables>
+		<variables name="PressSup" typeName="EBOOL" topologicalAddress="%M11"></variables>
+		<variables name="PressVal" typeName="BOOL"></variables>
+		<variables name="Term" typeName="EBOOL" topologicalAddress="%I0.1.6"></variables>
+		<variables name="C5sup" typeName="EBOOL" topologicalAddress="%M34"></variables>
+		<variables name="TermVal" typeName="BOOL"></variables>
+		<variables name="C4" typeName="EBOOL" topologicalAddress="%Q0.2.4"></variables>
+		<variables name="C5" typeName="EBOOL" topologicalAddress="%Q0.2.5"></variables>
+		<variables name="C1" typeName="EBOOL" topologicalAddress="%Q0.2.1"></variables>
+		<variables name="C2" typeName="EBOOL" topologicalAddress="%Q0.2.2"></variables>
+		<variables name="C3" typeName="EBOOL" topologicalAddress="%Q0.2.3"></variables>
+		<variables name="C1sup" typeName="EBOOL" topologicalAddress="%M30"></variables>
+		<variables name="C2sup" typeName="EBOOL" topologicalAddress="%M31"></variables>
+		<variables name="C3sup" typeName="EBOOL" topologicalAddress="%M32"></variables>
+		<variables name="C4sup" typeName="EBOOL" topologicalAddress="%M33"></variables>
+	</dataBlock>
+</VariablesExchangeFile>
