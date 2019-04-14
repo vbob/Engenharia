@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\input{structure.tex} % Include the file specifying the document structure and custom commands
+
+%----------------------------------------------------------------------------------------
+%	ASSIGNMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Estrutura de Quadros do Protocolo 802.11} % Title of the assignment
+
+\author{Vitor Bruno de Oliveira Barth\\ \texttt{vbob@vbob.com.br}} % Author name and email address
+
+\date{\today} % University, school and/or department name(s) and a date
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\par A camada MAC provê funcionalidades de controle de acesso ao meio, e também oferece suporte para autenticação, dentre outras funcionalidades.
+\par Um quadro da macada MAC é apresentado na Figura \ref{fig:frame-macro}.
+
+\begin{figure}[h!]
+  \includegraphics[width=\linewidth]{frame-macro.png}
+  \caption{Estrutura de Quadro 802.11}
+  \label{fig:frame-macro}
+\end{figure}
+
+\par Além das informações de endereço e os próprios dados transmitidos, um quadro contém informações de controle. Tais informações de controle possuem diversas funcionalidades, tais como: versão do protocolo 802.11, tipo do frame, se é uma retransmissão, controle de energia, ordenação, etc.
+\par Neste trabalho, serão descritas especificamente as informações de tipo e subtipo do quadro.
+
+\section*{Tipo do Quadro}
+
+\par O Tipo do Quadro é um valor de 2 bits que indica se este é:
+
+\begin{description}[align=left]
+  \item [Quadro de Administração (00):] Tratam de informações referentes à descoberta de rede, autenticação e associação.
+  \item [Quadro de Controle (01):] Tratam de informações de controle de fluxo de informações.
+  \item [Quadro de Dados (10)] 
+  \item [Reservado para Uso Futuro (11)]
+  \end{description}
+
+\section*{Subtipo do Quadro}
+
+\par O Subtipo do Quadro é um valor de 4 bits que, combinado ao Tipo do Quadro, indicam do que se trata a informação contida no Corpo do Quadro.
+
+\subsection*{Quadro de Administração (00)}
+
+\begin{description}[align=left]
+\item [0000 - Requisição de Associação:] A estação (STA) envia um pedido de associação para que se dê início à transmissão de dados.
+\item [0001 - Resposta de Associação:] Resposta do Ponto de Acesso (AP) à Requisição de Autenticação.
+\item [0010 - Requisição de Reassociação:] A STA envia um pedido de reassociação sempre que há perda na conexão, mas está já está localizada na Tabela de Endereços.
+\item [0011 - Resposta de Reassociação:] Resposta do AP à Requisição de Reassociação.
+\item [0100 - Requisição de Sondagem:] A STA envia um \textit{broadcast} requisitando que os APs com SSID público se identifiquem.
+\item [0101 - Resposta de Sondagem:] Resposta dos APs à Requisição de Sondagem.
+\item [0110-0111 - Reservado para Uso Futuro] 
+\item [1000 - Beacon:] São transmitidos periodicamente por APs com informações à respeito da rede.
+\item [1001 - Anúncio de Mensagem de Indicação de Tráfego (ATIM):] Transmitido à STAs em estado de Economia de Energia, informando que estas devem sair do estado de suspensão por determinado tempo para que possa receber dados em \textit{buffer}.
+\item [1010 - Desassociação:] Indica que a comunicação com uma STA foi interrompida, por qualquer razão: inatividade, perda de sinal, perda excessiva de quadros, etc.
+\item [1011 - Autenticação:] A STA envia um Quadro de Autenticação com informações de autenticação na rede.
+\item [1100 - Desautenticação:] Indica que a STA não está mais autenticada, por qualquer razão: mudança de senha, mudança de canal, quantidade de STAs conectadas, etc.
+\item [1101-1111 - Reservado para Uso Futuro] 
+\end{description}
+
+\bigbreak
+
+\subsection*{Quadro de Controle (01)}
+
+\begin{description}[align=left]
+\item [0000-1001 - Reservado para Uso Futuro] 
+\item [1010 - Power Save (PS)-Poll:] Requisição para que a STA entre em estado de economia de energia. No Corpo do Quadro estão informações do intervalo pelo qual a STA permanecerá neste estado.
+\item [1011 - Requisição para Enviar (RTS):] Encaminhado pela STA quando há dados em \textit{buffer} para serem enviados.
+\item [1100 - Livre para Enviar (CTS):] Enviado pelo AP indicando que a STA está livre para transmitir.
+\item [1101 - Confirmação (ACK)]
+\item [1110 - Fim do Período Livre-de-Contenção (CF)-End]
+\item [1111 - CF-End + CF-ACK:] Enviado pelo AP, indicando o fim do período livre de contenção e indicando que recebeu o último quadro encaminhado por uma STA.
+\end{description}
+
+\bigbreak
+
+\subsection*{Quadro de Dados (10)}
+
+\begin{description}[align=left]
+\item [0000 - Dados]
+\item [0001 - Dados + CF-ACK:] Contém Dados e uma Confirmação que o último quadro encaminhado foi recebido.
+\item [0010 - Dados + CF-Poll:] Durante o Período Livre-de-Contenção, o AP encaminha dados para uma estação, e encaminha em \textit{broadcast} uma requisição para que estações que possuam dados em \textit{buffer} se identifiquem.
+\item [0011 - Dados + CF-ACK + CF-Poll:] Durante o Período Livre-de-Contenção, o AP encaminha dados para uma estação, encaminha em \textit{broadcast} uma requisição para que estações que possuam dados em \textit{buffer} se identifiquem, e também confirma que o último quadro encaminhado foi recebido.
+\item [0100 - Função Nula (Sem Dados):] Quadros sem Dados são encaminhados por STAs para indicar ao AP sobre o estado atual de Economia de Energia. Caso possua o bit de Estado de Energia "0", indica que a STA está Online. Se o bit de Estado de Energia for "1", indica que a STA estará desligada temporariamente.
+\item [0101 - CF-ACK (Sem Dados):] O AP confirma que o último quadro encaminhado foi recebido.
+\item [0110 - CF-Poll (Sem Dados):]  O encaminha em \textit{broadcast} uma requisição para que estações que possuam dados em \textit{buffer} se identifiquem.
+\item [0111 - CF-ACK + CF-Poll (Sem Dados):] O AP confirma que o último quadro encaminhado foi recebido e encaminha em \textit{broadcast} uma requisição para que estações que possuam dados em \textit{buffer} se identifiquem.
+\item [1000-1111 - Reservado para Uso Futuro]
+\end{description}
+
+\end{document}
